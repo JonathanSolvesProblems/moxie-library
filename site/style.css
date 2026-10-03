@@ -9,21 +9,27 @@
      wrote links to it, flat-topped on a shelf when something does. Her poster
      says the job is to move her writing from a graveyard to a library, and the
      two objects share a silhouette.
-  2. The sky is her blog's own teal and the lit surfaces are her blog's own paper
-     and gold, because this is a room in a house she already built.
-  3. Colour belongs to the three places she publishes, plus one lamp colour that
-     only ever means "found for the draft on the desk".
-  4. Her words are set in a book face on lit paper. Everything the software says
-     is set in a grotesque on the dark. You can always tell whose sentence it is.
+  2. The colours are Moxie-Dude's own, read from her live blog: the turquoise of
+     her banner, the charcoal of her type and footer, the white of her page. In
+     the morning theme the sky is that turquoise exactly; at dusk it is the same
+     hue after sunset. This is a room in a house she already built.
+  3. Colour belongs to the three places she publishes, plus one warm lamp colour
+     that only ever means "found". Warm, because on a turquoise page it is the
+     one thing that cannot be mistaken for the brand.
+  4. Everything the software says is set in Raleway, the face her blog speaks in,
+     with the wordmark in its heaviest weight like hers. Her own words are set in
+     a book face on white, because here her posts are books. You can always tell
+     whose sentence it is.
   5. Things arrive with a hop and a settle and are otherwise still, because the
-     only event here is a buried piece coming back up.
+     only event here is a buried piece coming back up. A slab that is pointed at
+     answers in a speech bubble, the way the hamster does on her banner.
 */
 
 @font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("fonts/bricolage-grotesque.woff2") format("woff2");
-  font-weight: 200 800;
-  font-stretch: 75% 100%;
+  font-family: "Raleway";
+  src: url("fonts/raleway.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
@@ -42,8 +48,8 @@
 }
 
 :root {
-  --says: "Bricolage Grotesque", "Trebuchet MS", "Segoe UI", sans-serif; /* the software's voice */
-  --hers: "Literata", Georgia, "Times New Roman", serif;                 /* her voice */
+  --says: "Raleway", "Trebuchet MS", "Segoe UI", sans-serif;   /* the software's voice: her blog's face */
+  --hers: "Literata", Georgia, "Times New Roman", serif;       /* her voice: a book face */
 
   /* scale: 17px base, ratio 1.25 */
   --t-small: 0.8rem;
@@ -57,6 +63,9 @@
   --r-sheet: 14px;
   --r-round: 999px;
   --edge: 2px;
+  --mast: 76px;
+  --slab-k: 1;
+  --zoom: 1;
 
   --quick: 160ms;
   --settle: 520ms;
@@ -64,52 +73,53 @@
     1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, 0.991,
     0.977 51%, 0.974 53.8%, 0.975 57.1%, 0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1);
 
-  /* outlet colours for use on lit paper */
-  --moxie-on-paper: #17707C;
+  /* Her charcoal: type, outlines, the footer of her blog. */
+  --ink: #222222;
+  --ink-soft: #4A5B5D;
+  --line: #222222;
+
+  /* The three outlets as labels on white. Moxie-Dude is her turquoise, darkened to be readable. */
+  --moxie-on-paper: #04727A;
   --westmount-on-paper: #B4492F;
-  --substack-on-paper: #6B3F78;
+  --substack-on-paper: #A63A6E;
+
+  /* The three outlets as slabs standing on the ground, which is dark in both themes. */
+  --moxie: #01CDD6;                  /* her banner's turquoise, exactly */
+  --westmount: #FF8D6E;
+  --substack: #F29BC0;
+  --lamp: #FFC65C;
+  --lamp-on-paper: #8A5A00;
+  --ground-ink: #FFFFFF;
 }
 
-/* Dusk is home: the sky of her poster, in her blog's teal. */
+/* Dusk is home: her turquoise after sunset, the hour of the poster she made. */
 :root[data-theme="dusk"] {
   color-scheme: dark;
-  --sky: #06414D;
-  --ground: #04303A;
-  --paper: #F2EDE8;
-  --paper-shade: #E3D9CC;
-  --ink: #10262B;
-  --ink-soft: #46595D;
-  --chalk: #F2EDE8;
-  --chalk-dim: #A9C2C3;
-  --line: #0B1F23;
-  --stone: #B9C4C0;
-  --stone-on-paper: #B9C4C0;
-  --lamp: #E7B866;
-  --lamp-on-paper: #8A5A12;
-  --moxie: #5CC2CE;
-  --westmount: #F0876B;
-  --substack: #C79AD6;
+  --sky: #066A72;
+  --ground: #04484E;
+  --ground-dim: #B5E3E6;
+  --paper: #F8FDFD;
+  --paper-shade: #E3F0F0;
+  --chalk: #FFFFFF;
+  --chalk-dim: #C9EEF0;
+  --stone: #CFE3E4;
+  --stone-on-paper: #CFE3E4;
+  --focus: #FFC65C;
 }
 
-/* Morning: the same graveyard after sunrise. Designed, not inverted. */
+/* Morning is her blog in daylight: turquoise header, white page, charcoal footer. */
 :root[data-theme="morning"] {
   color-scheme: light;
-  --sky: #CDE7E3;
-  --ground: #B5D6C8;
-  --paper: #FBF8F3;
-  --paper-shade: #EDE5DA;
-  --ink: #10262B;
-  --ink-soft: #46595D;
-  --chalk: #10262B;
-  --chalk-dim: #35504F;
-  --line: #10262B;
-  --stone: #5A6966;
-  --stone-on-paper: #C9D2CF;
-  --lamp: #E0A53A;
-  --lamp-on-paper: #7A4E0B;
-  --moxie: #17707C;
-  --westmount: #B4492F;
-  --substack: #6B3F78;
+  --sky: #01CDD6;
+  --ground: #222222;
+  --ground-dim: #AAAAAA;
+  --paper: #FDFEFE;
+  --paper-shade: #E6F3F3;
+  --chalk: #222222;
+  --chalk-dim: #0E4347;
+  --stone: #E9F4F4;
+  --stone-on-paper: #D5E6E7;
+  --focus: #222222;
 }
 
 * { box-sizing: border-box; }
@@ -124,12 +134,13 @@ body {
   color: var(--chalk);
   font-family: var(--says);
   font-size: var(--t-body);
+  font-weight: 500;
   line-height: 1.45;
-  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;   /* Raleway's default figures are old-style */
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, p, ul, ol { margin: 0; padding: 0; }
+h1, h2, h3, p, ul, ol, blockquote { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
 
 .visually-hidden, .skip:not(:focus) {
@@ -141,7 +152,7 @@ ul, ol { list-style: none; }
   background: var(--paper); color: var(--ink); padding: 10px 14px; border-radius: var(--r-round);
 }
 
-:focus-visible { outline: 3px solid var(--lamp); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 
 /* ---- masthead ------------------------------------------------------------ */
 .mast {
@@ -151,27 +162,25 @@ ul, ol { list-style: none; }
 }
 /* Masthead plus desk plus ground fill the window exactly, so the ground sits
    at the bottom edge whether the desk is empty or full. */
-:root { --mast: 76px; --slab-k: 1; --zoom: 1; }
 main { display: flex; flex-direction: column; min-height: calc(100dvh / var(--zoom) - var(--mast)); }
 main > .desk { flex: 1 0 auto; }
-.wordmark {
-  font-size: var(--t-mark); font-weight: 800; font-stretch: 78%;
-  letter-spacing: -0.02em; line-height: 1;
-}
-.wordmark span { font-weight: 300; }
+
+/* Set like the "Moxie-Dude" on her banner: Raleway at its heaviest. */
+.wordmark { font-size: var(--t-mark); font-weight: 500; letter-spacing: -0.015em; line-height: 1; }
+.wordmark b { font-weight: 900; }
 .tally { color: var(--chalk-dim); font-size: var(--t-body); margin-right: auto; }
 
 .sky-switch {
   display: inline-flex; align-items: center; gap: calc(var(--u) * 2);
   min-height: 44px; padding: 0 calc(var(--u) * 4);
-  font: 600 var(--t-small)/1 var(--says);
+  font: 700 var(--t-small)/1 var(--says); text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--chalk); background: transparent;
   border: var(--edge) solid var(--chalk-dim); border-radius: var(--r-round);
   cursor: pointer; align-self: center;
 }
 .sky-switch:hover { border-color: var(--chalk); }
 .sky-switch__dot {
-  width: 14px; height: 14px; border-radius: 50%; background: var(--lamp);
+  width: 14px; height: 14px; border-radius: 50%; background: var(--lamp); border: 1.5px solid var(--line);
   transition: transform var(--settle) var(--spring);
 }
 :root[data-theme="morning"] .sky-switch__dot { transform: translateY(-3px) scale(1.15); }
@@ -191,9 +200,12 @@ main > .desk { flex: 1 0 auto; }
   display: flex; flex-direction: column;
   position: sticky; top: calc(var(--u) * 4);
 }
-.sheet:focus-within { outline: 3px solid var(--lamp); outline-offset: 3px; }
+.sheet:focus-within { outline: 3px solid var(--focus); outline-offset: 3px; }
 .sheet__head { display: flex; align-items: center; justify-content: space-between; min-height: 44px; }
-.sheet__head h2 { font-size: var(--t-lead); font-weight: 700; font-stretch: 85%; }
+/* Section labels are small capitals in Raleway, the way her navigation is set. */
+.sheet__head h2, .colophon h2 {
+  font-size: var(--t-small); font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em;
+}
 
 #draft {
   width: 100%; height: calc(25vh / var(--zoom)); min-height: 7em; margin-top: var(--u);
@@ -220,7 +232,7 @@ main > .desk { flex: 1 0 auto; }
 
 /* buttons: chunky, with a ledge that gives when pressed */
 .btn, .quiet {
-  font: 650 var(--t-small)/1 var(--says); cursor: pointer; color: var(--ink);
+  font: 700 var(--t-small)/1 var(--says); cursor: pointer; color: var(--ink);
   min-height: 44px; padding: 0 calc(var(--u) * 4); border-radius: var(--r-round);
   border: var(--edge) solid var(--line);
   box-shadow: 0 3px 0 var(--line);      /* the ledge: a hard edge, no blur */
@@ -231,14 +243,14 @@ main > .desk { flex: 1 0 auto; }
 .btn--lamp { background: var(--lamp); }
 .btn:hover, .quiet:hover { transform: translateY(-1px); }
 .btn:active, .quiet:active { transform: translateY(3px); box-shadow: 0 0 0 var(--line); }
-.btn:focus-visible, .quiet:focus-visible, .find a:focus-visible { outline-color: var(--lamp-on-paper); }
+.btn:focus-visible, .quiet:focus-visible, .find a:focus-visible, .seek input:focus-visible { outline-color: var(--lamp-on-paper); }
 .quiet { background: transparent; border-color: transparent; box-shadow: none; color: var(--ink-soft); }
 .quiet:hover { border-color: var(--ink-soft); }
-.btn--starter { font-weight: 500; text-align: left; line-height: 1.2; min-width: 0; padding-inline: calc(var(--u) * 3); }
+.btn--starter { font-weight: 600; text-align: left; line-height: 1.2; min-width: 0; padding-inline: calc(var(--u) * 3); }
 .btn--starter span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ---- what the library found ---------------------------------------------- */
-.finds__title { font-size: var(--t-head); font-weight: 750; font-stretch: 82%; letter-spacing: -0.01em; line-height: 1.1; min-height: 44px; display: flex; align-items: center; }
+.finds__title { font-size: var(--t-head); font-weight: 800; letter-spacing: -0.015em; line-height: 1.1; min-height: 44px; display: flex; align-items: center; }
 .finds__note { color: var(--chalk-dim); max-width: 56ch; margin-top: var(--u); }
 .finds__note:empty { display: none; }
 .finds__list { display: grid; gap: calc(var(--u) * 5); margin-top: calc(var(--u) * 5); }
@@ -261,9 +273,9 @@ main > .desk { flex: 1 0 auto; }
 }
 .find--tomb .find__slab { border-radius: 15px 15px var(--r-book) var(--r-book); background: var(--stone-on-paper); box-shadow: inset 0 -8px 0 var(--c); }
 
-.find__meta { font-size: var(--t-small); color: var(--ink-soft); font-weight: 500; }
-.find__meta b { color: var(--c); font-weight: 700; }
-.find__title { font-size: var(--t-lead); font-weight: 700; font-stretch: 88%; line-height: 1.15; margin: 2px 0 calc(var(--u) * 2); }
+.find__meta { font-size: var(--t-small); color: var(--ink-soft); font-weight: 600; }
+.find__meta b { color: var(--c); font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; }
+.find__title { font-size: var(--t-lead); font-weight: 800; letter-spacing: -0.01em; line-height: 1.18; margin: 3px 0 calc(var(--u) * 2); }
 .find__title a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--c); }
 .find__hers {
   font: 400 1rem/1.6 var(--hers);
@@ -277,9 +289,14 @@ main > .desk { flex: 1 0 auto; }
   background: linear-gradient(to bottom, transparent, var(--paper));
 }
 .find__state { font-size: var(--t-small); color: var(--ink-soft); margin-top: calc(var(--u) * 2); }
-.find__state b { color: var(--ink); }
+.find__state b { color: var(--ink); font-weight: 800; }
 .find__acts { display: flex; flex-wrap: wrap; gap: calc(var(--u) * 2); margin-top: calc(var(--u) * 3); align-items: center; }
 .find__why { font-size: var(--t-small); color: var(--ink-soft); margin-left: auto; max-width: 30ch; text-align: right; }
+
+/* her pull line on an opened slab: her words, so her face */
+.find__line { font: italic 500 1.18rem/1.4 var(--hers); margin: 0 0 calc(var(--u) * 3); }
+.find__line::before { content: "\201C"; }
+.find__line::after { content: "\201D"; }
 
 .find--same { border-style: dashed; }
 
@@ -296,22 +313,29 @@ main > .desk { flex: 1 0 auto; }
 
 /* ---- the ground: sixteen years of slabs ----------------------------------
    Always at the bottom of the window, the way the ground is, so the slab that
-   matches is seen lifting at the moment its card lands. */
+   matches is seen lifting at the moment its card lands. Dark in both themes:
+   teal earth at dusk, and in the morning the charcoal of her blog's footer. */
 .ground {
   position: sticky; bottom: 0; z-index: 3;
-  background: var(--ground); border-top: var(--edge) solid var(--line);
+  background: var(--ground); color: var(--ground-ink); border-top: var(--edge) solid var(--line);
   padding: calc(var(--u) * 3) calc(var(--u) * 8) calc(var(--u) * 2);
 }
 .ground__head {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--u) calc(var(--u) * 7); align-items: center;
 }
-.ground__head h2 { font-size: var(--t-lead); font-weight: 750; font-stretch: 82%; letter-spacing: -0.01em; line-height: 1.15; }
+.ground__head h2 { font-size: 1.18rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.15; }
+.ground__head h2 span { color: var(--lamp); }
+.legend, .outlets { display: flex; flex-wrap: wrap; gap: var(--u) calc(var(--u) * 4); font-size: var(--t-small); color: var(--ground-dim); }
+.legend li, .outlets li { display: flex; align-items: end; gap: 6px; }
+.outlets li { align-items: center; }
+.outlets i { width: 11px; height: 11px; border-radius: 2px; background: var(--c); }
+.outlets b { color: var(--ground-ink); font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.72rem; }
 
 /* find a piece by title: the keyboard's way into the ground */
 .seek { position: relative; justify-self: end; }
 .seek input {
   width: 15.5rem; height: 34px; padding: 0 calc(var(--u) * 3);
-  font: 500 var(--t-small)/1 var(--says); color: var(--ink);
+  font: 600 var(--t-small)/1 var(--says); color: var(--ink);
   background: var(--paper); border: var(--edge) solid var(--line); border-radius: var(--r-round);
 }
 .seek input::placeholder { color: var(--ink-soft); opacity: 1; }
@@ -322,19 +346,12 @@ main > .desk { flex: 1 0 auto; }
 }
 .pick {
   display: block; width: 100%; text-align: left; cursor: pointer;
-  font: 400 var(--t-small)/1.3 var(--says); color: var(--ink-soft);
+  font: 500 var(--t-small)/1.3 var(--says); color: var(--ink-soft);
   background: transparent; border: 0; border-radius: 10px; padding: 7px 10px;
 }
-.pick b { display: block; color: var(--ink); font-weight: 650; }
+.pick b { display: block; color: var(--ink); font-weight: 800; }
 button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); outline-offset: -2px; outline-color: var(--lamp-on-paper); }
 .pick--none { cursor: default; }
-.ground__head h2 span { color: var(--lamp); }
-:root[data-theme="morning"] .ground__head h2 span { color: var(--lamp-on-paper); }
-.legend, .outlets { display: flex; flex-wrap: wrap; gap: var(--u) calc(var(--u) * 4); font-size: var(--t-small); color: var(--chalk-dim); }
-.legend li, .outlets li { display: flex; align-items: end; gap: 6px; }
-.outlets li { align-items: center; }
-.outlets i { width: 11px; height: 11px; border-radius: 2px; background: var(--c); border: 1.5px solid var(--line); }
-.outlets b { color: var(--chalk); font-weight: 650; }
 
 .plots {
   display: flex; align-items: end; gap: calc(var(--u) * 2);
@@ -344,9 +361,9 @@ button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); o
 .year__plot {
   display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, calc(18px * var(--slab-k)));
   gap: 3px calc(2px * var(--slab-k)); align-items: end;
-  border-bottom: var(--edge) solid var(--chalk-dim); padding-bottom: 1px;
+  border-bottom: var(--edge) solid var(--ground-dim); padding-bottom: 1px;
 }
-.year__label { display: block; font-size: 0.7rem; color: var(--chalk-dim); margin-top: 2px; letter-spacing: 0.02em; }
+.year__label { display: block; font-size: 0.7rem; font-weight: 600; color: var(--ground-dim); margin-top: 2px; letter-spacing: 0.03em; }
 
 .slab {
   display: block; width: calc(5px * var(--slab-k)); height: calc(var(--h, 12) * 1px * var(--slab-k));
@@ -359,7 +376,21 @@ button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); o
 .slab--key.slab--tomb { border-radius: 4px 4px 0 0; }
 .slab--key.slab--book { background: var(--moxie); }
 .plots .slab { cursor: pointer; }
-.plots .slab:hover { outline: 1.5px solid var(--chalk); }
+.plots .slab:hover { outline: 1.5px solid var(--ground-ink); }
+
+/* A slab that is pointed at answers in a speech bubble, like the hamster on her banner. */
+.tip {
+  position: fixed; z-index: 5; pointer-events: none; max-width: 300px;
+  background: var(--paper); color: var(--ink); border: var(--edge) solid var(--line);
+  border-radius: 16px; padding: 8px 12px; font-size: var(--t-small); line-height: 1.3;
+}
+.tip::after {
+  content: ""; position: absolute; left: var(--tail, 24px); bottom: -8px; width: 13px; height: 13px;
+  background: var(--paper); border-right: var(--edge) solid var(--line); border-bottom: var(--edge) solid var(--line);
+  transform: translateX(-50%) rotate(45deg);
+}
+.tip b { display: block; font-weight: 800; }
+.tip q { display: block; margin-top: 4px; font: italic 400 0.86rem/1.35 var(--hers); }
 
 /* ---- colophon ------------------------------------------------------------ */
 .colophon {
@@ -367,23 +398,10 @@ button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); o
   background: var(--sky); border-top: var(--edge) solid var(--line); padding: calc(var(--u) * 8) calc(var(--u) * 8) calc(var(--u) * 12);
   color: var(--chalk-dim); font-size: 0.92rem;
 }
-.colophon h2 { color: var(--chalk); font-size: var(--t-body); font-weight: 700; margin-bottom: var(--u); }
-.colophon b { color: var(--chalk); font-weight: 650; }
+.colophon h2 { color: var(--chalk); margin-bottom: calc(var(--u) * 2); }
+.colophon b { color: var(--chalk); font-weight: 800; }
 .colophon__credit { grid-column: 1 / -1; border-top: var(--edge) solid var(--chalk-dim); padding-top: calc(var(--u) * 4); max-width: 90ch; }
-.colophon a { color: var(--chalk); text-underline-offset: 3px; }
-
-.tip {
-  position: fixed; z-index: 5; pointer-events: none; max-width: 300px;
-  background: var(--paper); color: var(--ink); border: var(--edge) solid var(--line);
-  border-radius: 10px; padding: 6px 10px; font-size: var(--t-small); line-height: 1.3;
-}
-.tip b { display: block; font-weight: 700; }
-.tip q { display: block; margin-top: 4px; font: italic 400 0.86rem/1.35 var(--hers); }
-
-/* her pull line on an opened slab: her words, so her face */
-.find__line { font: italic 500 1.18rem/1.4 var(--hers); margin: 0 0 calc(var(--u) * 3); }
-.find__line::before { content: "\201C"; }
-.find__line::after { content: "\201D"; }
+.colophon a { color: var(--chalk); font-weight: 700; text-underline-offset: 3px; }
 
 /* ---- small screens ------------------------------------------------------- */
 @media (max-width: 920px) {

@@ -130,4 +130,5 @@ the scripts rebuild them from her public pages.
 [transformers.js](https://github.com/huggingface/transformers.js) and ONNX Runtime Web (Apache-2.0),
 [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) (Apache-2.0),
 [Ollama](https://github.com/ollama/ollama) (MIT) and [Gemma 3](https://ai.google.dev/gemma) for the pull lines and the model comparison,
-Bricolage Grotesque and Literata (SIL Open Font License).
+Raleway and Literata (SIL Open Font License). The colours and the Raleway type are taken from
+her blog, so the page looks like it belongs to her.

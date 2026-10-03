@@ -129,4 +129,4 @@ It matches subjects, not jokes, and it cannot tell whether a link would be welco
 
 **Best Use of Gemma.** Gemma 3 4B runs locally through Ollama and proposes one pull line per piece, and a word-for-word check decides which ones are kept. EmbeddingGemma was one of the three models I tested against her links. To be clear about the rest: the model that does the matching in the page is all-MiniLM-L6-v2, not Gemma.
 
-*Fonts are Bricolage Grotesque and Literata, both SIL Open Font License. The teal and the gold are the ones on her blog.*
+*The turquoise, the charcoal and the Raleway type are the ones on her blog. Her words are set in Literata. Both fonts are SIL Open Font License.*

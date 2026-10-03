@@ -1,6 +1,6 @@
 {
   "project": "moxie-library",
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "platform": "web-app",
   "family": "toy-playful",
   "metaphor": "the slab: a tombstone and a book spine are the same shape, so every piece is one upright slab that is either standing in the ground or sitting on a shelf",
@@ -10,10 +10,10 @@
   "category_convention_avoided": "Content-repurposing tools (SocialPost, Buffer, Ocoya) ship a white canvas, an indigo-to-violet gradient hero, rounded stat cards in rows of three, a left sidebar of icon rows and a calendar grid of scheduled posts. Personal knowledge tools ship a dark graph of floating nodes.",
   "design_code": [
     "Every piece is drawn as an upright slab, round-topped in the ground when nothing she wrote links to it and flat-topped on a shelf when something does, because her own poster says the job is to move her writing from a graveyard to a library and those two objects share a silhouette.",
-    "The sky is her blog's own teal and the lit surfaces are her blog's own paper and gold, because this is a room in a house she already built, not a new brand.",
-    "Colour belongs to the three places she publishes and to nothing else, with one lamp colour reserved for 'found', because unifying her outlets is the request and a fourth meaning would blur it.",
-    "Her words are set in a book face on lit paper and everything the software says is set in a grotesque on the dark, because the reader must always be able to tell her sentence from the machine's.",
-    "Things arrive with a hop and a settle and are otherwise still, because the only event in this product is a buried piece coming back up."
+    "The colours are Moxie-Dude's own, read from her live blog: in the morning theme the sky is her banner's turquoise exactly, the cards are her white page and the ground is her footer's charcoal; at dusk the sky is the same hue after sunset. This is a room in a house she already built.",
+    "Colour belongs to the three places she publishes, plus one warm lamp colour that only ever means 'found', because on a turquoise page a warm colour is the one thing that cannot be mistaken for the brand.",
+    "Everything the software says is set in Raleway, the face her blog speaks in, with the wordmark in its heaviest weight like hers; her own words are set in a book face on white, because here her posts are books and the reader must always be able to tell her sentence from the machine's.",
+    "Things arrive with a hop and a settle and are otherwise still, because the only event here is a buried piece coming back up; a slab that is pointed at answers in a speech bubble, the way the hamster does on her banner."
   ],
   "anti_brief": [
     "Gothic. She writes humour; the graveyard is a joke she made, so no blackletter, no fog, no skulls.",
@@ -21,10 +21,10 @@
     "A chat box. She did not ask to talk to her archive, she asked to be pointed back at it."
   ],
   "axes": {
-    "canvas": "tinted-mid-dark, saturated teal (her brand colour as a dusk sky); morning theme is a pale aqua sky",
+    "canvas": "dusk: mid-tone turquoise-teal (her banner colour after sunset); morning: her banner turquoise, exactly. The ground is dark in both: teal earth at dusk, her footer's charcoal in the morning",
     "chroma_budget": "triad for the three outlets, one lamp accent, stone neutral",
-    "type_voice": "characterful variable grotesque for the interface, book serif for her prose",
-    "structure": "split desk over a ground strip; the stacks view is a year-by-year wall",
+    "type_voice": "Raleway for the interface (locked: her blog's face), Literata for her prose",
+    "structure": "split desk over a sticky ground strip of 710 slabs with a title search; large screens zoom the whole picture 1.5x",
     "density": "comfortable",
     "edge": "mixed by meaning: full round top for a slab in the ground, 3px for a shelved book, 14px for paper sheets",
     "depth": "ink outline and overlap, things stand on a ground line; no blur shadows",
@@ -34,48 +34,57 @@
   },
   "themes": {
     "dusk": {
-      "sky": "#06414D",
-      "ground": "#04303A",
-      "paper": "#F2EDE8",
-      "paper_shade": "#E3D9CC",
-      "ink": "#10262B",
-      "chalk": "#F2EDE8",
-      "chalk_dim": "#A9C2C3",
-      "line": "#0B1F23",
-      "stone": "#B9C4C0",
-      "stone_shade": "#8FA09C",
-      "lamp": "#E7B866",
-      "lamp_on_paper": "#8A5A12"
+      "sky": "#066A72",
+      "ground": "#04484E",
+      "ground_dim": "#B5E3E6",
+      "paper": "#F8FDFD",
+      "paper_shade": "#E3F0F0",
+      "chalk": "#FFFFFF",
+      "chalk_dim": "#C9EEF0",
+      "stone": "#CFE3E4",
+      "focus": "#FFC65C"
     },
     "morning": {
-      "sky": "#CDE7E3",
-      "ground": "#7FAE9B",
-      "paper": "#FBF8F3",
-      "paper_shade": "#EDE5DA",
-      "ink": "#10262B",
-      "chalk": "#10262B",
-      "chalk_dim": "#3F5A5E",
-      "line": "#10262B",
-      "stone": "#A3B0AD",
-      "stone_shade": "#7F908C",
-      "lamp": "#E0A53A",
-      "lamp_on_paper": "#7A4E0B"
+      "sky": "#01CDD6",
+      "ground": "#222222",
+      "ground_dim": "#AAAAAA",
+      "paper": "#FDFEFE",
+      "paper_shade": "#E6F3F3",
+      "chalk": "#222222",
+      "chalk_dim": "#0E4347",
+      "stone": "#E9F4F4",
+      "focus": "#222222"
+    },
+    "shared": {
+      "ink": "#222222",
+      "ink_soft": "#4A5B5D",
+      "line": "#222222",
+      "lamp": "#FFC65C",
+      "lamp_on_paper": "#8A5A00",
+      "ground_ink": "#FFFFFF"
     }
   },
   "tokens": {
-    "outlet_moxie": "#17707C",
-    "outlet_westmount": "#B4492F",
-    "outlet_substack": "#6B3F78",
+    "outlet_moxie": "#01CDD6 on the ground, #04727A as a label on white",
+    "outlet_westmount": "#FF8D6E on the ground, #B4492F on white",
+    "outlet_substack": "#F29BC0 on the ground, #A63A6E on white",
     "accent_role": "lamp: the one colour that means 'this piece was found for the draft on the desk'",
-    "accent_hue_deg": 38,
-    "type_display": "Bricolage Grotesque",
+    "accent_hue_deg": 39,
+    "type_display": "Raleway",
     "type_body": "Literata",
     "type_mono": null,
     "scale_ratio": 1.25,
     "base_size_px": 17,
     "space_unit_px": 4,
-    "radius_scale": [3, 14, 999],
-    "motion_duration_ms": [160, 520],
+    "radius_scale": [
+      3,
+      14,
+      999
+    ],
+    "motion_duration_ms": [
+      160,
+      520
+    ],
     "motion_easing": "linear() spring with one overshoot"
   },
   "motion_brief": {
@@ -83,6 +92,7 @@
     "signature": "a tombstone hops out of the ground, loses its round top and settles as a book",
     "resting_state": "still"
   },
-  "sources_of_values": "Teal, paper and gold are read from moxie-dude.com's own header CSS (#014855, #f2ede8, #c69a58) and adjusted for contrast. Plum is the title colour of the poster she made in May 2026.",
-  "notes": "Ledger: last three logged families were cinematic-atmospheric, dimensional-tactile and luminous-emissive, all banned here. toy-playful had never been used. Print-editorial (a library checkout card) was considered and dropped as the document attractor. Accent hue 38 is close to still-here's 41 but the canvas (saturated teal vs near-black green), family and structure all differ."
+  "sources_of_values": "Turquoise, charcoal, white and Raleway are read from the live moxie-dude.com (computed styles and a screenshot, read-only). The first version of this design took teal #014855, paper #f2ede8 and gold #c69a58 from an unpublished redesign file and used Bricolage Grotesque; both were replaced on 3 Oct 2026 when Jonathan asked for her site's branding. Contrast was computed for every text and slab pairing in both themes.",
+  "notes": "Redesign pass 3 Oct 2026, same family (toy-playful) and same metaphor, locked to her live brand. Roboto Light, her blog's body face, was considered for her quoted prose and not used: two sans faces would blur whose sentence is whose, and a library sets its books in a book face. Dusk stays the default (her poster is a graveyard at dusk); a visitor whose system is in light mode gets the morning theme, which is her blog's colours exactly.",
+  "locked_inputs": "Moxie-Dude's live branding, read from moxie-dude.com on 3 Oct 2026: banner turquoise #01CDD6, charcoal #222222 for type and footer, white page, Raleway (Black for the wordmark, uppercase for navigation), comic speech bubbles on the banner. Jonathan asked for the page to follow her site's branding."
 }

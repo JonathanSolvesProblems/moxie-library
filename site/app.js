@@ -306,9 +306,12 @@ function drawGround() {
     tip.hidden = false;
     // On a large screen the body is zoomed, so pointer coordinates are divided by it.
     const z = parseFloat(getComputedStyle(document.body).zoom) || 1;
-    const x = Math.min(e.clientX / z + 12, innerWidth / z - tip.offsetWidth - 8);
-    tip.style.left = `${Math.max(8, x)}px`;
-    tip.style.top = `${e.clientY / z - tip.offsetHeight - 12}px`;
+    const px = e.clientX / z;
+    const left = Math.max(8, Math.min(px - 24, innerWidth / z - tip.offsetWidth - 8));
+    tip.style.left = `${left}px`;
+    tip.style.top = `${e.clientY / z - tip.offsetHeight - 16}px`;
+    // The bubble's tail stays over the slab even when the bubble is pushed in from an edge.
+    tip.style.setProperty('--tail', `${Math.max(16, Math.min(px - left, tip.offsetWidth - 16))}px`);
   });
   plots.addEventListener('pointerleave', () => { tip.hidden = true; });
   plots.addEventListener('click', (e) => {
