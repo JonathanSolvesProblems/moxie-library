@@ -28,9 +28,9 @@ This is the thing she asked for.
   Click one, or type part of its title in the search box, to see it and the pieces closest to it.
 - **One line per piece.** Gemma 3 4B, running locally through Ollama, proposes the sentence most
   worth quoting from each piece. A string comparison decides: the line is kept only if it is
-  found word for word in that piece. So far it has been asked about 319 pieces and 277 lines
-  were kept, 54 of them only after one correction. The run stopped when my laptop's GPU fell
-  over, so the other 384 pieces have not been asked yet.
+  found word for word in that piece. It was asked about 694 pieces and 560 lines
+  were kept, 131 of them only after one correction. For the other 9 pieces the local server
+  returned an error every time, so they have no line.
 - **It says when there is nothing.** If no piece is close to the draft, the page says the subject
   is new instead of padding the list.
 

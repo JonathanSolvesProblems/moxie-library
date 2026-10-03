@@ -1,12 +1,12 @@
 {
  "model": "gemma3:4b",
  "pieces_with_text": 703,
- "asked": 319,
- "kept": 277,
- "kept_after_one_correction": 54,
- "not_hers": 9,
- "wrong_length": 8,
- "cut_off": 23,
+ "asked": 694,
+ "kept": 560,
+ "kept_after_one_correction": 131,
+ "not_hers": 23,
+ "wrong_length": 18,
+ "cut_off": 91,
  "model_said_none": 2,
- "not_yet_asked": 384
+ "not_yet_asked": 9
 }

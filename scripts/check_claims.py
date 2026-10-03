@@ -81,7 +81,7 @@ if lines_file.exists():
         ("Gemma: wrong length", n(lines["wrong_length"]), r"(\d+) were the wrong length"),
         ("Gemma: cut off", n(lines["cut_off"]), r"(\d+) ran on past the limit"),
         ("Gemma: said none", n(lines["model_said_none"]), r"(\w+) it said there was no line"),
-        ("Gemma: not yet asked", n(lines["not_yet_asked"]), r"other (\d+) pieces have not been asked"),
+        ("Gemma: no answer from the server", n(lines["not_yet_asked"]), r"other (\d+) pieces"),
     ]
 REQUIRED_IN_README = {"pieces in the library", "never linked, all outlets", "Moxie-Dude posts", "backward links",
                       "within 30 days, table", "over a year", "newest first", "keyword search", "shipped model"}

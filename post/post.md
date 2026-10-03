@@ -2,6 +2,7 @@
 title: My mom has published 710 pieces in 16 years. Nothing she wrote links to 526 of them.
 published: false
 tags: devchallenge, weekendchallenge, hf26challenge, opensource
+cover_image: https://moxie-library.vercel.app/press/cover.png
 ---
 
 *This is a submission for the [Hacktoberfest Weekend Challenge: Build for a Friend](https://dev.to/challenges/hacktoberfest-weekend-2026-10-01).*
@@ -71,7 +72,7 @@ When she pauses typing, the draft is cut into passages the same way, each one is
 
 **I picked the model by testing three on her own links.** I ran all-MiniLM, nomic-embed-text and EmbeddingGemma through Ollama on my laptop's GPU. On an early version of the test described below they scored 7, 10 and 9 of 19, which is inside the noise. Then I tried the best scorer, nomic-embed-text, in the runtime the page uses: over a second per passage on a CPU. The smallest took 78 ms. So the smallest shipped.
 
-**A second open model picks one line per piece.** Gemma 3 4B, running locally through Ollama, reads each piece and proposes the one sentence most worth quoting. Then a string comparison decides. The line is kept only if it can be found word for word in the piece, and what gets stored is the span cut from her text, not Gemma's retyping of it. So far it has been asked about 319 pieces. 277 lines were kept, 54 of them only after one correction. 42 were thrown out: 9 were not word for word hers, 8 were the wrong length, 23 ran on past the limit, and twice it said there was no line, which is an allowed answer. The other 384 pieces have not been asked yet, because my laptop's GPU fell over halfway through the run. The page shows a line only where one was kept.
+**A second open model picks one line per piece.** Gemma 3 4B, running locally through Ollama, reads each piece and proposes the one sentence most worth quoting. Then a string comparison decides. The line is kept only if it can be found word for word in the piece, and what gets stored is the span cut from her text, not Gemma's retyping of it. It was asked about 694 pieces. 560 lines were kept, 131 of them only after one correction. 134 were thrown out: 23 were not word for word hers, 18 were the wrong length, 91 ran on past the limit, and twice it said there was no line, which is an allowed answer. For the other 9 pieces the local server returned an error every time, so they have no line. The page shows a line only where one was kept.
 
 **One bug worth passing on.** transformers.js 4.3 loaded the model from local files and then failed with `this.tokenizer is not a function`. It checks whether tokenizer files exist only when the local model path is not a full URL. I had passed `new URL('./models/', location).href`. Passing `.pathname` instead fixed it.
 

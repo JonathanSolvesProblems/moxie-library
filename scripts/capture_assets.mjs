@@ -77,6 +77,35 @@ try {
   await page.waitForTimeout(1800);
   await shot('morning.png');
   await context.close();          // flushes the video
+
+  // Cover image for the post: the real masthead and the real ground, with the
+  // line from the poster she made between them. 1280x538 is DEV's 1000x420 ratio.
+  const coverContext = await browser.newContext({ viewport: { width: 1280, height: 538 }, colorScheme: 'dark', deviceScaleFactor: 2 });
+  const cover = await coverContext.newPage();
+  await cover.goto(`${BASE}/`);
+  await cover.waitForFunction(() => document.querySelectorAll('.plots .slab').length > 0, null, { timeout: 120000 });
+  await cover.evaluate(() => document.fonts.ready);
+  await cover.addStyleTag({ content: `
+    .desk, .colophon, .skip, .sky-switch, .tally { display: none !important; }
+    body, main { min-height: 0 !important; }
+    .ground { position: static !important; }
+    .seek { visibility: hidden; }
+    .cover-line { padding: 6px 32px 0; height: 247px; display: flex; flex-direction: column; justify-content: center; }
+    .cover-line p { font: italic 500 2.6rem/1.2 var(--hers); white-space: pre-line; }
+    .cover-line span { font: 800 0.8rem/1 var(--says); text-transform: uppercase; letter-spacing: 0.09em; color: var(--chalk-dim); margin-top: 16px; }` });
+  await cover.evaluate(() => {
+    const s = document.createElement('section');
+    s.className = 'cover-line';
+    const p = document.createElement('p');
+    p.textContent = '“Don’t treat your content like a graveyard.\nTreat it like a library.”';
+    const who = document.createElement('span');
+    who.textContent = 'Mona Andrei, on the poster she made in May 2026';
+    s.append(p, who);
+    document.querySelector('main').prepend(s);
+  });
+  await cover.waitForTimeout(500);
+  await cover.screenshot({ path: path.join(OUT, 'cover.png'), timeout: 120000 });
+  await coverContext.close();
   await browser.close();
 
   const webm = fs.readdirSync(RAW).filter((f) => f.endsWith('.webm')).map((f) => path.join(RAW, f))[0];
