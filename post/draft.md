@@ -46,7 +46,7 @@ Live page: [X: public URL once Mom has said yes to hosting her passages]
 
 Things to try:
 
-1. Type a couple of sentences about a kitchen disaster. In the recording I typed "I tried a new recipe tonight and set off the smoke alarm twice. The kids ordered pizza before I had finished apologising to the neighbours." Those are my test sentences, not hers. What comes back is hers: five pieces from 2014 and 2016, starting with the one about why she should never try to cook red meat again.
+1. Type a couple of sentences about a kitchen disaster. In the recording I typed "I tried a new recipe tonight and set off the smoke alarm twice. The kids ordered pizza before I had finished apologising to the neighbours." Those are my test sentences, not hers. What comes back is hers: five pieces written between 2013 and 2016, starting with the one about why she should never try to cook red meat again.
 2. Type something a humour writer in Montreal has probably never covered. I used the Treaty of Westphalia. You get "Nothing close."
 3. Turn your Wi-Fi off and type another line. It still answers.
 4. Click any tombstone along the bottom, or type part of a title in the search box. You get that piece and the three closest to it, any of which could link to it.
