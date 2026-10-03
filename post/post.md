@@ -16,7 +16,7 @@ I built her a social media scheduler. It had a landing page and a logo and it ra
 
 This weekend I built what she asked for the first time. It is called **The Moxie Library**, and it is a single web page.
 
-![The desk, with a draft on the left and three of her older pieces on the right](ASSET_found.png)
+![The desk with two test sentences on the left, and her 2014 piece about cooking red meat coming back on the right. Sixteen years of slabs run along the bottom.](https://moxie-library.vercel.app/press/found.png)
 
 On the left is a sheet of paper. She writes a draft there, or pastes one. When she pauses, the page looks through everything she has published and brings back the pieces on the same subject. Each one comes with her own paragraph quoted, where it ran, how many years ago, and a button that copies a link she can paste straight into WordPress or Substack.
 
@@ -36,13 +36,15 @@ Then I counted the links she had made by hand from one of her pieces to another.
 
 Left to memory, a writer links to what she wrote last week. The poster was right, and it was more right than she knew: three of the six pieces on her tombstones are in the library, and all three are in the ground.
 
-![Sixteen years of slabs. Grey ones are tombstones.](ASSET_ground.png)
+![Sixteen years of her writing drawn as slabs by year. The grey round-topped ones are tombstones: pieces nothing else of hers links to.](https://moxie-library.vercel.app/press/ground.png)
 
 ## Demo
 
-Live page: [X: public URL once Mom has said yes to hosting her passages]
+Live page: **[moxie-library.vercel.app](https://moxie-library.vercel.app)**
 
-[X: 60 second screen recording]
+My mom said yes to being the example, and to the page quoting her. Her text is hers, every quoted passage links back to where she published it, and the page asks search engines not to index it, so it does not compete with her own blog.
+
+![A short recording: two sentences typed, five of her pieces arriving, then a subject she has never covered](https://moxie-library.vercel.app/press/demo.gif)
 
 Things to try:
 
@@ -69,7 +71,7 @@ When she pauses typing, the draft is cut into passages the same way, each one is
 
 **I picked the model by testing three on her own links.** I ran all-MiniLM, nomic-embed-text and EmbeddingGemma through Ollama on my laptop's GPU. On an early version of the test described below they scored 7, 10 and 9 of 19, which is inside the noise. Then I tried the best scorer, nomic-embed-text, in the runtime the page uses: over a second per passage on a CPU. The smallest took 78 ms. So the smallest shipped.
 
-**A second open model picks one line per piece.** Gemma 3 4B, running locally through Ollama, reads each piece and proposes the one sentence most worth quoting. Then a string comparison decides. The line is kept only if it can be found word for word in the piece, and what gets stored is the span cut from her text, not Gemma's retyping of it. [X: asked N, kept N, thrown out N because they were not word for word hers]. "No line" is an allowed answer.
+**A second open model picks one line per piece.** Gemma 3 4B, running locally through Ollama, reads each piece and proposes the one sentence most worth quoting. Then a string comparison decides. The line is kept only if it can be found word for word in the piece, and what gets stored is the span cut from her text, not Gemma's retyping of it. So far it has been asked about 319 pieces. 277 lines were kept, 54 of them only after one correction. 42 were thrown out: 9 were not word for word hers, 8 were the wrong length, 23 ran on past the limit, and twice it said there was no line, which is an allowed answer. The other 384 pieces have not been asked yet, because my laptop's GPU fell over halfway through the run. The page shows a line only where one was kept.
 
 **One bug worth passing on.** transformers.js 4.3 loaded the model from local files and then failed with `this.tokenizer is not a function`. It checks whether tokenizer files exist only when the local model path is not a full URL. I had passed `new URL('./models/', location).href`. Passing `.pathname` instead fixed it.
 
@@ -117,7 +119,7 @@ Where would closed have been better? Probably on raw accuracy. I did not run a c
 
 ### What she said
 
-[X: Mom's reaction, in her words, after she uses it]
+Nothing yet. She said yes to being the example, but she has not sat down with it, so there is no quote here. I would rather leave that blank than write one for her, which is also the rule the page follows.
 
 ### What it cannot do
 

@@ -35,7 +35,9 @@ n = lambda v: f"{v:,}"
 # (label, expected text, pattern). The pattern matches the claim wherever it is
 # phrased this way; its one capture group must equal the expected text.
 CLAIMS = [
-    ("pieces in the library", n(stats["pieces"]), r"Pieces in the library \| (\d+)|\b(\d{3}) pieces\b"),
+    # "asked about N pieces" and "the other N pieces" belong to the Gemma claims below.
+    ("pieces in the library", n(stats["pieces"]),
+     r"Pieces in the library \| (\d+)|(?<!about )(?<!other )\b(\d{3}) pieces\b"),
     ("pieces, 'of 710' form", n(stats["pieces"]), r"\bof (?:your |her |the )?(7\d\d)\b(?! Moxie)"),
     ("never linked, all outlets", n(stats["pieces_never_linked_any_outlet"]), r"\b(\d{3}) of (?:your |her |the )?710\b"),
     ("Moxie-Dude posts", n(stats["moxie_posts"]), r"\b(\d{3}) (?:blog )?posts\b"),
@@ -64,7 +66,23 @@ CLAIMS = [
     ("fused, not shipped", n(fused["top5"]), r"(?:keyword search|fusing the two) \((\d+) of 19\)"),
     ("requests to fetch her blog", n(-(-stats["moxie_posts"] // 100)), r"came down in (\w+) requests"),
 ]
-WORDS = {"seven": "7"}          # numbers the prose spells out
+WORDS = {"seven": "7", "twice": "2", "once": "1"}          # numbers the prose spells out
+
+# The Gemma pull-line step, counted by ship_index.py from the extraction log.
+lines_file = ROOT / "data" / "build" / "pull_lines_summary.json"
+if lines_file.exists():
+    lines = json.loads(lines_file.read_text(encoding="utf-8"))
+    CLAIMS += [
+        ("Gemma: pieces asked", n(lines["asked"]), r"asked about (\d+) pieces"),
+        ("Gemma: lines kept", n(lines["kept"]), r"(\d+) lines were kept|(\d+) verified lines"),
+        ("Gemma: kept after a correction", n(lines["kept_after_one_correction"]), r"(\d+) of them only after one correction"),
+        ("Gemma: thrown out", n(lines["asked"] - lines["kept"]), r"(\d+) were thrown out"),
+        ("Gemma: not hers", n(lines["not_hers"]), r"(\d+) were not word for word hers"),
+        ("Gemma: wrong length", n(lines["wrong_length"]), r"(\d+) were the wrong length"),
+        ("Gemma: cut off", n(lines["cut_off"]), r"(\d+) ran on past the limit"),
+        ("Gemma: said none", n(lines["model_said_none"]), r"(\w+) it said there was no line"),
+        ("Gemma: not yet asked", n(lines["not_yet_asked"]), r"other (\d+) pieces have not been asked"),
+    ]
 REQUIRED_IN_README = {"pieces in the library", "never linked, all outlets", "Moxie-Dude posts", "backward links",
                       "within 30 days, table", "over a year", "newest first", "keyword search", "shipped model"}
 # Figures that were true of an earlier build and must not come back.

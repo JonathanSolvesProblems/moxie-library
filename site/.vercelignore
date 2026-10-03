@@ -1,0 +1,2 @@
+# Deploy everything in this folder, including the model, runtime and data
+# that the repository's .gitignore keeps out of git.

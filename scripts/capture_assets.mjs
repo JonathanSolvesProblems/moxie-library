@@ -2,7 +2,7 @@
 // silent video. Nothing here is staged data; it drives the same page and the
 // same library a visitor gets.
 //
-//   node scripts/capture_assets.mjs
+//   node scripts/capture_assets.mjs [--url https://deployed.example]
 import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,8 +22,12 @@ const PORT = 4183;
 const TOPIC = 'I tried a new recipe tonight and set off the smoke alarm twice. The kids ordered pizza before I had finished apologising to the neighbours.';
 const NEW_SUBJECT = 'The Treaty of Westphalia in 1648 ended the Thirty Years War and is often cited as the origin of the modern system of sovereign states.';
 
-const server = spawn(process.execPath, [path.join(ROOT, 'scripts', 'serve.mjs'), String(PORT)], { stdio: 'pipe' });
-await new Promise((resolve) => server.stdout.once('data', resolve));
+// With --url the recording is made from the deployed page, the one a reader opens.
+const urlAt = process.argv.indexOf('--url');
+const LIVE = urlAt > -1 ? process.argv[urlAt + 1].replace(/\/$/, '') : null;
+const server = LIVE ? null : spawn(process.execPath, [path.join(ROOT, 'scripts', 'serve.mjs'), String(PORT)], { stdio: 'pipe' });
+if (server) await new Promise((resolve) => server.stdout.once('data', resolve));
+const BASE = LIVE ?? `http://localhost:${PORT}`;
 const browser = await chromium.launch();
 const context = await browser.newContext({
   viewport: { width: 1280, height: 720 }, colorScheme: 'dark',
@@ -39,7 +43,7 @@ const settled = async (pattern) => {
 
 try {
   const t0 = Date.now();
-  await page.goto(`http://localhost:${PORT}/`);
+  await page.goto(`${BASE}/`);
   await page.waitForFunction(() => document.getElementById('engine').dataset.state === 'ready', null, { timeout: 180000 });
   const readyAt = (Date.now() - t0) / 1000;
   await page.waitForTimeout(1500);
@@ -64,7 +68,7 @@ try {
   await settled('Nothing close');
   await shot('nothing-close.png');
 
-  await page.locator('.plots .slab--tomb').nth(300).click();
+  await page.locator('.plots .slab--tomb').nth(60).click();
   await settled('^From ');
   await shot('slab.png');
   console.log('slab:', await page.locator('#finds-title').textContent(), '|', await page.locator('.find__title').first().textContent());
@@ -88,5 +92,5 @@ try {
   await browser.close().catch(() => {});
   process.exitCode = 1;
 } finally {
-  server.kill();
+  server?.kill();
 }

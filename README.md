@@ -3,6 +3,8 @@
 Everything my mom has published, in one place, with a desk that points her back at what she
 already wrote.
 
+Live: **[moxie-library.vercel.app](https://moxie-library.vercel.app)**
+
 Built for the DEV Hacktoberfest Weekend Challenge: Build for a Friend, 2 to 4 October 2026.
 
 ## Who it is for
@@ -23,7 +25,12 @@ This is the thing she asked for.
   her own passage quoted and a link she can copy into WordPress or Substack.
 - **The ground.** Every piece is drawn as a slab along the bottom of the window, by year. A piece
   that nothing else of hers links to is a tombstone. A piece that something links to is a book.
-  Click one to see it and the pieces closest to it.
+  Click one, or type part of its title in the search box, to see it and the pieces closest to it.
+- **One line per piece.** Gemma 3 4B, running locally through Ollama, proposes the sentence most
+  worth quoting from each piece. A string comparison decides: the line is kept only if it is
+  found word for word in that piece. So far it has been asked about 319 pieces and 277 lines
+  were kept, 54 of them only after one correction. The run stopped when my laptop's GPU fell
+  over, so the other 384 pieces have not been asked yet.
 - **It says when there is nothing.** If no piece is close to the draft, the page says the subject
   is new instead of padding the list.
 
@@ -92,7 +99,8 @@ These figures are computed from the exact vectors the page loads, not from a dif
 
 - It matches subjects, not jokes. It cannot tell whether a link would be welcome.
 - It reads passages of about 120 words, so a one-line aside can slip past.
-- It only knows what was public on those three outlets when the library was built.
+- It only knows what was public on those three outlets when the library was built. Three more
+  outlets named on her poster would not let me read them.
 - The "nothing close" cut-off is the level that 19 in 20 of her own pieces clear against her
   earlier work. It is a rule taken from her archive, not a guarantee.
 
@@ -105,10 +113,13 @@ python scripts/build_library.py          # merge, cut into passages, count
 node scripts/build_index.mjs             # embed with the model the page ships
 uv run --python 3.12 --with numpy scripts/eval_shipped.py all-minilm-l6-v2-q8
 python scripts/ship_index.py all-minilm-l6-v2-q8
+python scripts/extract_pull_lines.py     # optional: Gemma 3 via Ollama, resumable
 node scripts/vendor.mjs                  # copy the runtime and model beside the page
 node scripts/serve.mjs                   # http://localhost:4173
 node scripts/check_site.mjs              # the page's promises, checked in a real browser
 python scripts/check_claims.py           # this file's numbers, checked against the data
+node scripts/capture_assets.mjs          # screenshots and a short video for the post
+node scripts/capture_broll.mjs           # 1920x1080 clips for the demo video, into broll/
 ```
 
 Her writing is her copyright. The fetched text and the built `site/data/` are not in this repo;
@@ -118,5 +129,5 @@ the scripts rebuild them from her public pages.
 
 [transformers.js](https://github.com/huggingface/transformers.js) and ONNX Runtime Web (Apache-2.0),
 [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) (Apache-2.0),
-[Ollama](https://github.com/ollama/ollama) (MIT) for the model comparison on my GPU,
+[Ollama](https://github.com/ollama/ollama) (MIT) and [Gemma 3](https://ai.google.dev/gemma) for the pull lines and the model comparison,
 Bricolage Grotesque and Literata (SIL Open Font License).

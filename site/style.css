@@ -119,7 +119,7 @@ html { font-size: 17px; }
 
 body {
   margin: 0;
-  min-height: 100dvh;
+  min-height: calc(100dvh / var(--zoom));
   background: var(--sky);
   color: var(--chalk);
   font-family: var(--says);
@@ -151,8 +151,8 @@ ul, ol { list-style: none; }
 }
 /* Masthead plus desk plus ground fill the window exactly, so the ground sits
    at the bottom edge whether the desk is empty or full. */
-:root { --mast: 76px; }
-main { display: flex; flex-direction: column; min-height: calc(100dvh - var(--mast)); }
+:root { --mast: 76px; --slab-k: 1; --zoom: 1; }
+main { display: flex; flex-direction: column; min-height: calc(100dvh / var(--zoom) - var(--mast)); }
 main > .desk { flex: 1 0 auto; }
 .wordmark {
   font-size: var(--t-mark); font-weight: 800; font-stretch: 78%;
@@ -196,7 +196,7 @@ main > .desk { flex: 1 0 auto; }
 .sheet__head h2 { font-size: var(--t-lead); font-weight: 700; font-stretch: 85%; }
 
 #draft {
-  width: 100%; height: 25vh; min-height: 7em; margin-top: var(--u);
+  width: 100%; height: calc(25vh / var(--zoom)); min-height: 7em; margin-top: var(--u);
   border: 0; outline: 0; resize: vertical; background: transparent; color: var(--ink);
   font: 400 1.06rem/1.65 var(--hers);
 }
@@ -252,8 +252,10 @@ main > .desk { flex: 1 0 auto; }
   animation-delay: calc(var(--n, 0) * 70ms);
   transform-origin: 20px 100%;
 }
+/* The slab keeps the left column to itself however many rows the card has. */
+.find > :not(.find__slab) { grid-column: 2; }
 .find__slab {
-  grid-row: 1 / span 5; align-self: start; width: 30px; height: 46px;
+  grid-column: 1; grid-row: 1 / span 6; align-self: start; width: 30px; height: 46px;
   background: var(--c); border: var(--edge) solid var(--line);
   border-radius: var(--r-book);
 }
@@ -340,20 +342,20 @@ button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); o
 }
 .year { flex: none; }
 .year__plot {
-  display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, 18px);
-  gap: 3px 2px; align-items: end;
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, calc(18px * var(--slab-k)));
+  gap: 3px calc(2px * var(--slab-k)); align-items: end;
   border-bottom: var(--edge) solid var(--chalk-dim); padding-bottom: 1px;
 }
 .year__label { display: block; font-size: 0.7rem; color: var(--chalk-dim); margin-top: 2px; letter-spacing: 0.02em; }
 
 .slab {
-  display: block; width: 5px; height: var(--h, 12px);
+  display: block; width: calc(5px * var(--slab-k)); height: calc(var(--h, 12) * 1px * var(--slab-k));
   background: var(--c, var(--stone)); border-radius: 1px;
   transform-origin: 50% 100%;
 }
-.slab--tomb { background: var(--stone); border-radius: 3px 3px 0 0; }
+.slab--tomb { background: var(--stone); border-radius: calc(3px * var(--slab-k)) calc(3px * var(--slab-k)) 0 0; }
 .slab--lit { background: var(--lamp); outline: 1.5px solid var(--line); animation: hop var(--settle) var(--spring) both; position: relative; z-index: 1; }
-.slab--key { width: 8px; height: 14px; flex: none; }
+.slab--key { width: 8px; height: 14px; flex: none; --slab-k: 1; }
 .slab--key.slab--tomb { border-radius: 4px 4px 0 0; }
 .slab--key.slab--book { background: var(--moxie); }
 .plots .slab { cursor: pointer; }
@@ -367,6 +369,8 @@ button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); o
 }
 .colophon h2 { color: var(--chalk); font-size: var(--t-body); font-weight: 700; margin-bottom: var(--u); }
 .colophon b { color: var(--chalk); font-weight: 650; }
+.colophon__credit { grid-column: 1 / -1; border-top: var(--edge) solid var(--chalk-dim); padding-top: calc(var(--u) * 4); max-width: 90ch; }
+.colophon a { color: var(--chalk); text-underline-offset: 3px; }
 
 .tip {
   position: fixed; z-index: 5; pointer-events: none; max-width: 300px;
@@ -395,6 +399,14 @@ button.pick:hover, button.pick:focus-visible { background: var(--paper-shade); o
   .ground, .colophon { padding-inline: calc(var(--u) * 4); }
   .colophon { grid-template-columns: minmax(0, 1fr); gap: calc(var(--u) * 5); }
   .find__why { margin-left: 0; text-align: left; }
+}
+
+/* A big monitor, or a 1080p recording: the same picture, drawn one and a half
+   times larger. Viewport units are divided by the zoom so the ground still
+   lands on the bottom edge. */
+@media (min-width: 1700px) and (min-height: 950px) {
+  :root { --zoom: 1.5; }
+  body { zoom: 1.5; }
 }
 
 @media (max-height: 600px) { .ground { position: static; } .sheet { position: static; } }

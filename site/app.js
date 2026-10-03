@@ -266,9 +266,11 @@ function setEngineReady(ms, passages) {
   const e = $('engine');
   e.dataset.state = 'ready';
   const name = lib.meta.model.split('/').pop();
-  e.textContent = ms == null
+  const said = ms == null
     ? `Reader awake: ${name}, an open model running inside this tab.`
     : `Read ${plural(passages, 'passage', 'passages')} in ${Math.round(ms)} ms with ${name}, inside this tab.`;
+  // The browser's own report of the connection. Offline is where the claim gets tested.
+  e.textContent = navigator.onLine ? said : `${said} You are offline, and it still answered.`;
 }
 
 // ---- the ground ------------------------------------------------------------
@@ -287,7 +289,7 @@ function drawGround() {
       const p = lib.pieces[i];
       const s = el('i', `slab ${p.from.length ? 'slab--book' : 'slab--tomb'}`);
       s.dataset.i = i;
-      s.style.setProperty('--h', `${Math.round(7 + Math.min(p.words, 1100) / 100)}px`);
+      s.style.setProperty('--h', Math.round(7 + Math.min(p.words, 1100) / 100));   // unitless: CSS scales it
       s.style.setProperty('--c', `var(--${OUTLET[p.outlet].key})`);
       plot.append(s);
     }
@@ -302,9 +304,11 @@ function drawGround() {
     tip.replaceChildren(el('b', '', p.title), `${OUTLET[p.outlet].short} · ${monthYear(p.date)} · ${p.from.length ? 'on the shelf' : 'in the ground'}`);
     if (p.line) tip.append(el('q', '', p.line));
     tip.hidden = false;
-    const x = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8);
+    // On a large screen the body is zoomed, so pointer coordinates are divided by it.
+    const z = parseFloat(getComputedStyle(document.body).zoom) || 1;
+    const x = Math.min(e.clientX / z + 12, innerWidth / z - tip.offsetWidth - 8);
     tip.style.left = `${Math.max(8, x)}px`;
-    tip.style.top = `${e.clientY - tip.offsetHeight - 12}px`;
+    tip.style.top = `${e.clientY / z - tip.offsetHeight - 12}px`;
   });
   plots.addEventListener('pointerleave', () => { tip.hidden = true; });
   plots.addEventListener('click', (e) => {

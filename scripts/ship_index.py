@@ -38,19 +38,26 @@ lines_file = build / "pull_lines.json"
 lines = None
 if lines_file.exists():
     recs = read(lines_file)
-    kept = {r["id"]: r["line"] for r in recs if r.get("line")}
+    # A call that never got an answer (timeout, server error) is not an answer
+    # of "no line". It is left out of the count and asked again on the next run.
+    answered = [r for r in recs if not str(r["verdict"]).startswith("error")]
+    kept = {r["id"]: r["line"] for r in answered if r.get("line")}
     for p in pieces:
         if p["id"] in kept:
             p["line"] = kept[p["id"]]
     lines = {
         "model": "gemma3:4b",
-        "asked": len(recs),
+        "pieces_with_text": sum(1 for p in pieces if p["cn"] > 0),
+        "asked": len(answered),
         "kept": len(kept),
-        "not_hers": sum(1 for r in recs if r["verdict"] == "not hers"),
-        "wrong_length": sum(1 for r in recs if str(r["verdict"]).startswith("hers, but")),
-        "model_said_none": sum(1 for r in recs if r["verdict"] == "model said none"),
-        "failed_calls": sum(1 for r in recs if str(r["verdict"]).startswith("error")),
+        "kept_after_one_correction": sum(1 for r in answered if r.get("line") and "first_offer" in r),
+        "not_hers": sum(1 for r in answered if r["verdict"] == "not hers"),
+        "wrong_length": sum(1 for r in answered if str(r["verdict"]).startswith("hers, but")),
+        "cut_off": sum(1 for r in answered if r["verdict"] == "reply cut off"),
+        "model_said_none": sum(1 for r in answered if r["verdict"] == "model said none"),
+        "not_yet_asked": sum(1 for p in pieces if p["cn"] > 0) - len(answered),
     }
+    (build / "pull_lines_summary.json").write_text(json.dumps(lines, indent=1), encoding="utf-8")
 
 library = {
     "meta": meta,

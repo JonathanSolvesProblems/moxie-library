@@ -1,7 +1,7 @@
 // Drive the real page in a real browser and fail loudly if any promise the
 // page makes is not kept.
 //
-//   node scripts/check_site.mjs [--shots]
+//   node scripts/check_site.mjs [--shots] [--url https://deployed.example]
 //
 // Checks: the page loads with no console errors, the model loads from local
 // files, no request leaves this origin, a draft built from one of her own
@@ -26,8 +26,11 @@ const check = (name, ok, detail = '') => {
   console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? '  (' + detail + ')' : ''}`);
 };
 
-const server = spawn(process.execPath, [path.join(ROOT, 'scripts', 'serve.mjs'), String(PORT)], { stdio: 'pipe' });
-await new Promise((resolve) => server.stdout.once('data', resolve));
+// With --url the same checks run against a deployed copy instead of a local server.
+const urlAt = process.argv.indexOf('--url');
+const LIVE = urlAt > -1 ? process.argv[urlAt + 1].replace(/\/$/, '') : null;
+const server = LIVE ? null : spawn(process.execPath, [path.join(ROOT, 'scripts', 'serve.mjs'), String(PORT)], { stdio: 'pipe' });
+if (server) await new Promise((resolve) => server.stdout.once('data', resolve));
 
 const browser = await chromium.launch();
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, colorScheme: 'dark' });
@@ -37,7 +40,8 @@ page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
 page.on('pageerror', (e) => errors.push(String(e)));
 page.on('request', (r) => requests.push(r.url()));
 const shot = async (name, opts = {}) => { if (SHOTS) await page.screenshot({ path: path.join(shotDir, name), ...opts }); };
-const origin = `http://localhost:${PORT}`;
+const origin = LIVE ?? `http://localhost:${PORT}`;
+console.log(`checking ${origin}`);
 
 try {
   await page.goto(origin + '/', { waitUntil: 'load' });
@@ -126,7 +130,7 @@ try {
   await shot('99-failure.png');
 } finally {
   await browser.close();
-  server.kill();
+  server?.kill();
 }
 
 const failed = results.filter((r) => !r.ok);

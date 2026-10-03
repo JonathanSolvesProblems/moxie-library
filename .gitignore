@@ -21,3 +21,9 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Raw footage for the demo video
+broll/
+_videos/
+*.webm
+*.edit-plan.json
