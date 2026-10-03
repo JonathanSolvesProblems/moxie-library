@@ -369,6 +369,41 @@ function starters() {
   $('starters').hidden = false;
 }
 
+// Find a piece by its title. The slabs are too small and too many to tab
+// through, so this is the keyboard's way to open any one of them.
+function titleSearch() {
+  const input = $('seek'), list = $('seek-list');
+  const MAX = 7;
+  const run = () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 2) { list.hidden = true; list.replaceChildren(); light([]); return; }
+    const hits = [];
+    lib.pieces.forEach((p, i) => { if (p.title.toLowerCase().includes(q)) hits.push(i); });
+    light(hits.slice(0, 80));
+    const rows = hits.slice(0, MAX).map((i) => {
+      const p = lib.pieces[i];
+      const li = el('li');
+      const b = el('button', 'pick');
+      b.type = 'button';
+      b.append(el('b', '', p.title), `${OUTLET[p.outlet].tiny} · ${monthYear(p.date)} · ${p.from.length ? 'on the shelf' : 'in the ground'}`);
+      b.addEventListener('click', () => { list.hidden = true; openPiece(i); });
+      li.append(b);
+      return li;
+    });
+    if (!hits.length) rows.push(el('li', 'pick pick--none', `No title contains “${input.value.trim()}”.`));
+    else if (hits.length > MAX) rows.push(el('li', 'pick pick--none', `${hits.length - MAX} more. Keep typing to narrow it down.`));
+    list.replaceChildren(...rows);
+    list.hidden = false;
+  };
+  input.addEventListener('input', run);
+  input.addEventListener('focus', () => { if (input.value.trim().length >= 2) run(); });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { input.value = ''; run(); }
+    if (e.key === 'Enter') { const first = list.querySelector('button'); if (first) first.click(); }
+  });
+  document.addEventListener('click', (e) => { if (!e.target.closest('.seek')) list.hidden = true; });
+}
+
 // ---- start -----------------------------------------------------------------
 function theme() {
   const root = document.documentElement, btn = $('theme');
@@ -415,6 +450,7 @@ async function start() {
   writeFacts();
   drawGround();
   starters();
+  titleSearch();
 
   worker = new Worker('embed-worker.js', { type: 'module' });
   worker.onmessage = ({ data }) => {

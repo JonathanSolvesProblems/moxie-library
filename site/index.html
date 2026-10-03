@@ -8,6 +8,7 @@
   <meta name="color-scheme" content="dark light">
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/literata.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script>
     // Theme is set before first paint so the page never flashes the wrong sky.
@@ -57,12 +58,17 @@
 
     <section class="ground" aria-labelledby="ground-title">
       <div class="ground__head">
-        <h2 id="ground-title"><span id="buried">–</span> of your <span id="total">–</span> pieces have nothing of yours pointing at them</h2>
+        <h2 id="ground-title"><span id="buried">…</span> of your <span id="total">…</span> pieces have nothing of yours pointing at them</h2>
         <ul class="legend" aria-label="What the shapes and colours mean">
           <li><i class="slab slab--tomb slab--key" aria-hidden="true"></i> in the ground: nothing you wrote links to it</li>
           <li><i class="slab slab--book slab--key" aria-hidden="true"></i> on the shelf: something does</li>
         </ul>
         <ul class="outlets" id="outlets" aria-label="Where the pieces were published"></ul>
+        <div class="seek">
+          <label class="visually-hidden" for="seek">Find a piece by its title</label>
+          <input id="seek" type="search" autocomplete="off" placeholder="Find a piece by title" aria-controls="seek-list">
+          <ul class="seek__list" id="seek-list" hidden></ul>
+        </div>
       </div>
       <div class="plots" id="plots" role="img" aria-label="Every published piece by year. Most are drawn as tombstones because nothing links to them."></div>
     </section>

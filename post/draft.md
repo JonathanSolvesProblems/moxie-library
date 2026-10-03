@@ -46,10 +46,10 @@ Live page: [X: public URL once Mom has said yes to hosting her passages]
 
 Things to try:
 
-1. Click one of the three titles under the sheet. It pastes the opening of a piece she published this summer, and the page should find that piece and its relatives.
-2. Type a few sentences about something a humour writer in Montreal has probably never covered. I used the Treaty of Westphalia. You get "Nothing close."
+1. Type a couple of sentences about a kitchen disaster. In the recording I typed "I tried a new recipe tonight and set off the smoke alarm twice. The kids ordered pizza before I had finished apologising to the neighbours." Those are my test sentences, not hers. What comes back is hers: five pieces from 2014 and 2016, starting with the one about why she should never try to cook red meat again.
+2. Type something a humour writer in Montreal has probably never covered. I used the Treaty of Westphalia. You get "Nothing close."
 3. Turn your Wi-Fi off and type another line. It still answers.
-4. Click any tombstone along the bottom. You get that piece and the three closest to it, any of which could link to it.
+4. Click any tombstone along the bottom, or type part of a title in the search box. You get that piece and the three closest to it, any of which could link to it.
 
 ## Code
 
@@ -99,7 +99,7 @@ The second one is the first paragraph of this post. I built the scheduler.
 
 ### Checks that fail out loud
 
-`check_site.mjs` opens the page in real Chromium and checks what the page promises: the model loads from local files, a passage of hers finds its own piece first, the quoted passage is word for word from the library, the Treaty of Westphalia gets "Nothing close", the page still answers with the network switched off, and not one request leaves the page's own origin. 13 checks.
+`check_site.mjs` opens the page in real Chromium and checks what the page promises: the model loads from local files, a passage of hers finds its own piece first, the quoted passage is word for word from the library, the Treaty of Westphalia gets "Nothing close", the page still answers with the network switched off, any piece can be opened from the keyboard, and not one request leaves the page's own origin. 14 checks.
 
 `check_claims.py` reads every number in the README and in this post and compares it with the data. On its first run it caught a stale word count in my own plan.
 

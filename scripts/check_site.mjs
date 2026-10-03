@@ -91,6 +91,15 @@ try {
   check('clicking a slab opens that piece', (await page.locator('.find').count()) >= 1, await page.locator('#finds-title').textContent());
   await shot('04-slab.png');
 
+  // 5. Keyboard only: find a piece by its title and open it.
+  await page.focus('#seek');
+  await page.keyboard.type('pizza');
+  await page.waitForSelector('#seek-list button', { timeout: 10000 });
+  const offered = await page.locator('#seek-list button b').first().textContent();
+  await page.keyboard.press('Enter');
+  await page.waitForFunction((t) => document.querySelector('.find__title')?.textContent === t, offered, { timeout: 20000 });
+  check('a piece can be found by title from the keyboard', /pizza/i.test(offered), offered);
+
   const foreign = requests.filter((u) => !u.startsWith(origin) && !u.startsWith('data:') && !u.startsWith('blob:'));
   check('no request left this origin', foreign.length === 0, foreign.slice(0, 3).join(' '));
   check('the page reports the same count', /server since you opened it: 0\./.test(await page.locator('#privacy').textContent()));
