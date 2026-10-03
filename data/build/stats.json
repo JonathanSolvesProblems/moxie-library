@@ -1,0 +1,30 @@
+{
+ "pieces": 710,
+ "outlets": {
+  "Moxie-Dude": 650,
+  "Westmount Magazine": 37,
+  "Single Moms with Moxie (Substack)": 23
+ },
+ "first_date": "2010-05-07",
+ "last_date": "2026-08-07",
+ "words": 353232,
+ "passages": 2809,
+ "moxie_posts": 650,
+ "moxie_words": 300512,
+ "moxie_first": "2010-05-07",
+ "moxie_last": "2026-08-07",
+ "moxie_peak_year": [
+  "2013",
+  146
+ ],
+ "moxie_own_links": 192,
+ "moxie_backward_links": 179,
+ "moxie_backward_within_30_days": 150,
+ "moxie_backward_over_90_days": 19,
+ "moxie_backward_over_1_year": 9,
+ "moxie_posts_that_link_to_her_own": 107,
+ "moxie_posts_never_linked": 490,
+ "all_links_between_her_pieces": 228,
+ "cross_outlet_links": 8,
+ "pieces_never_linked_any_outlet": 526
+}

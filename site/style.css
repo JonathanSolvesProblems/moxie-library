@@ -1,0 +1,368 @@
+/*
+  The Moxie Library. Design code (full spec in .design/manifest.json).
+
+  Avoided on purpose: the content-tool look (white canvas, indigo gradient hero,
+  rows of stat cards, a calendar of scheduled posts) and the knowledge-tool look
+  (a dark graph of floating nodes).
+
+  1. Every piece is an upright slab: round-topped in the ground when nothing she
+     wrote links to it, flat-topped on a shelf when something does. Her poster
+     says the job is to move her writing from a graveyard to a library, and the
+     two objects share a silhouette.
+  2. The sky is her blog's own teal and the lit surfaces are her blog's own paper
+     and gold, because this is a room in a house she already built.
+  3. Colour belongs to the three places she publishes, plus one lamp colour that
+     only ever means "found for the draft on the desk".
+  4. Her words are set in a book face on lit paper. Everything the software says
+     is set in a grotesque on the dark. You can always tell whose sentence it is.
+  5. Things arrive with a hop and a settle and are otherwise still, because the
+     only event here is a buried piece coming back up.
+*/
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Literata";
+  src: url("fonts/literata.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Literata";
+  src: url("fonts/literata-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --says: "Bricolage Grotesque", "Trebuchet MS", "Segoe UI", sans-serif; /* the software's voice */
+  --hers: "Literata", Georgia, "Times New Roman", serif;                 /* her voice */
+
+  /* scale: 17px base, ratio 1.25 */
+  --t-small: 0.8rem;
+  --t-body: 1rem;
+  --t-lead: 1.25rem;
+  --t-head: 1.563rem;
+  --t-mark: 1.953rem;
+
+  --u: 4px;
+  --r-book: 3px;
+  --r-sheet: 14px;
+  --r-round: 999px;
+  --edge: 2px;
+
+  --quick: 160ms;
+  --settle: 520ms;
+  --spring: linear(0, 0.009, 0.035 2.1%, 0.141 4.4%, 0.723 12.9%, 0.938 16.7%, 1.017, 1.077, 1.121,
+    1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, 0.991,
+    0.977 51%, 0.974 53.8%, 0.975 57.1%, 0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1);
+
+  /* outlet colours for use on lit paper */
+  --moxie-on-paper: #17707C;
+  --westmount-on-paper: #B4492F;
+  --substack-on-paper: #6B3F78;
+}
+
+/* Dusk is home: the sky of her poster, in her blog's teal. */
+:root[data-theme="dusk"] {
+  color-scheme: dark;
+  --sky: #06414D;
+  --ground: #04303A;
+  --paper: #F2EDE8;
+  --paper-shade: #E3D9CC;
+  --ink: #10262B;
+  --ink-soft: #46595D;
+  --chalk: #F2EDE8;
+  --chalk-dim: #A9C2C3;
+  --line: #0B1F23;
+  --stone: #B9C4C0;
+  --lamp: #E7B866;
+  --lamp-on-paper: #8A5A12;
+  --moxie: #5CC2CE;
+  --westmount: #F0876B;
+  --substack: #C79AD6;
+}
+
+/* Morning: the same graveyard after sunrise. Designed, not inverted. */
+:root[data-theme="morning"] {
+  color-scheme: light;
+  --sky: #CDE7E3;
+  --ground: #B5D6C8;
+  --paper: #FBF8F3;
+  --paper-shade: #EDE5DA;
+  --ink: #10262B;
+  --ink-soft: #46595D;
+  --chalk: #10262B;
+  --chalk-dim: #35504F;
+  --line: #10262B;
+  --stone: #5A6966;
+  --lamp: #E0A53A;
+  --lamp-on-paper: #7A4E0B;
+  --moxie: #17707C;
+  --westmount: #B4492F;
+  --substack: #6B3F78;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--sky);
+  color: var(--chalk);
+  font-family: var(--says);
+  font-size: var(--t-body);
+  line-height: 1.45;
+  font-variant-numeric: lining-nums tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p, ul, ol { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+
+.visually-hidden, .skip:not(:focus) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.skip:focus {
+  position: fixed; top: 8px; left: 8px; z-index: 10;
+  background: var(--paper); color: var(--ink); padding: 10px 14px; border-radius: var(--r-round);
+}
+
+:focus-visible { outline: 3px solid var(--lamp); outline-offset: 3px; }
+
+/* ---- masthead ------------------------------------------------------------ */
+.mast {
+  display: flex; align-items: baseline; gap: calc(var(--u) * 5);
+  padding: calc(var(--u) * 5) calc(var(--u) * 8) calc(var(--u) * 3);
+}
+.wordmark {
+  font-size: var(--t-mark); font-weight: 800; font-stretch: 78%;
+  letter-spacing: -0.02em; line-height: 1;
+}
+.wordmark span { font-weight: 300; }
+.tally { color: var(--chalk-dim); font-size: var(--t-body); margin-right: auto; }
+
+.sky-switch {
+  display: inline-flex; align-items: center; gap: calc(var(--u) * 2);
+  min-height: 44px; padding: 0 calc(var(--u) * 4);
+  font: 600 var(--t-small)/1 var(--says);
+  color: var(--chalk); background: transparent;
+  border: var(--edge) solid var(--chalk-dim); border-radius: var(--r-round);
+  cursor: pointer; align-self: center;
+}
+.sky-switch:hover { border-color: var(--chalk); }
+.sky-switch__dot {
+  width: 14px; height: 14px; border-radius: 50%; background: var(--lamp);
+  transition: transform var(--settle) var(--spring);
+}
+:root[data-theme="morning"] .sky-switch__dot { transform: translateY(-3px) scale(1.15); }
+
+/* ---- the desk ------------------------------------------------------------ */
+.desk {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: calc(var(--u) * 8);
+  padding: calc(var(--u) * 3) calc(var(--u) * 8) calc(var(--u) * 12);
+  align-items: start;
+}
+
+.sheet {
+  background: var(--paper); color: var(--ink);
+  border: var(--edge) solid var(--line); border-radius: var(--r-sheet);
+  padding: calc(var(--u) * 5) calc(var(--u) * 6) calc(var(--u) * 4);
+  display: flex; flex-direction: column;
+  position: sticky; top: calc(var(--u) * 4);
+}
+.sheet:focus-within { outline: 3px solid var(--lamp); outline-offset: 3px; }
+.sheet__head { display: flex; align-items: center; justify-content: space-between; min-height: 44px; }
+.sheet__head h2 { font-size: var(--t-lead); font-weight: 700; font-stretch: 85%; }
+
+#draft {
+  width: 100%; height: 30vh; min-height: 8.5em; margin-top: var(--u);
+  border: 0; outline: 0; resize: vertical; background: transparent; color: var(--ink);
+  font: 400 1.06rem/1.65 var(--hers);
+}
+#draft::placeholder { color: var(--ink-soft); font-style: italic; opacity: 1; }
+
+.starters { border-top: var(--edge) dashed var(--paper-shade); padding-top: calc(var(--u) * 3); margin-top: var(--u); }
+.starters__label { display: block; font-size: var(--t-small); color: var(--ink-soft); margin-bottom: calc(var(--u) * 2); }
+.starters__row { display: flex; flex-wrap: wrap; gap: calc(var(--u) * 2); }
+
+.sheet__foot {
+  margin-top: calc(var(--u) * 3); font-size: var(--t-small); color: var(--ink-soft);
+  display: flex; align-items: center; gap: calc(var(--u) * 2); min-height: 20px;
+}
+.sheet__foot::before {
+  content: ""; width: 9px; height: 9px; border-radius: 50%; flex: none;
+  background: var(--paper-shade); border: 1.5px solid var(--ink-soft);
+}
+.sheet__foot[data-state="ready"]::before { background: var(--lamp); border-color: var(--line); }
+.sheet__foot[data-state="busy"]::before { background: var(--lamp); border-color: var(--line); animation: hop 700ms var(--spring) infinite; }
+.sheet__foot[data-state="broken"]::before { background: var(--westmount-on-paper); border-color: var(--line); }
+
+/* buttons: chunky, with a ledge that gives when pressed */
+.btn, .quiet {
+  font: 650 var(--t-small)/1 var(--says); cursor: pointer; color: var(--ink);
+  min-height: 44px; padding: 0 calc(var(--u) * 4); border-radius: var(--r-round);
+  border: var(--edge) solid var(--line); border-bottom-width: 5px;
+  background: var(--paper-shade);
+  display: inline-flex; align-items: center; gap: calc(var(--u) * 2); text-decoration: none;
+  transition: transform var(--quick) ease-out, border-bottom-width var(--quick) ease-out, margin-top var(--quick) ease-out;
+}
+.btn--lamp { background: var(--lamp); }
+.btn:hover, .quiet:hover { transform: translateY(-1px); }
+.btn:active, .quiet:active { border-bottom-width: var(--edge); margin-top: 3px; transform: none; }
+.btn:focus-visible, .quiet:focus-visible, .find a:focus-visible { outline-color: var(--lamp-on-paper); }
+.quiet { background: transparent; border-color: transparent; border-bottom-width: var(--edge); color: var(--ink-soft); }
+.quiet:hover { border-color: var(--ink-soft); }
+.btn--starter { font-weight: 500; text-align: left; line-height: 1.2; max-width: 100%; }
+.btn--starter span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---- what the library found ---------------------------------------------- */
+.finds__title { font-size: var(--t-head); font-weight: 750; font-stretch: 82%; letter-spacing: -0.01em; line-height: 1.1; min-height: 44px; display: flex; align-items: center; }
+.finds__note { color: var(--chalk-dim); max-width: 56ch; margin-top: var(--u); }
+.finds__note:empty { display: none; }
+.finds__list { display: grid; gap: calc(var(--u) * 5); margin-top: calc(var(--u) * 5); }
+
+.find {
+  background: var(--paper); color: var(--ink);
+  border: var(--edge) solid var(--line); border-radius: var(--r-sheet);
+  padding: calc(var(--u) * 4) calc(var(--u) * 5) calc(var(--u) * 4);
+  display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: calc(var(--u) * 4);
+  animation: arrive var(--settle) var(--spring) both;
+  animation-delay: calc(var(--n, 0) * 70ms);
+  transform-origin: 20px 100%;
+}
+.find__slab {
+  grid-row: 1 / span 5; align-self: start; width: 30px; height: 46px;
+  background: var(--c); border: var(--edge) solid var(--line);
+  border-radius: var(--r-book);
+}
+.find--tomb .find__slab { border-radius: 15px 15px var(--r-book) var(--r-book); background: var(--stone); box-shadow: inset 0 -8px 0 var(--c); }
+:root[data-theme="dusk"] .find--tomb .find__slab { background: #B9C4C0; }
+:root[data-theme="morning"] .find--tomb .find__slab { background: #C9D2CF; }
+
+.find__meta { font-size: var(--t-small); color: var(--ink-soft); font-weight: 500; }
+.find__meta b { color: var(--c); font-weight: 700; }
+.find__title { font-size: var(--t-lead); font-weight: 700; font-stretch: 88%; line-height: 1.15; margin: 2px 0 calc(var(--u) * 2); }
+.find__title a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--c); }
+.find__hers {
+  font: 400 1rem/1.6 var(--hers);
+  border-left: 4px solid var(--c); padding-left: calc(var(--u) * 3);
+  max-height: 9.6em; overflow: hidden; position: relative;
+}
+.find__hers p + p { margin-top: 0.5em; }
+.find__hers[data-open="true"] { max-height: none; }
+.find__hers:not([data-open="true"])[data-long="true"]::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 2.4em;
+  background: linear-gradient(to bottom, transparent, var(--paper));
+}
+.find__state { font-size: var(--t-small); color: var(--ink-soft); margin-top: calc(var(--u) * 2); }
+.find__state b { color: var(--ink); }
+.find__acts { display: flex; flex-wrap: wrap; gap: calc(var(--u) * 2); margin-top: calc(var(--u) * 3); align-items: center; }
+.find__why { font-size: var(--t-small); color: var(--ink-soft); margin-left: auto; max-width: 30ch; text-align: right; }
+
+.find--same { border-style: dashed; }
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(26px) scale(0.94, 0.9); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hop {
+  0% { transform: translateY(0) scale(1, 1); }
+  30% { transform: translateY(-7px) scale(0.9, 1.18); }
+  60% { transform: translateY(0) scale(1.15, 0.85); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+
+/* ---- the ground: sixteen years of slabs ----------------------------------
+   Always at the bottom of the window, the way the ground is, so the slab that
+   matches is seen lifting at the moment its card lands. */
+.ground {
+  position: sticky; bottom: 0; z-index: 3;
+  background: var(--ground); border-top: var(--edge) solid var(--line);
+  padding: calc(var(--u) * 3) calc(var(--u) * 8) calc(var(--u) * 2);
+}
+.ground__head { display: flex; flex-wrap: wrap; gap: var(--u) calc(var(--u) * 7); align-items: baseline; }
+.ground__head h2 { font-size: var(--t-lead); font-weight: 750; font-stretch: 82%; letter-spacing: -0.01em; line-height: 1.15; margin-right: auto; }
+.ground__head h2 span { color: var(--lamp); }
+:root[data-theme="morning"] .ground__head h2 span { color: var(--lamp-on-paper); }
+.legend, .outlets { display: flex; flex-wrap: wrap; gap: var(--u) calc(var(--u) * 4); font-size: var(--t-small); color: var(--chalk-dim); }
+.legend li, .outlets li { display: flex; align-items: end; gap: 6px; }
+.outlets li { align-items: center; }
+.outlets i { width: 11px; height: 11px; border-radius: 2px; background: var(--c); border: 1.5px solid var(--line); }
+.outlets b { color: var(--chalk); font-weight: 650; }
+
+.plots {
+  display: flex; align-items: end; gap: calc(var(--u) * 2);
+  margin-top: calc(var(--u) * 3); overflow-x: auto; scrollbar-width: thin;
+}
+.year { flex: none; }
+.year__plot {
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, 18px);
+  gap: 3px 2px; align-items: end;
+  border-bottom: var(--edge) solid var(--chalk-dim); padding-bottom: 1px;
+}
+.year__label { display: block; font-size: 0.7rem; color: var(--chalk-dim); margin-top: 2px; letter-spacing: 0.02em; }
+
+.slab {
+  display: block; width: 5px; height: var(--h, 12px);
+  background: var(--c, var(--stone)); border-radius: 1px;
+  transform-origin: 50% 100%;
+}
+.slab--tomb { background: var(--stone); border-radius: 3px 3px 0 0; }
+.slab--lit { background: var(--lamp); outline: 1.5px solid var(--line); animation: hop var(--settle) var(--spring) both; position: relative; z-index: 1; }
+.slab--key { width: 8px; height: 14px; flex: none; }
+.slab--key.slab--tomb { border-radius: 4px 4px 0 0; }
+.slab--key.slab--book { background: var(--moxie); }
+.plots .slab { cursor: pointer; }
+.plots .slab:hover { outline: 1.5px solid var(--chalk); }
+
+/* ---- colophon ------------------------------------------------------------ */
+.colophon {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: calc(var(--u) * 8);
+  background: var(--sky); border-top: var(--edge) solid var(--line); padding: calc(var(--u) * 8) calc(var(--u) * 8) calc(var(--u) * 12);
+  color: var(--chalk-dim); font-size: 0.92rem;
+}
+.colophon h2 { color: var(--chalk); font-size: var(--t-body); font-weight: 700; margin-bottom: var(--u); }
+.colophon b { color: var(--chalk); font-weight: 650; }
+
+.tip {
+  position: fixed; z-index: 5; pointer-events: none; max-width: 300px;
+  background: var(--paper); color: var(--ink); border: var(--edge) solid var(--line);
+  border-radius: 10px; padding: 6px 10px; font-size: var(--t-small); line-height: 1.3;
+}
+.tip b { display: block; font-weight: 700; }
+.tip q { display: block; margin-top: 4px; font: italic 400 0.86rem/1.35 var(--hers); }
+
+/* her pull line on an opened slab: her words, so her face */
+.find__line { font: italic 500 1.18rem/1.4 var(--hers); margin: 0 0 calc(var(--u) * 3); }
+.find__line::before { content: "\201C"; }
+.find__line::after { content: "\201D"; }
+
+/* ---- small screens ------------------------------------------------------- */
+@media (max-width: 920px) {
+  .mast { flex-wrap: wrap; padding-inline: calc(var(--u) * 4); }
+  .desk { grid-template-columns: minmax(0, 1fr); padding-inline: calc(var(--u) * 4); }
+  .sheet { position: static; }
+  .ground { position: static; }
+  .ground, .colophon { padding-inline: calc(var(--u) * 4); }
+  .colophon { grid-template-columns: minmax(0, 1fr); gap: calc(var(--u) * 5); }
+  .find__why { margin-left: 0; text-align: left; }
+}
+
+@media (max-height: 600px) { .ground { position: static; } .sheet { position: static; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

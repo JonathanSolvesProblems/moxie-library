@@ -1,0 +1,2508 @@
+[
+ {
+  "source": "https://www.moxie-dude.com/2012/03/09/an-open-letter-to-single-mothers-listen-to-the-voices-in-your-head/",
+  "target": "https://www.moxie-dude.com/2012/03/08/writing-is-a-gift/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 16,
+   "all-minilm (whole post)": 10,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 20,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 12,
+   "embeddinggemma (best passage)": 5
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2012/08/09/im-not-afraid-of-heights-im-afraid-of-falling/",
+  "target": "https://www.moxie-dude.com/2012/01/04/happy-new-year-and-a-story-about-my-biggest-accomplishment-of-2011/",
+  "gap_days": 218,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 3,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2012/08/18/when-raising-teenagers-doesnt-suck/",
+  "target": "https://www.moxie-dude.com/2012/03/27/raising-teenagers-it-does-get-better/",
+  "gap_days": 144,
+  "ranks": {
+   "BM25 keyword match": 20,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 10,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 9,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2012/11/02/pretend-post-and-friday-funny-its-a-two-for-one-because-everyone-loves-a-bargain/",
+  "target": "https://www.moxie-dude.com/2012/10/30/i-am-not-a-hypochondriac-and-thanks-apple-for-giving-me-the-tool-to-believe-that-i-have-eyeball-cancer/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2012/12/21/id-like-to-take-a-moment-to-thank-brad-pitt-for-disillusioning-gregs-common-sense-with-your-sense-of-scent/",
+  "target": "https://www.moxie-dude.com/2012/12/07/this-weeks-friday-funny-and-shopping-with-girls-vs-shopping-with-boys-yes-there-is-a-difference/",
+  "gap_days": 14,
+  "ranks": {
+   "BM25 keyword match": 34,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 10,
+   "nomic-embed-text (whole post)": 26,
+   "nomic-embed-text (best passage)": 31,
+   "embeddinggemma (whole post)": 24,
+   "embeddinggemma (best passage)": 12
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/01/11/this-weeks-friday-funny-is-brought-to-you-by-a-reflective-post-about-breasts-part-2/",
+  "target": "https://www.moxie-dude.com/2012/12/27/a-reflective-post-about-breasts-part-1/",
+  "gap_days": 15,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 8,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 20,
+   "nomic-embed-text (best passage)": 38,
+   "embeddinggemma (whole post)": 4,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/01/29/walk-a-mile-in-my-shoes-better-yet-drink-some-of-my-wine/",
+  "target": "https://www.moxie-dude.com/2013/01/25/this-weeks-friday-funny-is-brought-to-you-by-the-bitter-sweet-taste-of-birthday-cake/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 5,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 6,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/02/01/role-reversal-its-a-natural-phenomenon-apparently/",
+  "target": "https://www.moxie-dude.com/2013/01/09/no-pain-no-gain-unless-if-your-arm-is-broken/",
+  "gap_days": 23,
+  "ranks": {
+   "BM25 keyword match": 14,
+   "all-minilm (whole post)": 82,
+   "all-minilm (best passage)": 96,
+   "nomic-embed-text (whole post)": 80,
+   "nomic-embed-text (best passage)": 30,
+   "embeddinggemma (whole post)": 36,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/07/04/dating-almost-as-awkward-as-ok-nothing-is-more-awkward-than-dating/",
+  "target": "https://www.moxie-dude.com/2013/06/20/i-must-be-growing-up-because-being-single-has-a-whole-new-perspective-from-up-here/",
+  "gap_days": 14,
+  "ranks": {
+   "BM25 keyword match": 8,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 3,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 5,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/07/04/dating-almost-as-awkward-as-ok-nothing-is-more-awkward-than-dating/",
+  "target": "https://www.moxie-dude.com/2013/07/01/how-do-you-get-over-a-break-up-pull-up-a-chair-i-have-the-answer-to-this-one/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 3,
+   "all-minilm (best passage)": 7,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 6
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/07/09/dear-bill-gates-does-the-hamster-have-to-think-of-everything/",
+  "target": "https://www.moxie-dude.com/2013/05/17/how-i-love-my-dogs-let-me-count-the-ways-no-really-let-me-count-them/",
+  "gap_days": 53,
+  "ranks": {
+   "BM25 keyword match": 25,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 14,
+   "nomic-embed-text (best passage)": 7,
+   "embeddinggemma (whole post)": 29,
+   "embeddinggemma (best passage)": 5
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/07/11/yes-i-really-can-be-that-dumb-also-this-is-what-happens-when-you-really-believe-in-something-dont-judge-me/",
+  "target": "https://www.moxie-dude.com/2013/07/10/this-is-not-a-real-post-its-me-thinking-out-loud/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 7,
+   "all-minilm (whole post)": 15,
+   "all-minilm (best passage)": 3,
+   "nomic-embed-text (whole post)": 3,
+   "nomic-embed-text (best passage)": 6,
+   "embeddinggemma (whole post)": 4,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/07/12/talking-to-strangers/",
+  "target": "https://www.moxie-dude.com/2013/07/11/yes-i-really-can-be-that-dumb-also-this-is-what-happens-when-you-really-believe-in-something-dont-judge-me/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 17,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 36,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 6,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/08/16/theres-a-new-foodie-in-town-you-can-still-be-a-foodie-even-if-you-cant-cook-right/",
+  "target": "https://www.moxie-dude.com/2013/08/15/the-first-fucking-dinner/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 15,
+   "nomic-embed-text (best passage)": 14,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/08/21/sometimes-i-feel-like-im-on-the-verge-of-who-i-am-and-then-the-hamster-distracts-me/",
+  "target": "https://www.moxie-dude.com/2013/06/20/i-must-be-growing-up-because-being-single-has-a-whole-new-perspective-from-up-here/",
+  "gap_days": 62,
+  "ranks": {
+   "BM25 keyword match": 87,
+   "all-minilm (whole post)": 57,
+   "all-minilm (best passage)": 123,
+   "nomic-embed-text (whole post)": 67,
+   "nomic-embed-text (best passage)": 76,
+   "embeddinggemma (whole post)": 53,
+   "embeddinggemma (best passage)": 89
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/08/22/wherein-i-outsmart-the-hamster-okay-not-really/",
+  "target": "https://www.moxie-dude.com/2013/08/21/sometimes-i-feel-like-im-on-the-verge-of-who-i-am-and-then-the-hamster-distracts-me/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 9,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 9,
+   "nomic-embed-text (best passage)": 5,
+   "embeddinggemma (whole post)": 7,
+   "embeddinggemma (best passage)": 10
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/09/02/why-yes-getting-yelled-at-by-my-teenager-is-exactly-what-i-envisioned-when-i-was-pregnant-with-her-life-is-going-according-to-plan/",
+  "target": "https://www.moxie-dude.com/2013/08/26/raising-teenagers-and-back-to-school-exactly-like-preparing-to-give-birth-only-less-pushing-and-more-worrying/",
+  "gap_days": 7,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 5,
+   "all-minilm (best passage)": 15,
+   "nomic-embed-text (whole post)": 7,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/09/20/out-of-the-bubble-and-into-jack-astors-bar-grill-dorval/",
+  "target": "https://www.moxie-dude.com/2013/07/16/oh-so-you-want-to-be-a-writer-well-let-me-tell-you-how-it-is-how-it-really-is/",
+  "gap_days": 66,
+  "ranks": {
+   "BM25 keyword match": 3,
+   "all-minilm (whole post)": 31,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 30,
+   "nomic-embed-text (best passage)": 9,
+   "embeddinggemma (whole post)": 17,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/09/24/dear-my-sons-teacher-oops/",
+  "target": "https://www.moxie-dude.com/2013/08/30/cunninghams-pub-2-for-1-tuesdays-chicken-wings-teenagers-win/",
+  "gap_days": 25,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 33,
+   "all-minilm (best passage)": 17,
+   "nomic-embed-text (whole post)": 9,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/10/02/about-writing-noticing-with-a-slant-on-food/",
+  "target": "https://www.moxie-dude.com/2013/09/26/maybe-its-time-to-start-lying-like-pinocchio-said-the-hamster-while-i-was-trying-to-sleep/",
+  "gap_days": 6,
+  "ranks": {
+   "BM25 keyword match": 5,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 6,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/10/04/nothing-is-broken-i-just-need-a-quick-writing-fix/",
+  "target": "https://www.moxie-dude.com/2013/10/01/in-honour-of-one-of-the-funniest-women-ive-ever-had-the-pleasure-of-being-related-to/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 14,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 40,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/10/04/nothing-is-broken-i-just-need-a-quick-writing-fix/",
+  "target": "https://www.moxie-dude.com/2013/10/03/guess-what-im-doing-today-hint-blissdom-canada/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 17,
+   "all-minilm (whole post)": 52,
+   "all-minilm (best passage)": 15,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 32,
+   "embeddinggemma (best passage)": 7
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/10/09/wordless-wednesday-u-huh-yeah-right/",
+  "target": "https://www.moxie-dude.com/2013/09/04/if-this-is-wednesday-it-must-be-time-for-wordless-wednesday-sort-of-cant-help-it-i-write-words-for-a-living/",
+  "gap_days": 35,
+  "ranks": {
+   "BM25 keyword match": 6,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 5,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 4,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/10/09/wordless-wednesday-u-huh-yeah-right/",
+  "target": "https://www.moxie-dude.com/2013/09/11/wordless-wednesday-solitude-in-public-the-muses-inspiration/",
+  "gap_days": 28,
+  "ranks": {
+   "BM25 keyword match": 142,
+   "all-minilm (whole post)": 6,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 13,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 29,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/10/16/warning-this-post-is-totally-fragmented-two-parts-raising-teenagers-one-part-creating-new-words-kinda-like-the-recipe-for-my-fave-cocktail/",
+  "target": "https://www.moxie-dude.com/2013/10/14/guess-what-mood-your-teenager-is-in-now-its-a-game-the-whole-family-can-play-think-of-this-post-as-a-public-service-announcement/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 68,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 31,
+   "nomic-embed-text (best passage)": 19,
+   "embeddinggemma (whole post)": 21,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/26/todays-post-is-brought-to-you-by-the-letter-z/",
+  "target": "https://www.moxie-dude.com/2013/11/25/i-cant-blame-this-one-on-the-hamster-oh-yes-i-can/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/28/happy-thanksgiving-and-heres-a-list-of-life-quotes-that-could-impact-your-life-but-dont-quote-me-on-that/",
+  "target": "https://www.moxie-dude.com/2013/11/25/i-cant-blame-this-one-on-the-hamster-oh-yes-i-can/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 29,
+   "all-minilm (whole post)": 197,
+   "all-minilm (best passage)": 100,
+   "nomic-embed-text (whole post)": 217,
+   "nomic-embed-text (best passage)": 194,
+   "embeddinggemma (whole post)": 159,
+   "embeddinggemma (best passage)": 141
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/30/because-hindsight-is-20-20-and-its-the-only-time-i-dont-need-my-glasses/",
+  "target": "https://www.moxie-dude.com/2013/11/25/i-cant-blame-this-one-on-the-hamster-oh-yes-i-can/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 46,
+   "all-minilm (whole post)": 147,
+   "all-minilm (best passage)": 172,
+   "nomic-embed-text (whole post)": 183,
+   "nomic-embed-text (best passage)": 162,
+   "embeddinggemma (whole post)": 152,
+   "embeddinggemma (best passage)": 120
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/30/because-hindsight-is-20-20-and-its-the-only-time-i-dont-need-my-glasses/",
+  "target": "https://www.moxie-dude.com/2013/11/26/todays-post-is-brought-to-you-by-the-letter-z/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 21,
+   "all-minilm (whole post)": 207,
+   "all-minilm (best passage)": 187,
+   "nomic-embed-text (whole post)": 121,
+   "nomic-embed-text (best passage)": 68,
+   "embeddinggemma (whole post)": 126,
+   "embeddinggemma (best passage)": 75
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/30/because-hindsight-is-20-20-and-its-the-only-time-i-dont-need-my-glasses/",
+  "target": "https://www.moxie-dude.com/2013/11/27/wordless-wednesday-the-first-snow-fall/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 132,
+   "all-minilm (whole post)": 61,
+   "all-minilm (best passage)": 53,
+   "nomic-embed-text (whole post)": 136,
+   "nomic-embed-text (best passage)": 93,
+   "embeddinggemma (whole post)": 168,
+   "embeddinggemma (best passage)": 141
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/30/because-hindsight-is-20-20-and-its-the-only-time-i-dont-need-my-glasses/",
+  "target": "https://www.moxie-dude.com/2013/11/28/happy-thanksgiving-and-heres-a-list-of-life-quotes-that-could-impact-your-life-but-dont-quote-me-on-that/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 18,
+   "all-minilm (whole post)": 12,
+   "all-minilm (best passage)": 14,
+   "nomic-embed-text (whole post)": 20,
+   "nomic-embed-text (best passage)": 29,
+   "embeddinggemma (whole post)": 17,
+   "embeddinggemma (best passage)": 33
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/11/30/because-hindsight-is-20-20-and-its-the-only-time-i-dont-need-my-glasses/",
+  "target": "https://www.moxie-dude.com/2013/11/29/50-shades-of-grey-on-my-head/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 76,
+   "all-minilm (whole post)": 150,
+   "all-minilm (best passage)": 195,
+   "nomic-embed-text (whole post)": 88,
+   "nomic-embed-text (best passage)": 114,
+   "embeddinggemma (whole post)": 37,
+   "embeddinggemma (best passage)": 30
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/06/shopping-for-teens-it-gets-harder-and-harder-every-freaking-year/",
+  "target": "https://www.moxie-dude.com/2013/12/03/theyre-putting-me-in-the-guinness-world-record-of-kitchen-disasters-actually-im-the-only-one-in-that-category-so-in-a-way-im-an-innovator/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 17,
+   "all-minilm (whole post)": 31,
+   "all-minilm (best passage)": 29,
+   "nomic-embed-text (whole post)": 40,
+   "nomic-embed-text (best passage)": 66,
+   "embeddinggemma (whole post)": 33,
+   "embeddinggemma (best passage)": 102
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/07/in-a-few-hours-my-house-will-be-invaded-by-a-herd-of-teenage-boys-and-they-will-kill-me/",
+  "target": "https://www.moxie-dude.com/2013/12/02/tis-the-season-or-something/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 210,
+   "all-minilm (whole post)": 146,
+   "all-minilm (best passage)": 153,
+   "nomic-embed-text (whole post)": 140,
+   "nomic-embed-text (best passage)": 111,
+   "embeddinggemma (whole post)": 161,
+   "embeddinggemma (best passage)": 126
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/07/in-a-few-hours-my-house-will-be-invaded-by-a-herd-of-teenage-boys-and-they-will-kill-me/",
+  "target": "https://www.moxie-dude.com/2013/12/03/theyre-putting-me-in-the-guinness-world-record-of-kitchen-disasters-actually-im-the-only-one-in-that-category-so-in-a-way-im-an-innovator/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 14,
+   "all-minilm (whole post)": 25,
+   "all-minilm (best passage)": 14,
+   "nomic-embed-text (whole post)": 26,
+   "nomic-embed-text (best passage)": 9,
+   "embeddinggemma (whole post)": 13,
+   "embeddinggemma (best passage)": 29
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/07/in-a-few-hours-my-house-will-be-invaded-by-a-herd-of-teenage-boys-and-they-will-kill-me/",
+  "target": "https://www.moxie-dude.com/2013/12/04/wordless-wednesday-is-cancelled-for-this-week-because-oh-peleeaaasssse-people/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 54,
+   "all-minilm (whole post)": 195,
+   "all-minilm (best passage)": 184,
+   "nomic-embed-text (whole post)": 112,
+   "nomic-embed-text (best passage)": 197,
+   "embeddinggemma (whole post)": 126,
+   "embeddinggemma (best passage)": 195
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/07/in-a-few-hours-my-house-will-be-invaded-by-a-herd-of-teenage-boys-and-they-will-kill-me/",
+  "target": "https://www.moxie-dude.com/2013/12/06/shopping-for-teens-it-gets-harder-and-harder-every-freaking-year/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 13,
+   "all-minilm (whole post)": 12,
+   "all-minilm (best passage)": 6,
+   "nomic-embed-text (whole post)": 32,
+   "nomic-embed-text (best passage)": 27,
+   "embeddinggemma (whole post)": 24,
+   "embeddinggemma (best passage)": 29
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/14/only-one-more-shopping-weekend-before-christmas-yayyy-said-no-one-ever/",
+  "target": "https://www.moxie-dude.com/2013/12/06/shopping-for-teens-it-gets-harder-and-harder-every-freaking-year/",
+  "gap_days": 8,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 5,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/14/only-one-more-shopping-weekend-before-christmas-yayyy-said-no-one-ever/",
+  "target": "https://www.moxie-dude.com/2013/12/09/update-to-saturdays-mini-zombie-apocalypse/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 25,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 83,
+   "nomic-embed-text (best passage)": 6,
+   "embeddinggemma (whole post)": 19,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/14/only-one-more-shopping-weekend-before-christmas-yayyy-said-no-one-ever/",
+  "target": "https://www.moxie-dude.com/2013/12/10/moments-that-stop-time/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 7,
+   "all-minilm (whole post)": 24,
+   "all-minilm (best passage)": 14,
+   "nomic-embed-text (whole post)": 94,
+   "nomic-embed-text (best passage)": 102,
+   "embeddinggemma (whole post)": 92,
+   "embeddinggemma (best passage)": 68
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/14/only-one-more-shopping-weekend-before-christmas-yayyy-said-no-one-ever/",
+  "target": "https://www.moxie-dude.com/2013/12/11/im-popular-i-know-this-because-my-bra-calls-me/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 55,
+   "all-minilm (whole post)": 96,
+   "all-minilm (best passage)": 96,
+   "nomic-embed-text (whole post)": 66,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 33,
+   "embeddinggemma (best passage)": 11
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/14/only-one-more-shopping-weekend-before-christmas-yayyy-said-no-one-ever/",
+  "target": "https://www.moxie-dude.com/2013/12/13/i-couldnt-sleep-last-night-so-instead-i-figured-out-the-purpose-of-aging/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 15,
+   "all-minilm (whole post)": 88,
+   "all-minilm (best passage)": 77,
+   "nomic-embed-text (whole post)": 111,
+   "nomic-embed-text (best passage)": 78,
+   "embeddinggemma (whole post)": 92,
+   "embeddinggemma (best passage)": 20
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/21/christmas-traditions-a-behind-the-scenes-glimpse/",
+  "target": "https://www.moxie-dude.com/2013/12/06/shopping-for-teens-it-gets-harder-and-harder-every-freaking-year/",
+  "gap_days": 15,
+  "ranks": {
+   "BM25 keyword match": 48,
+   "all-minilm (whole post)": 18,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 22,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 16,
+   "embeddinggemma (best passage)": 5
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/21/christmas-traditions-a-behind-the-scenes-glimpse/",
+  "target": "https://www.moxie-dude.com/2013/12/16/im-thinking-of-starting-my-own-cooking-show-im-calling-it-top-kitchen-fails-or-possibly-survivor/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 49,
+   "all-minilm (whole post)": 184,
+   "all-minilm (best passage)": 99,
+   "nomic-embed-text (whole post)": 56,
+   "nomic-embed-text (best passage)": 23,
+   "embeddinggemma (whole post)": 31,
+   "embeddinggemma (best passage)": 6
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/21/christmas-traditions-a-behind-the-scenes-glimpse/",
+  "target": "https://www.moxie-dude.com/2013/12/17/im-both-sleep-deprived-and-early-which-makes-wordless-wednesday-on-a-tuesday-completely-logical/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 188,
+   "all-minilm (whole post)": 11,
+   "all-minilm (best passage)": 27,
+   "nomic-embed-text (whole post)": 114,
+   "nomic-embed-text (best passage)": 139,
+   "embeddinggemma (whole post)": 89,
+   "embeddinggemma (best passage)": 42
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/21/christmas-traditions-a-behind-the-scenes-glimpse/",
+  "target": "https://www.moxie-dude.com/2013/12/20/i-swear-a-lot-its-a-seasonal-thing/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 25,
+   "all-minilm (whole post)": 5,
+   "all-minilm (best passage)": 11,
+   "nomic-embed-text (whole post)": 16,
+   "nomic-embed-text (best passage)": 33,
+   "embeddinggemma (whole post)": 34,
+   "embeddinggemma (best passage)": 32
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/28/weekly-wrap-up-because-we-havent-done-enough-wrapping-lately/",
+  "target": "https://www.moxie-dude.com/2013/12/23/i-am-super-chef/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 4,
+   "all-minilm (whole post)": 19,
+   "all-minilm (best passage)": 14,
+   "nomic-embed-text (whole post)": 11,
+   "nomic-embed-text (best passage)": 25,
+   "embeddinggemma (whole post)": 11,
+   "embeddinggemma (best passage)": 35
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/28/weekly-wrap-up-because-we-havent-done-enough-wrapping-lately/",
+  "target": "https://www.moxie-dude.com/2013/12/25/merry-christmas-i-may-have-said-that-already/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 5,
+   "all-minilm (whole post)": 13,
+   "all-minilm (best passage)": 19,
+   "nomic-embed-text (whole post)": 50,
+   "nomic-embed-text (best passage)": 27,
+   "embeddinggemma (whole post)": 5,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2013/12/28/weekly-wrap-up-because-we-havent-done-enough-wrapping-lately/",
+  "target": "https://www.moxie-dude.com/2013/12/26/tossing-and-turning-apparently-its-the-new-fad-in-middle-of-the-night-exercise/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 33,
+   "all-minilm (whole post)": 15,
+   "all-minilm (best passage)": 15,
+   "nomic-embed-text (whole post)": 52,
+   "nomic-embed-text (best passage)": 18,
+   "embeddinggemma (whole post)": 4,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/04/gratitude-and-2013-its-not-all-oil-and-water/",
+  "target": "https://www.moxie-dude.com/2013/12/30/what-happened-in-2013-stays-in-2013/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 5,
+   "all-minilm (whole post)": 5,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/04/gratitude-and-2013-its-not-all-oil-and-water/",
+  "target": "https://www.moxie-dude.com/2013/12/31/dear-2014-relax-you-dont-have-big-shoes-to-fill-because-2013-was-kinda-lame/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 13,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/04/gratitude-and-2013-its-not-all-oil-and-water/",
+  "target": "https://www.moxie-dude.com/2014/01/01/my-confusion-may-have-been-real-but-my-mind-is-made-up/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 25,
+   "all-minilm (whole post)": 5,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 6,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/04/gratitude-and-2013-its-not-all-oil-and-water/",
+  "target": "https://www.moxie-dude.com/2014/01/02/if-youre-not-into-writing-you-can-just-skip-this-weeks-posts-altogether-because-apparently-im-focused-i-blame-the-new-year/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 55,
+   "all-minilm (whole post)": 10,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 5,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 11,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/04/gratitude-and-2013-its-not-all-oil-and-water/",
+  "target": "https://www.moxie-dude.com/2014/01/03/a-day-without-sunshine-is-like-night/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 6,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/10/sometime-recipes-come-from-unexpected-places-like-this-blog/",
+  "target": "https://www.moxie-dude.com/2013/12/16/im-thinking-of-starting-my-own-cooking-show-im-calling-it-top-kitchen-fails-or-possibly-survivor/",
+  "gap_days": 25,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 3,
+   "all-minilm (best passage)": 5,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 5
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/10/sometime-recipes-come-from-unexpected-places-like-this-blog/",
+  "target": "https://www.moxie-dude.com/2013/12/23/i-am-super-chef/",
+  "gap_days": 18,
+  "ranks": {
+   "BM25 keyword match": 59,
+   "all-minilm (whole post)": 8,
+   "all-minilm (best passage)": 7,
+   "nomic-embed-text (whole post)": 5,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/11/easy-like-saturday-morning-coffee/",
+  "target": "https://www.moxie-dude.com/2014/01/06/when-bored-stalk-self/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 240,
+   "all-minilm (whole post)": 26,
+   "all-minilm (best passage)": 46,
+   "nomic-embed-text (whole post)": 67,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 8,
+   "embeddinggemma (best passage)": 17
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/11/easy-like-saturday-morning-coffee/",
+  "target": "https://www.moxie-dude.com/2014/01/07/when-i-grow-up-i-want-to-be-just-like-me-only-richer/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 56,
+   "all-minilm (whole post)": 52,
+   "all-minilm (best passage)": 59,
+   "nomic-embed-text (whole post)": 79,
+   "nomic-embed-text (best passage)": 34,
+   "embeddinggemma (whole post)": 51,
+   "embeddinggemma (best passage)": 21
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/11/easy-like-saturday-morning-coffee/",
+  "target": "https://www.moxie-dude.com/2014/01/08/how-to-get-your-teenagers-to-stop-swearing/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 58,
+   "all-minilm (whole post)": 237,
+   "all-minilm (best passage)": 241,
+   "nomic-embed-text (whole post)": 202,
+   "nomic-embed-text (best passage)": 250,
+   "embeddinggemma (whole post)": 186,
+   "embeddinggemma (best passage)": 197
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/11/easy-like-saturday-morning-coffee/",
+  "target": "https://www.moxie-dude.com/2014/01/09/if-you-dont-like-looking-at-vagina-inspired-art-i-suggest-you-skip-this-post-seriously/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 151,
+   "all-minilm (whole post)": 240,
+   "all-minilm (best passage)": 181,
+   "nomic-embed-text (whole post)": 205,
+   "nomic-embed-text (best passage)": 104,
+   "embeddinggemma (whole post)": 48,
+   "embeddinggemma (best passage)": 27
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/11/easy-like-saturday-morning-coffee/",
+  "target": "https://www.moxie-dude.com/2014/01/10/sometime-recipes-come-from-unexpected-places-like-this-blog/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 59,
+   "all-minilm (whole post)": 59,
+   "all-minilm (best passage)": 3,
+   "nomic-embed-text (whole post)": 115,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 60,
+   "embeddinggemma (best passage)": 12
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/13/giving-birth-and-stubbing-a-toe-the-most-similar-causes-of-pain-known-to-man/",
+  "target": "https://www.moxie-dude.com/2013/05/03/yes-virginia-there-is-a-difference-between-boys-and-girls/",
+  "gap_days": 255,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/18/so-you-think-walking-a-mile-in-my-shoes-will-give-you-a-glimpse-try-thinking-a-day-in-my-head/",
+  "target": "https://www.moxie-dude.com/2014/01/13/giving-birth-and-stubbing-a-toe-the-most-similar-causes-of-pain-known-to-man/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 48,
+   "all-minilm (whole post)": 255,
+   "all-minilm (best passage)": 261,
+   "nomic-embed-text (whole post)": 249,
+   "nomic-embed-text (best passage)": 265,
+   "embeddinggemma (whole post)": 224,
+   "embeddinggemma (best passage)": 192
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/18/so-you-think-walking-a-mile-in-my-shoes-will-give-you-a-glimpse-try-thinking-a-day-in-my-head/",
+  "target": "https://www.moxie-dude.com/2014/01/15/this-post-is-either-12-hours-late-or-12-hours-early-or-possibly-its-just-stuck-in-the-vortex-of-5-for-everything/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 7
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/18/so-you-think-walking-a-mile-in-my-shoes-will-give-you-a-glimpse-try-thinking-a-day-in-my-head/",
+  "target": "https://www.moxie-dude.com/2014/01/16/confusing-myself-apparently-its-a-little-game-the-hamster-likes-to-play/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 235,
+   "all-minilm (whole post)": 77,
+   "all-minilm (best passage)": 68,
+   "nomic-embed-text (whole post)": 48,
+   "nomic-embed-text (best passage)": 51,
+   "embeddinggemma (whole post)": 34,
+   "embeddinggemma (best passage)": 32
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/25/i-have-a-good-memory-no-wait-those-are-post-it-notes-i-have-post-it-notes/",
+  "target": "https://www.moxie-dude.com/2014/01/20/finally-all-those-years-of-play-doh-training-come-in-handy/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 174,
+   "all-minilm (whole post)": 63,
+   "all-minilm (best passage)": 143,
+   "nomic-embed-text (whole post)": 178,
+   "nomic-embed-text (best passage)": 99,
+   "embeddinggemma (whole post)": 166,
+   "embeddinggemma (best passage)": 82
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/25/i-have-a-good-memory-no-wait-those-are-post-it-notes-i-have-post-it-notes/",
+  "target": "https://www.moxie-dude.com/2014/01/21/dear-steven-spielberg-i-may-or-may-not-have-missed-your-call-sorry-ive-been-busy-starring-in-my-sons-homework/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 8,
+   "all-minilm (whole post)": 3,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 25,
+   "nomic-embed-text (best passage)": 10,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/25/i-have-a-good-memory-no-wait-those-are-post-it-notes-i-have-post-it-notes/",
+  "target": "https://www.moxie-dude.com/2014/01/22/a-doggone-good-day-for-a-wordless-wednesday/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 269,
+   "all-minilm (whole post)": 174,
+   "all-minilm (best passage)": 189,
+   "nomic-embed-text (whole post)": 167,
+   "nomic-embed-text (best passage)": 143,
+   "embeddinggemma (whole post)": 163,
+   "embeddinggemma (best passage)": 148
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/25/i-have-a-good-memory-no-wait-those-are-post-it-notes-i-have-post-it-notes/",
+  "target": "https://www.moxie-dude.com/2014/01/24/is-social-media-meddling-with-the-fine-art-of-handshaking-2/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 228,
+   "all-minilm (best passage)": 257,
+   "nomic-embed-text (whole post)": 63,
+   "nomic-embed-text (best passage)": 88,
+   "embeddinggemma (whole post)": 95,
+   "embeddinggemma (best passage)": 160
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/01/28/another-no-bake-recipe-success-except-for-the-measuring-part/",
+  "target": "https://www.moxie-dude.com/2014/01/20/finally-all-those-years-of-play-doh-training-come-in-handy/",
+  "gap_days": 8,
+  "ranks": {
+   "BM25 keyword match": 9,
+   "all-minilm (whole post)": 17,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 23,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 29,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/01/and-its-a-wrap/",
+  "target": "https://www.moxie-dude.com/2014/01/27/if-it-wasnt-for-rear-view-mirrors-sitting-in-traffic-wouldnt-be-any-fun-at-all/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 46,
+   "all-minilm (whole post)": 179,
+   "all-minilm (best passage)": 232,
+   "nomic-embed-text (whole post)": 176,
+   "nomic-embed-text (best passage)": 225,
+   "embeddinggemma (whole post)": 110,
+   "embeddinggemma (best passage)": 119
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/01/and-its-a-wrap/",
+  "target": "https://www.moxie-dude.com/2014/01/28/another-no-bake-recipe-success-except-for-the-measuring-part/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 65,
+   "all-minilm (whole post)": 131,
+   "all-minilm (best passage)": 190,
+   "nomic-embed-text (whole post)": 190,
+   "nomic-embed-text (best passage)": 199,
+   "embeddinggemma (whole post)": 162,
+   "embeddinggemma (best passage)": 197
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/01/and-its-a-wrap/",
+  "target": "https://www.moxie-dude.com/2014/01/30/the-most-important-relationship-in-your-life-ps-its-not-what-you-think-pps-this-post-is-full-of-pss/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 6,
+   "all-minilm (whole post)": 63,
+   "all-minilm (best passage)": 82,
+   "nomic-embed-text (whole post)": 5,
+   "nomic-embed-text (best passage)": 55,
+   "embeddinggemma (whole post)": 9,
+   "embeddinggemma (best passage)": 99
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/08/i-support-all-olympic-athletes-and-the-ones-from-canada-in-my-own-ocd-way/",
+  "target": "https://www.moxie-dude.com/2014/02/03/this-weekend-the-world-was-born-of-a-new-shaver-but-im-not-allowed-to-write-about-it-so-instead-heres-the-story-of-why-i-didnt-become-a-vet/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 54,
+   "all-minilm (whole post)": 148,
+   "all-minilm (best passage)": 169,
+   "nomic-embed-text (whole post)": 201,
+   "nomic-embed-text (best passage)": 225,
+   "embeddinggemma (whole post)": 214,
+   "embeddinggemma (best passage)": 210
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/08/i-support-all-olympic-athletes-and-the-ones-from-canada-in-my-own-ocd-way/",
+  "target": "https://www.moxie-dude.com/2014/02/05/if-your-kids-think-youre-perfect-revel-in-it-because-one-day-that-will-all-change/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 256,
+   "all-minilm (whole post)": 93,
+   "all-minilm (best passage)": 115,
+   "nomic-embed-text (whole post)": 168,
+   "nomic-embed-text (best passage)": 87,
+   "embeddinggemma (whole post)": 161,
+   "embeddinggemma (best passage)": 117
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/08/i-support-all-olympic-athletes-and-the-ones-from-canada-in-my-own-ocd-way/",
+  "target": "https://www.moxie-dude.com/2014/02/06/sometimes-im-afraid-of-my-own-mind/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 112,
+   "all-minilm (best passage)": 3,
+   "nomic-embed-text (whole post)": 65,
+   "nomic-embed-text (best passage)": 88,
+   "embeddinggemma (whole post)": 41,
+   "embeddinggemma (best passage)": 70
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/15/theres-something-very-wrong-in-the-world-when-people-in-russia-turn-to-me-as-an-expert-instead-of-watching-the-olympics/",
+  "target": "https://www.moxie-dude.com/2014/02/10/thank-you-thesitsgirls-com-and-hurry-up-friday-because-im-pretty-sure-this-is-the-highlight-of-my-week/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 153,
+   "all-minilm (whole post)": 20,
+   "all-minilm (best passage)": 55,
+   "nomic-embed-text (whole post)": 137,
+   "nomic-embed-text (best passage)": 111,
+   "embeddinggemma (whole post)": 33,
+   "embeddinggemma (best passage)": 34
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/15/theres-something-very-wrong-in-the-world-when-people-in-russia-turn-to-me-as-an-expert-instead-of-watching-the-olympics/",
+  "target": "https://www.moxie-dude.com/2014/02/11/confusion-a-case-study/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 8,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 53,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/15/theres-something-very-wrong-in-the-world-when-people-in-russia-turn-to-me-as-an-expert-instead-of-watching-the-olympics/",
+  "target": "https://www.moxie-dude.com/2014/02/12/i-have-the-key-to-my-valentines-hearts-it-comes-in-a-pizza-box/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 201,
+   "all-minilm (whole post)": 186,
+   "all-minilm (best passage)": 179,
+   "nomic-embed-text (whole post)": 162,
+   "nomic-embed-text (best passage)": 222,
+   "embeddinggemma (whole post)": 111,
+   "embeddinggemma (best passage)": 138
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/15/theres-something-very-wrong-in-the-world-when-people-in-russia-turn-to-me-as-an-expert-instead-of-watching-the-olympics/",
+  "target": "https://www.moxie-dude.com/2014/02/13/good-days-and-bad-days-with-teenagers-translation-ugh/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 7,
+   "all-minilm (whole post)": 10,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 37,
+   "nomic-embed-text (best passage)": 70,
+   "embeddinggemma (whole post)": 8,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/22/crackers-are-a-food-group-right/",
+  "target": "https://www.moxie-dude.com/2014/02/17/today-im-going-to-conquer-the-world-and-stock-up-on-chamomile-tea/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 206,
+   "all-minilm (whole post)": 233,
+   "all-minilm (best passage)": 251,
+   "nomic-embed-text (whole post)": 231,
+   "nomic-embed-text (best passage)": 186,
+   "embeddinggemma (whole post)": 249,
+   "embeddinggemma (best passage)": 225
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/22/crackers-are-a-food-group-right/",
+  "target": "https://www.moxie-dude.com/2014/02/20/its-2-a-m-i-cant-sleep-and-im-out-of-chamomile-tea-guess-youll-just-have-to-listen-to-me-ramble-about-a-nun-i-used-to-know/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 56,
+   "all-minilm (whole post)": 170,
+   "all-minilm (best passage)": 121,
+   "nomic-embed-text (whole post)": 115,
+   "nomic-embed-text (best passage)": 198,
+   "embeddinggemma (whole post)": 106,
+   "embeddinggemma (best passage)": 175
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/02/22/crackers-are-a-food-group-right/",
+  "target": "https://www.moxie-dude.com/2014/02/21/introducing-the-new-and-improved-me-its-the-version-that-likes-watching-olympic-hockey/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 220,
+   "all-minilm (whole post)": 213,
+   "all-minilm (best passage)": 224,
+   "nomic-embed-text (whole post)": 231,
+   "nomic-embed-text (best passage)": 267,
+   "embeddinggemma (whole post)": 259,
+   "embeddinggemma (best passage)": 278
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/01/because-flying-is-the-new-walmart/",
+  "target": "https://www.moxie-dude.com/2014/02/24/murphys-laws-for-single-moms-because-teenagers/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 206,
+   "all-minilm (whole post)": 18,
+   "all-minilm (best passage)": 28,
+   "nomic-embed-text (whole post)": 81,
+   "nomic-embed-text (best passage)": 120,
+   "embeddinggemma (whole post)": 9,
+   "embeddinggemma (best passage)": 28
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/01/because-flying-is-the-new-walmart/",
+  "target": "https://www.moxie-dude.com/2014/02/25/the-4-phases-of-an-ending-relationship-also-i-think-i-just-broke-up-with-a-piece-of-myself/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 43,
+   "all-minilm (whole post)": 294,
+   "all-minilm (best passage)": 287,
+   "nomic-embed-text (whole post)": 137,
+   "nomic-embed-text (best passage)": 135,
+   "embeddinggemma (whole post)": 253,
+   "embeddinggemma (best passage)": 287
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/01/because-flying-is-the-new-walmart/",
+  "target": "https://www.moxie-dude.com/2014/02/27/dear-justin-bieber-why-just-why/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 99,
+   "all-minilm (whole post)": 10,
+   "all-minilm (best passage)": 60,
+   "nomic-embed-text (whole post)": 29,
+   "nomic-embed-text (best passage)": 110,
+   "embeddinggemma (whole post)": 69,
+   "embeddinggemma (best passage)": 109
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/08/spring-break-and-florida-random-highlights/",
+  "target": "https://www.moxie-dude.com/2014/03/03/possibly-the-only-place-my-kids-will-publicly-hang-out-with-me-is-at-a-flea-market-in-florida/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 108,
+   "all-minilm (whole post)": 165,
+   "all-minilm (best passage)": 36,
+   "nomic-embed-text (whole post)": 106,
+   "nomic-embed-text (best passage)": 37,
+   "embeddinggemma (whole post)": 105,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/08/spring-break-and-florida-random-highlights/",
+  "target": "https://www.moxie-dude.com/2014/03/04/dear-technology-mothers-everywhere-are-thanking-you-for-the-recent-lice-plague/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 99,
+   "all-minilm (whole post)": 305,
+   "all-minilm (best passage)": 284,
+   "nomic-embed-text (whole post)": 262,
+   "nomic-embed-text (best passage)": 294,
+   "embeddinggemma (whole post)": 263,
+   "embeddinggemma (best passage)": 289
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/08/spring-break-and-florida-random-highlights/",
+  "target": "https://www.moxie-dude.com/2014/03/06/3-things-i-learned-as-god-in-dunedins-mardi-gras-parade/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 22,
+   "all-minilm (best passage)": 16,
+   "nomic-embed-text (whole post)": 28,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/15/the-anatomy-of-a-week-from-hell-an-infographic/",
+  "target": "https://www.moxie-dude.com/2014/03/10/quasi-post-after-mentioning-that-i-had-a-date-on-saturday-and-that-i-was-cooking-i-received-some-requests-for-an-update-this-is-that-update/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 243,
+   "all-minilm (whole post)": 32,
+   "all-minilm (best passage)": 29,
+   "nomic-embed-text (whole post)": 164,
+   "nomic-embed-text (best passage)": 79,
+   "embeddinggemma (whole post)": 236,
+   "embeddinggemma (best passage)": 199
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/15/the-anatomy-of-a-week-from-hell-an-infographic/",
+  "target": "https://www.moxie-dude.com/2014/03/12/im-a-kitchen-guest-over-at-one-of-my-fave-food-blogs/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 240,
+   "all-minilm (whole post)": 109,
+   "all-minilm (best passage)": 121,
+   "nomic-embed-text (whole post)": 216,
+   "nomic-embed-text (best passage)": 145,
+   "embeddinggemma (whole post)": 109,
+   "embeddinggemma (best passage)": 56
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/15/the-anatomy-of-a-week-from-hell-an-infographic/",
+  "target": "https://www.moxie-dude.com/2014/03/14/im-going-to-blogher-14-despite-myself/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 152,
+   "all-minilm (whole post)": 21,
+   "all-minilm (best passage)": 17,
+   "nomic-embed-text (whole post)": 72,
+   "nomic-embed-text (best passage)": 107,
+   "embeddinggemma (whole post)": 4,
+   "embeddinggemma (best passage)": 22
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/22/most-people-sleep-i-just-confuse-myself/",
+  "target": "https://www.moxie-dude.com/2014/03/17/lets-keep-last-week-in-the-past-shall-we/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 84,
+   "all-minilm (whole post)": 8,
+   "all-minilm (best passage)": 16,
+   "nomic-embed-text (whole post)": 15,
+   "nomic-embed-text (best passage)": 14,
+   "embeddinggemma (whole post)": 36,
+   "embeddinggemma (best passage)": 49
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/22/most-people-sleep-i-just-confuse-myself/",
+  "target": "https://www.moxie-dude.com/2014/03/18/im-pretty-sure-god-was-hung-over-when-she-invented-spiders-but-then-again-what-do-i-know-ive-never-invented-anything/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 128,
+   "all-minilm (whole post)": 147,
+   "all-minilm (best passage)": 190,
+   "nomic-embed-text (whole post)": 149,
+   "nomic-embed-text (best passage)": 141,
+   "embeddinggemma (whole post)": 112,
+   "embeddinggemma (best passage)": 97
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/22/most-people-sleep-i-just-confuse-myself/",
+  "target": "https://www.moxie-dude.com/2014/03/20/i-dont-need-to-watch-criminal-minds-anymore-because-internet/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 64,
+   "all-minilm (whole post)": 46,
+   "all-minilm (best passage)": 60,
+   "nomic-embed-text (whole post)": 44,
+   "nomic-embed-text (best passage)": 59,
+   "embeddinggemma (whole post)": 43,
+   "embeddinggemma (best passage)": 41
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/27/how-to-identify-and-prepare-food/",
+  "target": "https://www.moxie-dude.com/2014/03/26/when-a-picture-is-worth-1000-words-or-1000-reasons-why-i-should-never-try-to-cook-red-meat-ever-again/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 25,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 14,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 5,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 16
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/29/writing-about-writing-talking-about-writing-if-you-see-a-group-of-runaway-cows-they-may-belong-to-me/",
+  "target": "https://www.moxie-dude.com/2014/03/26/when-a-picture-is-worth-1000-words-or-1000-reasons-why-i-should-never-try-to-cook-red-meat-ever-again/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 114,
+   "all-minilm (whole post)": 282,
+   "all-minilm (best passage)": 227,
+   "nomic-embed-text (whole post)": 214,
+   "nomic-embed-text (best passage)": 141,
+   "embeddinggemma (whole post)": 257,
+   "embeddinggemma (best passage)": 234
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/29/writing-about-writing-talking-about-writing-if-you-see-a-group-of-runaway-cows-they-may-belong-to-me/",
+  "target": "https://www.moxie-dude.com/2014/03/27/how-to-identify-and-prepare-food/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 134,
+   "all-minilm (whole post)": 318,
+   "all-minilm (best passage)": 100,
+   "nomic-embed-text (whole post)": 232,
+   "nomic-embed-text (best passage)": 187,
+   "embeddinggemma (whole post)": 322,
+   "embeddinggemma (best passage)": 123
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/03/29/writing-about-writing-talking-about-writing-if-you-see-a-group-of-runaway-cows-they-may-belong-to-me/",
+  "target": "https://www.moxie-dude.com/2014/03/28/im-about-to-get-opinionated-consider-yourself-warned-and-apologized-to-insert-apology-accepted-here/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 102,
+   "all-minilm (whole post)": 117,
+   "all-minilm (best passage)": 154,
+   "nomic-embed-text (whole post)": 58,
+   "nomic-embed-text (best passage)": 161,
+   "embeddinggemma (whole post)": 57,
+   "embeddinggemma (best passage)": 45
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/05/if-you-could-put-saturday-mornings-in-a-glass-it-would-taste-like-fresh-squeezed-orange-juice/",
+  "target": "https://www.moxie-dude.com/2014/04/01/is-there-anything-more-awkward-than-dating/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 135,
+   "all-minilm (whole post)": 258,
+   "all-minilm (best passage)": 286,
+   "nomic-embed-text (whole post)": 186,
+   "nomic-embed-text (best passage)": 212,
+   "embeddinggemma (whole post)": 180,
+   "embeddinggemma (best passage)": 179
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/05/if-you-could-put-saturday-mornings-in-a-glass-it-would-taste-like-fresh-squeezed-orange-juice/",
+  "target": "https://www.moxie-dude.com/2014/04/03/treadmill-generator-zombies-and-then-it-occurred-to-me-maybe-its-just-me/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 30,
+   "all-minilm (whole post)": 44,
+   "all-minilm (best passage)": 75,
+   "nomic-embed-text (whole post)": 82,
+   "nomic-embed-text (best passage)": 145,
+   "embeddinggemma (whole post)": 20,
+   "embeddinggemma (best passage)": 27
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/12/my-teenage-son-now-agrees-that-some-radio-stations-dont-belong-on-the-radio-i-think-were-both-growing-up/",
+  "target": "https://www.moxie-dude.com/2014/04/07/the-zombie-dogs-ive-always-wanted/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 260,
+   "all-minilm (whole post)": 308,
+   "all-minilm (best passage)": 314,
+   "nomic-embed-text (whole post)": 230,
+   "nomic-embed-text (best passage)": 234,
+   "embeddinggemma (whole post)": 177,
+   "embeddinggemma (best passage)": 252
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/12/my-teenage-son-now-agrees-that-some-radio-stations-dont-belong-on-the-radio-i-think-were-both-growing-up/",
+  "target": "https://www.moxie-dude.com/2014/04/09/wherein-i-share-a-hermetic-secret-ps-the-voices-in-your-head-may-hate-me-for-this/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 3,
+   "all-minilm (whole post)": 8,
+   "all-minilm (best passage)": 59,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 16,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 35
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/12/my-teenage-son-now-agrees-that-some-radio-stations-dont-belong-on-the-radio-i-think-were-both-growing-up/",
+  "target": "https://www.moxie-dude.com/2014/04/10/which-came-first-the-obsessive-compulsive-typist-or-the-writer-before-you-answer-know-that-that-may-not-even-be-a-real-question/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 104,
+   "all-minilm (whole post)": 155,
+   "all-minilm (best passage)": 248,
+   "nomic-embed-text (whole post)": 78,
+   "nomic-embed-text (best passage)": 177,
+   "embeddinggemma (whole post)": 68,
+   "embeddinggemma (best passage)": 66
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/16/pizza-pizza-is-the-solution/",
+  "target": "https://www.moxie-dude.com/2013/12/16/im-thinking-of-starting-my-own-cooking-show-im-calling-it-top-kitchen-fails-or-possibly-survivor/",
+  "gap_days": 121,
+  "ranks": {
+   "BM25 keyword match": 8,
+   "all-minilm (whole post)": 169,
+   "all-minilm (best passage)": 65,
+   "nomic-embed-text (whole post)": 47,
+   "nomic-embed-text (best passage)": 14,
+   "embeddinggemma (whole post)": 13,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/16/pizza-pizza-is-the-solution/",
+  "target": "https://www.moxie-dude.com/2013/12/23/i-am-super-chef/",
+  "gap_days": 114,
+  "ranks": {
+   "BM25 keyword match": 9,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 6,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 11
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/16/pizza-pizza-is-the-solution/",
+  "target": "https://www.moxie-dude.com/2014/03/26/when-a-picture-is-worth-1000-words-or-1000-reasons-why-i-should-never-try-to-cook-red-meat-ever-again/",
+  "gap_days": 21,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 15,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/19/spring-is-here-and-the-world-is-dirty-very-very-dirty/",
+  "target": "https://www.moxie-dude.com/2014/04/14/not-a-real-post-but-possibly-more-important-than-a-real-post-or-something/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 141,
+   "all-minilm (whole post)": 126,
+   "all-minilm (best passage)": 139,
+   "nomic-embed-text (whole post)": 235,
+   "nomic-embed-text (best passage)": 214,
+   "embeddinggemma (whole post)": 180,
+   "embeddinggemma (best passage)": 272
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/19/spring-is-here-and-the-world-is-dirty-very-very-dirty/",
+  "target": "https://www.moxie-dude.com/2014/04/15/my-eyesight-is-changing-possibly-this-is-my-bodys-way-of-protecting-me-from-mirrors/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 123,
+   "all-minilm (whole post)": 309,
+   "all-minilm (best passage)": 299,
+   "nomic-embed-text (whole post)": 262,
+   "nomic-embed-text (best passage)": 296,
+   "embeddinggemma (whole post)": 125,
+   "embeddinggemma (best passage)": 228
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/19/spring-is-here-and-the-world-is-dirty-very-very-dirty/",
+  "target": "https://www.moxie-dude.com/2014/04/16/pizza-pizza-is-the-solution/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 157,
+   "all-minilm (whole post)": 127,
+   "all-minilm (best passage)": 120,
+   "nomic-embed-text (whole post)": 256,
+   "nomic-embed-text (best passage)": 277,
+   "embeddinggemma (whole post)": 180,
+   "embeddinggemma (best passage)": 228
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/19/spring-is-here-and-the-world-is-dirty-very-very-dirty/",
+  "target": "https://www.moxie-dude.com/2014/04/18/i-think-my-son-and-i-have-reached-a-point-where-we-could-totally-fit-in-with-a-circus/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 91,
+   "all-minilm (whole post)": 117,
+   "all-minilm (best passage)": 161,
+   "nomic-embed-text (whole post)": 20,
+   "nomic-embed-text (best passage)": 157,
+   "embeddinggemma (whole post)": 97,
+   "embeddinggemma (best passage)": 57
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/26/friday-nights-were-made-for-pizza-and-cardboard-apparently/",
+  "target": "https://www.moxie-dude.com/2014/04/21/a-day-in-the-life-of-a-long-weekend-written-for-anybody-who-has-ever-said-you-are-so-lucky-to-work-from-home/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 261,
+   "all-minilm (whole post)": 275,
+   "all-minilm (best passage)": 240,
+   "nomic-embed-text (whole post)": 71,
+   "nomic-embed-text (best passage)": 51,
+   "embeddinggemma (whole post)": 149,
+   "embeddinggemma (best passage)": 135
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/26/friday-nights-were-made-for-pizza-and-cardboard-apparently/",
+  "target": "https://www.moxie-dude.com/2014/04/23/blogging-is-possibly-better-than-therapy-but-dont-tell-my-therapist-just-kidding-i-dont-really-have-a-therapist-because-i-blog/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 13,
+   "all-minilm (whole post)": 164,
+   "all-minilm (best passage)": 51,
+   "nomic-embed-text (whole post)": 48,
+   "nomic-embed-text (best passage)": 44,
+   "embeddinggemma (whole post)": 28,
+   "embeddinggemma (best passage)": 73
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/04/26/friday-nights-were-made-for-pizza-and-cardboard-apparently/",
+  "target": "https://www.moxie-dude.com/2014/04/25/a-womans-place-is-in-the-kitchen-and-she-should-go-there-directly-after-work-because-thats-where-she-keeps-the-wine-5/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 220,
+   "all-minilm (whole post)": 60,
+   "all-minilm (best passage)": 75,
+   "nomic-embed-text (whole post)": 79,
+   "nomic-embed-text (best passage)": 101,
+   "embeddinggemma (whole post)": 148,
+   "embeddinggemma (best passage)": 91
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/03/an-early-mothers-day-card-from-my-son-i-may-have-blushed/",
+  "target": "https://www.moxie-dude.com/2014/04/28/no-school-is-the-math-formula/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 293,
+   "all-minilm (whole post)": 224,
+   "all-minilm (best passage)": 254,
+   "nomic-embed-text (whole post)": 302,
+   "nomic-embed-text (best passage)": 285,
+   "embeddinggemma (whole post)": 289,
+   "embeddinggemma (best passage)": 189
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/03/an-early-mothers-day-card-from-my-son-i-may-have-blushed/",
+  "target": "https://www.moxie-dude.com/2014/04/30/yearbooks-and-lifetimes/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 137,
+   "all-minilm (whole post)": 105,
+   "all-minilm (best passage)": 49,
+   "nomic-embed-text (whole post)": 117,
+   "nomic-embed-text (best passage)": 158,
+   "embeddinggemma (whole post)": 110,
+   "embeddinggemma (best passage)": 153
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/03/an-early-mothers-day-card-from-my-son-i-may-have-blushed/",
+  "target": "https://www.moxie-dude.com/2014/05/02/you-dont-have-to-be-sensible-to-wear-sensible-shoes-a-case-study/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 52,
+   "all-minilm (whole post)": 283,
+   "all-minilm (best passage)": 161,
+   "nomic-embed-text (whole post)": 171,
+   "nomic-embed-text (best passage)": 177,
+   "embeddinggemma (whole post)": 165,
+   "embeddinggemma (best passage)": 114
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/17/true-friends-dont-let-friends-drink-and-make-promises/",
+  "target": "https://www.moxie-dude.com/2014/05/12/you-may-want-to-take-a-deep-breath-just-before-you-start-reading-this-post/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 197,
+   "all-minilm (whole post)": 50,
+   "all-minilm (best passage)": 46,
+   "nomic-embed-text (whole post)": 120,
+   "nomic-embed-text (best passage)": 65,
+   "embeddinggemma (whole post)": 15,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/17/true-friends-dont-let-friends-drink-and-make-promises/",
+  "target": "https://www.moxie-dude.com/2014/05/14/when-writing-becomes-hazardous-to-your-mental-health-and-marital-status/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 145,
+   "all-minilm (whole post)": 50,
+   "all-minilm (best passage)": 34,
+   "nomic-embed-text (whole post)": 91,
+   "nomic-embed-text (best passage)": 58,
+   "embeddinggemma (whole post)": 60,
+   "embeddinggemma (best passage)": 52
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/17/true-friends-dont-let-friends-drink-and-make-promises/",
+  "target": "https://www.moxie-dude.com/2014/05/16/6-items-or-less-its-not-a-freaking-math-problem-people/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 71,
+   "all-minilm (whole post)": 147,
+   "all-minilm (best passage)": 221,
+   "nomic-embed-text (whole post)": 127,
+   "nomic-embed-text (best passage)": 162,
+   "embeddinggemma (whole post)": 86,
+   "embeddinggemma (best passage)": 68
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/23/not-sure-if-your-boyfriend-is-cheating-on-you-his-phone-habits-may-have-the-answer/",
+  "target": "https://www.moxie-dude.com/2014/05/21/girls-night-out-better-than-therapy/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 7,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 7,
+   "nomic-embed-text (whole post)": 8,
+   "nomic-embed-text (best passage)": 8,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 10
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/24/freelance-writing-vs-full-time-job-a-pros-and-cons-perspective/",
+  "target": "https://www.moxie-dude.com/2014/05/20/lean-cuisine-rewards-rewarding-on-more-levels-than-you-know/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 59,
+   "all-minilm (whole post)": 8,
+   "all-minilm (best passage)": 9,
+   "nomic-embed-text (whole post)": 18,
+   "nomic-embed-text (best passage)": 27,
+   "embeddinggemma (whole post)": 31,
+   "embeddinggemma (best passage)": 118
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/24/freelance-writing-vs-full-time-job-a-pros-and-cons-perspective/",
+  "target": "https://www.moxie-dude.com/2014/05/21/girls-night-out-better-than-therapy/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 148,
+   "all-minilm (whole post)": 250,
+   "all-minilm (best passage)": 273,
+   "nomic-embed-text (whole post)": 83,
+   "nomic-embed-text (best passage)": 156,
+   "embeddinggemma (whole post)": 197,
+   "embeddinggemma (best passage)": 283
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/24/freelance-writing-vs-full-time-job-a-pros-and-cons-perspective/",
+  "target": "https://www.moxie-dude.com/2014/05/23/not-sure-if-your-boyfriend-is-cheating-on-you-his-phone-habits-may-have-the-answer/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 155,
+   "all-minilm (whole post)": 280,
+   "all-minilm (best passage)": 311,
+   "nomic-embed-text (whole post)": 338,
+   "nomic-embed-text (best passage)": 346,
+   "embeddinggemma (whole post)": 246,
+   "embeddinggemma (best passage)": 204
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/05/31/the-best-thing-about-reunions-is-that-they-remind-you-that-you-never-really-grow-up-also-we-should-have-reunions-every-day/",
+  "target": "https://www.moxie-dude.com/2014/05/28/focus-mona-focus/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 59,
+   "all-minilm (whole post)": 93,
+   "all-minilm (best passage)": 28,
+   "nomic-embed-text (whole post)": 121,
+   "nomic-embed-text (best passage)": 19,
+   "embeddinggemma (whole post)": 81,
+   "embeddinggemma (best passage)": 12
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/06/03/self-imposed-writing-challenge-chronicle-1/",
+  "target": "https://www.moxie-dude.com/2014/05/28/focus-mona-focus/",
+  "gap_days": 6,
+  "ranks": {
+   "BM25 keyword match": 6,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/06/03/self-imposed-writing-challenge-chronicle-1/",
+  "target": "https://www.moxie-dude.com/2014/05/31/the-best-thing-about-reunions-is-that-they-remind-you-that-you-never-really-grow-up-also-we-should-have-reunions-every-day/",
+  "gap_days": 3,
+  "ranks": {
+   "BM25 keyword match": 6,
+   "all-minilm (whole post)": 38,
+   "all-minilm (best passage)": 23,
+   "nomic-embed-text (whole post)": 56,
+   "nomic-embed-text (best passage)": 32,
+   "embeddinggemma (whole post)": 64,
+   "embeddinggemma (best passage)": 15
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/06/07/my-double-life-except-that-possibly-im-too-busy-for-two-lives/",
+  "target": "https://www.moxie-dude.com/2014/05/24/freelance-writing-vs-full-time-job-a-pros-and-cons-perspective/",
+  "gap_days": 14,
+  "ranks": {
+   "BM25 keyword match": 5,
+   "all-minilm (whole post)": 24,
+   "all-minilm (best passage)": 19,
+   "nomic-embed-text (whole post)": 37,
+   "nomic-embed-text (best passage)": 56,
+   "embeddinggemma (whole post)": 8,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/06/07/my-double-life-except-that-possibly-im-too-busy-for-two-lives/",
+  "target": "https://www.moxie-dude.com/2014/06/03/self-imposed-writing-challenge-chronicle-1/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 19,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 3,
+   "nomic-embed-text (whole post)": 11,
+   "nomic-embed-text (best passage)": 12,
+   "embeddinggemma (whole post)": 12,
+   "embeddinggemma (best passage)": 23
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/06/08/self-imposed-writing-challenge-chronicle-2/",
+  "target": "https://www.moxie-dude.com/2014/03/26/when-a-picture-is-worth-1000-words-or-1000-reasons-why-i-should-never-try-to-cook-red-meat-ever-again/",
+  "gap_days": 74,
+  "ranks": {
+   "BM25 keyword match": 147,
+   "all-minilm (whole post)": 191,
+   "all-minilm (best passage)": 269,
+   "nomic-embed-text (whole post)": 202,
+   "nomic-embed-text (best passage)": 188,
+   "embeddinggemma (whole post)": 171,
+   "embeddinggemma (best passage)": 244
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/06/08/self-imposed-writing-challenge-chronicle-2/",
+  "target": "https://www.moxie-dude.com/2014/06/03/self-imposed-writing-challenge-chronicle-1/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/11/15/this-picture-only-makes-sense-if-youre-almost-50-or-if-you-need-to-celebrate-the-fact-that-your-body-is-falling-apart/",
+  "target": "https://www.moxie-dude.com/2014/11/06/i-smell-like-an-old-person-why-do-i-feel-like-i-should-be-apologizing-for-that/",
+  "gap_days": 9,
+  "ranks": {
+   "BM25 keyword match": 15,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2014/12/26/12-rules-to-being-a-successful-rebel/",
+  "target": "https://www.moxie-dude.com/2014/04/26/friday-nights-were-made-for-pizza-and-cardboard-apparently/",
+  "gap_days": 244,
+  "ranks": {
+   "BM25 keyword match": 196,
+   "all-minilm (whole post)": 259,
+   "all-minilm (best passage)": 281,
+   "nomic-embed-text (whole post)": 44,
+   "nomic-embed-text (best passage)": 150,
+   "embeddinggemma (whole post)": 39,
+   "embeddinggemma (best passage)": 65
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2015/01/23/its-my-birthday-part-2-on-turning-50/",
+  "target": "https://www.moxie-dude.com/2015/01/23/its-my-birthday-part-1-also-not-to-sound-paranoid-or-anything-but-i-think-google-spies-on-me-during-my-sleep-or-possibly-im-just-senile/",
+  "gap_days": 0,
+  "ranks": {
+   "BM25 keyword match": 9,
+   "all-minilm (whole post)": 6,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2015/10/07/a-few-things-that-happened-to-me-when-i-died-in-my-head-of-course/",
+  "target": "https://www.moxie-dude.com/2015/09/03/there-are-no-serial-killers-in-my-new-old-house-only-spiders/",
+  "gap_days": 34,
+  "ranks": {
+   "BM25 keyword match": 7,
+   "all-minilm (whole post)": 177,
+   "all-minilm (best passage)": 250,
+   "nomic-embed-text (whole post)": 74,
+   "nomic-embed-text (best passage)": 63,
+   "embeddinggemma (whole post)": 91,
+   "embeddinggemma (best passage)": 57
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2015/10/07/a-few-things-that-happened-to-me-when-i-died-in-my-head-of-course/",
+  "target": "https://www.moxie-dude.com/2015/09/10/i-could-live-like-this-forever-even-if-i-had-alzheimers/",
+  "gap_days": 27,
+  "ranks": {
+   "BM25 keyword match": 28,
+   "all-minilm (whole post)": 44,
+   "all-minilm (best passage)": 25,
+   "nomic-embed-text (whole post)": 111,
+   "nomic-embed-text (best passage)": 112,
+   "embeddinggemma (whole post)": 142,
+   "embeddinggemma (best passage)": 190
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2015/10/07/a-few-things-that-happened-to-me-when-i-died-in-my-head-of-course/",
+  "target": "https://www.moxie-dude.com/2015/09/16/another-post-about-my-recent-move-or-possibly-a-post-about-womens-underwear/",
+  "gap_days": 21,
+  "ranks": {
+   "BM25 keyword match": 9,
+   "all-minilm (whole post)": 110,
+   "all-minilm (best passage)": 16,
+   "nomic-embed-text (whole post)": 25,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 21,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2015/11/25/in-the-spirit-of-thanksgiving-i-give-you-matt-bellassai/",
+  "target": "https://www.moxie-dude.com/2015/10/28/i-dont-want-to-murder-anyone-with-my-epilepsy/",
+  "gap_days": 28,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 198,
+   "all-minilm (best passage)": 84,
+   "nomic-embed-text (whole post)": 64,
+   "nomic-embed-text (best passage)": 9,
+   "embeddinggemma (whole post)": 33,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2015/12/01/ive-decided-to-break-some-bread-with-yall-although-we-may-need-a-sledgehammer/",
+  "target": "https://www.moxie-dude.com/2015/11/27/have-you-ever-wondered-what-bonnie-and-clyde-humphrey-bogart-and-lauren-bacall-and-harry-and-bess-houdini-have-in-common-nothing-probably/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 5,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/03/17/sorry-for-my-absence-ive-been-out-of-my-mind/",
+  "target": "https://www.moxie-dude.com/2015/10/28/i-dont-want-to-murder-anyone-with-my-epilepsy/",
+  "gap_days": 141,
+  "ranks": {
+   "BM25 keyword match": 10,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/04/01/well-played-netflix-oh-and-nightfall-i-saw-what-you-did-there/",
+  "target": "https://www.moxie-dude.com/2015/12/17/when-technology-tricks-us-into-believing-that-were-going-to-be-murdered-in-our-sleep/",
+  "gap_days": 106,
+  "ranks": {
+   "BM25 keyword match": 4,
+   "all-minilm (whole post)": 12,
+   "all-minilm (best passage)": 3,
+   "nomic-embed-text (whole post)": 11,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 19,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/06/17/so-how-bored-are-you-right-now/",
+  "target": "https://www.moxie-dude.com/2014/02/25/the-4-phases-of-an-ending-relationship-also-i-think-i-just-broke-up-with-a-piece-of-myself/",
+  "gap_days": 843,
+  "ranks": {
+   "BM25 keyword match": 105,
+   "all-minilm (whole post)": 313,
+   "all-minilm (best passage)": 198,
+   "nomic-embed-text (whole post)": 119,
+   "nomic-embed-text (best passage)": 150,
+   "embeddinggemma (whole post)": 155,
+   "embeddinggemma (best passage)": 185
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/06/17/so-how-bored-are-you-right-now/",
+  "target": "https://www.moxie-dude.com/2014/10/31/dear-my-daughter-i-didnt-mean-honey-boo-boo-when-i-called-you-honey-boo-boo/",
+  "gap_days": 595,
+  "ranks": {
+   "BM25 keyword match": 211,
+   "all-minilm (whole post)": 190,
+   "all-minilm (best passage)": 199,
+   "nomic-embed-text (whole post)": 310,
+   "nomic-embed-text (best passage)": 253,
+   "embeddinggemma (whole post)": 196,
+   "embeddinggemma (best passage)": 306
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/06/17/so-how-bored-are-you-right-now/",
+  "target": "https://www.moxie-dude.com/2016/01/19/the-secret-to-being-an-adult/",
+  "gap_days": 150,
+  "ranks": {
+   "BM25 keyword match": 295,
+   "all-minilm (whole post)": 171,
+   "all-minilm (best passage)": 158,
+   "nomic-embed-text (whole post)": 279,
+   "nomic-embed-text (best passage)": 111,
+   "embeddinggemma (whole post)": 128,
+   "embeddinggemma (best passage)": 144
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/11/15/5-tips-on-how-to-win-at-life/",
+  "target": "https://www.moxie-dude.com/2016/11/09/oshkosh-bgosh-encouraging-us-to-embrace-ourselves-for-who-we-are-as-we-are/",
+  "gap_days": 6,
+  "ranks": {
+   "BM25 keyword match": 15,
+   "all-minilm (whole post)": 284,
+   "all-minilm (best passage)": 239,
+   "nomic-embed-text (whole post)": 209,
+   "nomic-embed-text (best passage)": 241,
+   "embeddinggemma (whole post)": 260,
+   "embeddinggemma (best passage)": 94
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2016/12/12/i-may-have-alzheimers-disease-or-i-may-just-be-writing-about-it/",
+  "target": "https://www.moxie-dude.com/2016/11/30/this-isnt-a-real-post-its-actually-me-just-taking-a-break-from-my-real-writing/",
+  "gap_days": 12,
+  "ranks": {
+   "BM25 keyword match": 5,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 12,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 9
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/03/07/shout-out-to-virginia-the-state-not-the-girl/",
+  "target": "https://www.moxie-dude.com/2017/03/03/kindness-lets-spread-that-shit-on-everything/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 7,
+   "all-minilm (best passage)": 31,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 21,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 13
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/04/07/an-essay-on-random-acts-of-kindness-or-kindness-lets-spread-that-shit-on-everything-part-2/",
+  "target": "https://www.moxie-dude.com/2017/03/03/kindness-lets-spread-that-shit-on-everything/",
+  "gap_days": 35,
+  "ranks": {
+   "BM25 keyword match": 8,
+   "all-minilm (whole post)": 51,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 16,
+   "nomic-embed-text (best passage)": 12,
+   "embeddinggemma (whole post)": 10,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/11/21/guilt-and-its-power-over-single-mothers-post-2-of-a-series/",
+  "target": "https://www.moxie-dude.com/2017/11/19/guilt-and-other-single-mother-stories-post-1-of-a-series/",
+  "gap_days": 2,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/11/26/woman-or-dragon-slayer-oh-single-mom-that-explains-a-lot-post-3-of-a-series/",
+  "target": "https://www.moxie-dude.com/2017/11/19/guilt-and-other-single-mother-stories-post-1-of-a-series/",
+  "gap_days": 7,
+  "ranks": {
+   "BM25 keyword match": 11,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 7,
+   "nomic-embed-text (best passage)": 17,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 9
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/11/26/woman-or-dragon-slayer-oh-single-mom-that-explains-a-lot-post-3-of-a-series/",
+  "target": "https://www.moxie-dude.com/2017/11/21/guilt-and-its-power-over-single-mothers-post-2-of-a-series/",
+  "gap_days": 5,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 20,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 22,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 5,
+   "embeddinggemma (best passage)": 10
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/11/27/dear-single-mothers-its-time-we-stand-up-to-guilt-post-4-of-4-of-this-series/",
+  "target": "https://www.moxie-dude.com/2017/11/19/guilt-and-other-single-mother-stories-post-1-of-a-series/",
+  "gap_days": 8,
+  "ranks": {
+   "BM25 keyword match": 6,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 10,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/11/27/dear-single-mothers-its-time-we-stand-up-to-guilt-post-4-of-4-of-this-series/",
+  "target": "https://www.moxie-dude.com/2017/11/21/guilt-and-its-power-over-single-mothers-post-2-of-a-series/",
+  "gap_days": 6,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2017/11/27/dear-single-mothers-its-time-we-stand-up-to-guilt-post-4-of-4-of-this-series/",
+  "target": "https://www.moxie-dude.com/2017/11/26/woman-or-dragon-slayer-oh-single-mom-that-explains-a-lot-post-3-of-a-series/",
+  "gap_days": 1,
+  "ranks": {
+   "BM25 keyword match": 10,
+   "all-minilm (whole post)": 14,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 16,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 5,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2018/02/24/yes-i-am-still-alive/",
+  "target": "https://www.moxie-dude.com/2018/01/27/2018-the-year-of-magical-pfffft/",
+  "gap_days": 28,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2018/03/31/the-writers-life-an-update/",
+  "target": "https://www.moxie-dude.com/2018/03/03/the-writer-life-wear-running-shoes/",
+  "gap_days": 28,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 9,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2018/04/07/i-have-a-book-deal-and-im-writing-about-a-serial-killer-these-facts-are-unrelated/",
+  "target": "https://www.moxie-dude.com/2018/03/31/the-writers-life-an-update/",
+  "gap_days": 7,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 7,
+   "all-minilm (best passage)": 3,
+   "nomic-embed-text (whole post)": 7,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 4,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2019/12/05/my-new-years-resolution-is-to-eat-less-take-out-im-pretty-sure-that-my-son-is-going-to-hate-my-new-years-resolution/",
+  "target": "https://www.moxie-dude.com/2014/03/10/quasi-post-after-mentioning-that-i-had-a-date-on-saturday-and-that-i-was-cooking-i-received-some-requests-for-an-update-this-is-that-update/",
+  "gap_days": 2096,
+  "ranks": {
+   "BM25 keyword match": 368,
+   "all-minilm (whole post)": 13,
+   "all-minilm (best passage)": 24,
+   "nomic-embed-text (whole post)": 81,
+   "nomic-embed-text (best passage)": 19,
+   "embeddinggemma (whole post)": 113,
+   "embeddinggemma (best passage)": 58
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2020/03/04/status-update-im-bathing-suit-shopping/",
+  "target": "https://www.moxie-dude.com/2020/02/27/multi-tasking-vs-wearing-many-hats-with-kim-christin-spiritual-healer-and-inspirational-writer/",
+  "gap_days": 6,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 42,
+   "all-minilm (best passage)": 20,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 70,
+   "embeddinggemma (best passage)": 65
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2020/03/24/multi-tasking-vs-wearing-many-hats-with-joanna-bennett-partner-account-management-at-obrien-communications/",
+  "target": "https://www.moxie-dude.com/2020/02/27/multi-tasking-vs-wearing-many-hats-with-kim-christin-spiritual-healer-and-inspirational-writer/",
+  "gap_days": 26,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 11,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 7
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2020/03/24/multi-tasking-vs-wearing-many-hats-with-joanna-bennett-partner-account-management-at-obrien-communications/",
+  "target": "https://www.moxie-dude.com/2020/03/05/multi-tasking-vs-wearing-many-hats-a-glimpse-into-the-life-of-jillian-coburn-author-entrepreneur-inventor/",
+  "gap_days": 19,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 13,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 12,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 10
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2021/10/15/planning-for-your-childs-education-a-guide-for-single-moms/",
+  "target": "https://www.moxie-dude.com/2020/03/05/multi-tasking-vs-wearing-many-hats-a-glimpse-into-the-life-of-jillian-coburn-author-entrepreneur-inventor/",
+  "gap_days": 589,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 17,
+   "all-minilm (best passage)": 60,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 52,
+   "embeddinggemma (whole post)": 7,
+   "embeddinggemma (best passage)": 59
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2021/10/29/the-writing-life-2-strike-while-its-hot-or-die/",
+  "target": "https://www.moxie-dude.com/2021/10/25/the-writing-life/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 11,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 4,
+   "nomic-embed-text (best passage)": 3,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 4
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2021/11/01/an-open-letter-from-a-single-mother-to-a-failed-father-part-2-is-in-the-works/",
+  "target": "https://www.moxie-dude.com/2020/10/20/an-open-letter-from-a-single-mother-to-a-failed-father-part-1/",
+  "gap_days": 377,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2021/11/01/an-open-letter-from-a-single-mother-to-a-failed-father-part-2-is-in-the-works/",
+  "target": "https://www.moxie-dude.com/2021/10/25/the-writing-life/",
+  "gap_days": 7,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 10,
+   "all-minilm (best passage)": 4,
+   "nomic-embed-text (whole post)": 6,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 18,
+   "embeddinggemma (best passage)": 3
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2021/11/05/this-letter-did-nothing-for-me-oh-well/",
+  "target": "https://www.moxie-dude.com/2021/11/01/an-open-letter-from-a-single-mother-to-a-failed-father-part-2-is-in-the-works/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2021/11/13/dear-you-yeah-you-youre-doing-great-and-the-laundry-doesnt-care/",
+  "target": "https://www.moxie-dude.com/2021/11/09/im-late-im-late-for-a-very-important-date/",
+  "gap_days": 4,
+  "ranks": {
+   "BM25 keyword match": 2,
+   "all-minilm (whole post)": 8,
+   "all-minilm (best passage)": 31,
+   "nomic-embed-text (whole post)": 118,
+   "nomic-embed-text (best passage)": 96,
+   "embeddinggemma (whole post)": 47,
+   "embeddinggemma (best passage)": 7
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2022/10/23/ghostwriter-comes-out-from-under-the-sheet-to-share-what-its-like-to-write-other-peoples-stories/",
+  "target": "https://www.moxie-dude.com/2021/06/03/are-you-thinking-of-writing-a-nonfiction-book-here-are-a-few-tips/",
+  "gap_days": 507,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 4,
+   "all-minilm (best passage)": 9,
+   "nomic-embed-text (whole post)": 2,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 8
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2022/11/11/a-podcast-for-single-moms-part-2/",
+  "target": "https://www.moxie-dude.com/2022/10/16/a-new-podcast-for-single-moms/",
+  "gap_days": 26,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2023/04/01/juggling-parenting-finances-and-telling-dad-jokes-like-a-boss-single-moms-are-more-than-a-statistic/",
+  "target": "https://www.moxie-dude.com/2021/10/08/book-excerpt-from-superwoman-a-funny-and-reflective-look-at-single-motherhood/",
+  "gap_days": 540,
+  "ranks": {
+   "BM25 keyword match": 16,
+   "all-minilm (whole post)": 17,
+   "all-minilm (best passage)": 18,
+   "nomic-embed-text (whole post)": 11,
+   "nomic-embed-text (best passage)": 17,
+   "embeddinggemma (whole post)": 11,
+   "embeddinggemma (best passage)": 6
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2023/08/24/food-and-fitness-priorities-shift-when-you-age/",
+  "target": "https://www.moxie-dude.com/2023/01/06/how-i-fooled-my-adhd-into-letting-me-plan-my-life/",
+  "gap_days": 230,
+  "ranks": {
+   "BM25 keyword match": 10,
+   "all-minilm (whole post)": 20,
+   "all-minilm (best passage)": 54,
+   "nomic-embed-text (whole post)": 28,
+   "nomic-embed-text (best passage)": 95,
+   "embeddinggemma (whole post)": 45,
+   "embeddinggemma (best passage)": 27
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2023/11/19/trail-tales-of-aging-a-hike-a-dumbass-decision-and-the-quest-for-eternal-youth-or-at-least-a-pain-free-tomorrow/",
+  "target": "https://www.moxie-dude.com/2023/10/28/is-it-me-or-am-i-just-getting-old/",
+  "gap_days": 22,
+  "ranks": {
+   "BM25 keyword match": 3,
+   "all-minilm (whole post)": 22,
+   "all-minilm (best passage)": 13,
+   "nomic-embed-text (whole post)": 19,
+   "nomic-embed-text (best passage)": 18,
+   "embeddinggemma (whole post)": 2,
+   "embeddinggemma (best passage)": 5
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2024/02/11/my-funny-valentine-because-laughter-is-our-love-language/",
+  "target": "https://www.moxie-dude.com/2023/11/19/trail-tales-of-aging-a-hike-a-dumbass-decision-and-the-quest-for-eternal-youth-or-at-least-a-pain-free-tomorrow/",
+  "gap_days": 84,
+  "ranks": {
+   "BM25 keyword match": 6,
+   "all-minilm (whole post)": 29,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 79,
+   "nomic-embed-text (best passage)": 7,
+   "embeddinggemma (whole post)": 76,
+   "embeddinggemma (best passage)": 19
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2024/02/11/my-funny-valentine-because-laughter-is-our-love-language/",
+  "target": "https://www.moxie-dude.com/2023/12/16/top-two-reasons-why-dating-as-a-single-mom-sucks/",
+  "gap_days": 57,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 2,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 2,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2024/02/11/my-funny-valentine-because-laughter-is-our-love-language/",
+  "target": "https://www.moxie-dude.com/2024/01/27/another-reason-im-not-a-life-coach/",
+  "gap_days": 15,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 11,
+   "all-minilm (best passage)": 2,
+   "nomic-embed-text (whole post)": 14,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 10,
+   "embeddinggemma (best passage)": 2
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2024/02/25/stop-making-yourself-small-a-guide-to-owning-who-you-are-in-a-world-full-of-hot-air-balloons/",
+  "target": "https://www.moxie-dude.com/2024/01/14/and-this-is-why-im-not-a-life-coach/",
+  "gap_days": 42,
+  "ranks": {
+   "BM25 keyword match": 1,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 29,
+   "nomic-embed-text (whole post)": 8,
+   "nomic-embed-text (best passage)": 4,
+   "embeddinggemma (whole post)": 7,
+   "embeddinggemma (best passage)": 21
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2024/09/25/my-great-sourdough-experiment-in-retrospect-i-should-have-known-better/",
+  "target": "https://www.moxie-dude.com/2022/12/15/pain-also-known-as-bread-in-french/",
+  "gap_days": 650,
+  "ranks": {
+   "BM25 keyword match": 8,
+   "all-minilm (whole post)": 1,
+   "all-minilm (best passage)": 8,
+   "nomic-embed-text (whole post)": 1,
+   "nomic-embed-text (best passage)": 1,
+   "embeddinggemma (whole post)": 1,
+   "embeddinggemma (best passage)": 1
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2024/11/29/just-when-you-think-you-know-yourself-something-happens-that-makes-you-question-everything/",
+  "target": "https://www.moxie-dude.com/2023/11/19/trail-tales-of-aging-a-hike-a-dumbass-decision-and-the-quest-for-eternal-youth-or-at-least-a-pain-free-tomorrow/",
+  "gap_days": 376,
+  "ranks": {
+   "BM25 keyword match": 47,
+   "all-minilm (whole post)": 7,
+   "all-minilm (best passage)": 1,
+   "nomic-embed-text (whole post)": 10,
+   "nomic-embed-text (best passage)": 5,
+   "embeddinggemma (whole post)": 3,
+   "embeddinggemma (best passage)": 5
+  }
+ },
+ {
+  "source": "https://www.moxie-dude.com/2025/10/15/diane-keaton-died-and-i-cut-my-hair-coincidence-probably/",
+  "target": "https://www.moxie-dude.com/2025/09/25/not-sure-if-this-is-inspiring-or-just-proof-im-not-25-anymore/",
+  "gap_days": 20,
+  "ranks": {
+   "BM25 keyword match": 104,
+   "all-minilm (whole post)": 221,
+   "all-minilm (best passage)": 110,
+   "nomic-embed-text (whole post)": 177,
+   "nomic-embed-text (best passage)": 276,
+   "embeddinggemma (whole post)": 114,
+   "embeddinggemma (best passage)": 213
+  }
+ }
+]

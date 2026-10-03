@@ -1,0 +1,132 @@
+{
+ "model": "Xenova/all-MiniLM-L6-v2",
+ "dtype": "q8",
+ "scoring": "closest passage",
+ "all_links": {
+  "n": 179,
+  "top1": 34,
+  "top5": 59,
+  "top10": 72,
+  "median_rank": 17
+ },
+ "within_30_days": {
+  "n": 150,
+  "top1": 27,
+  "top5": 46,
+  "top10": 57,
+  "median_rank": 18
+ },
+ "over_90_days": {
+  "n": 19,
+  "top1": 5,
+  "top5": 9,
+  "top10": 10,
+  "median_rank": 6
+ },
+ "over_1_year": {
+  "n": 9,
+  "top1": 2,
+  "top5": 3,
+  "top10": 4,
+  "median_rank": 14
+ },
+ "baselines": {
+  "newest_first": {
+   "all_links": {
+    "n": 179,
+    "top1": 121,
+    "top5": 147,
+    "top10": 153,
+    "median_rank": 1
+   },
+   "within_30_days": {
+    "n": 150,
+    "top1": 121,
+    "top5": 141,
+    "top10": 145,
+    "median_rank": 1
+   },
+   "over_90_days": {
+    "n": 19,
+    "top1": 0,
+    "top5": 1,
+    "top10": 2,
+    "median_rank": 32
+   },
+   "over_1_year": {
+    "n": 9,
+    "top1": 0,
+    "top5": 0,
+    "top10": 0,
+    "median_rank": 36
+   }
+  },
+  "keyword_search": {
+   "all_links": {
+    "n": 179,
+    "top1": 31,
+    "top5": 57,
+    "top10": 77,
+    "median_rank": 18
+   },
+   "within_30_days": {
+    "n": 150,
+    "top1": 25,
+    "top5": 46,
+    "top10": 60,
+    "median_rank": 20
+   },
+   "over_90_days": {
+    "n": 19,
+    "top1": 4,
+    "top5": 7,
+    "top10": 11,
+    "median_rank": 10
+   },
+   "over_1_year": {
+    "n": 9,
+    "top1": 2,
+    "top5": 3,
+    "top10": 4,
+    "median_rank": 16
+   }
+  }
+ },
+ "not_shipped": {
+  "model_plus_keywords_fused": {
+   "all_links": {
+    "n": 179,
+    "top1": 32,
+    "top5": 74,
+    "top10": 86,
+    "median_rank": 13
+   },
+   "within_30_days": {
+    "n": 150,
+    "top1": 28,
+    "top5": 57,
+    "top10": 68,
+    "median_rank": 16
+   },
+   "over_90_days": {
+    "n": 19,
+    "top1": 4,
+    "top5": 10,
+    "top10": 11,
+    "median_rank": 5
+   },
+   "over_1_year": {
+    "n": 9,
+    "top1": 1,
+    "top5": 4,
+    "top10": 4,
+    "median_rank": 19
+   }
+  }
+ },
+ "floor": 0.457,
+ "floor_rule": "5th percentile of the closeness between each of her pieces and the closest piece she had already published (pieces with at least 50 before them)",
+ "floor_n": 653,
+ "her_links_closeness_median": 0.479,
+ "ms_per_passage_build": 77.6
+}

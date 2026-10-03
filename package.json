@@ -1,0 +1,17 @@
+{
+  "name": "moxie-library",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A library of one writer's 16 years of work, with a desk that remembers.",
+  "scripts": {
+    "index": "node scripts/build_index.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

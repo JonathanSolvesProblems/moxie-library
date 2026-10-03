@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-theme="dusk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Moxie Library</title>
+  <meta name="description" content="Everything Mona Andrei has published, in one place, with a desk that points her back at what she already wrote.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/literata.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Theme is set before first paint so the page never flashes the wrong sky.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('moxie-theme'); } catch (e) {}
+      var light = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.dataset.theme = saved || (light ? 'morning' : 'dusk');
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#draft">Skip to the desk</a>
+
+  <header class="mast">
+    <h1 class="wordmark">The Moxie <span>Library</span></h1>
+    <p class="tally" id="tally" aria-live="polite">Opening the library…</p>
+    <button class="sky-switch" id="theme" type="button" aria-pressed="false">
+      <span class="sky-switch__dot" aria-hidden="true"></span>
+      <span id="theme-label">Morning</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="desk" aria-labelledby="desk-title">
+      <div class="sheet">
+        <div class="sheet__head">
+          <h2 id="desk-title">The desk</h2>
+          <button class="quiet" id="clear" type="button" hidden>Clear</button>
+        </div>
+        <label class="visually-hidden" for="draft">Your draft</label>
+        <textarea id="draft" spellcheck="true"
+          placeholder="Start a draft here, or paste one. When you pause, the library looks through everything you have published and brings back the pieces on the same subject."></textarea>
+        <div class="starters" id="starters" hidden>
+          <span class="starters__label">Or test it with the opening of something you already published:</span>
+          <div class="starters__row" id="starter-row"></div>
+        </div>
+        <p class="sheet__foot" id="engine">Waking the reader…</p>
+      </div>
+
+      <div class="finds" aria-live="polite" aria-busy="false" id="finds">
+        <h2 class="finds__title" id="finds-title">Nothing on the desk yet</h2>
+        <p class="finds__note" id="finds-note">Write a few sentences on the left. The pieces you have already written on that subject will come up here, each with your own paragraph and a link you can copy.</p>
+        <ol class="finds__list" id="finds-list"></ol>
+      </div>
+    </section>
+
+    <section class="ground" aria-labelledby="ground-title">
+      <div class="ground__head">
+        <h2 id="ground-title"><span id="buried">–</span> of your <span id="total">–</span> pieces have nothing of yours pointing at them</h2>
+        <ul class="legend" aria-label="What the shapes and colours mean">
+          <li><i class="slab slab--tomb slab--key" aria-hidden="true"></i> in the ground: nothing you wrote links to it</li>
+          <li><i class="slab slab--book slab--key" aria-hidden="true"></i> on the shelf: something does</li>
+        </ul>
+        <ul class="outlets" id="outlets" aria-label="Where the pieces were published"></ul>
+      </div>
+      <div class="plots" id="plots" role="img" aria-label="Every published piece by year. Most are drawn as tombstones because nothing links to them."></div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <section>
+      <h2>How good is the finding?</h2>
+      <p id="proof">–</p>
+    </section>
+    <section>
+      <h2>What it cannot do</h2>
+      <p id="limits">–</p>
+    </section>
+    <section>
+      <h2>Where your draft goes</h2>
+      <p id="privacy">–</p>
+    </section>
+  </footer>
+
+  <div class="tip" id="tip" role="tooltip" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

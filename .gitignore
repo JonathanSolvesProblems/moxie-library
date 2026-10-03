@@ -1,0 +1,23 @@
+# Mona's posts are her copyright. Her text never goes in the repo:
+# raw fetches, the merged library, and the built site data all stay local.
+data/raw/
+data/build/chunks.json
+data/build/eval_queries.json
+data/build/pull_lines.json
+data/cache/
+data/index/
+data/models/
+site/data/
+
+# Runtime and model binaries are copied in by scripts/vendor.mjs
+site/vendor/
+site/models/
+
+# scratch
+tmp/
+node_modules/
+.venv/
+__pycache__/
+.env
+.env.*
+!.env.example

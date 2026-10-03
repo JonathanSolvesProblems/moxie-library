@@ -1,0 +1,88 @@
+{
+  "project": "moxie-library",
+  "date": "2026-10-02",
+  "platform": "web-app",
+  "family": "toy-playful",
+  "metaphor": "the slab: a tombstone and a book spine are the same shape, so every piece is one upright slab that is either standing in the ground or sitting on a shelf",
+  "register": "warm, playful",
+  "expressive_axis": "structure: one wall of 710 slabs, sixteen years wide, is the only loud thing on the page",
+  "home_polarity": "dusk (dark default), with a morning theme",
+  "category_convention_avoided": "Content-repurposing tools (SocialPost, Buffer, Ocoya) ship a white canvas, an indigo-to-violet gradient hero, rounded stat cards in rows of three, a left sidebar of icon rows and a calendar grid of scheduled posts. Personal knowledge tools ship a dark graph of floating nodes.",
+  "design_code": [
+    "Every piece is drawn as an upright slab, round-topped in the ground when nothing she wrote links to it and flat-topped on a shelf when something does, because her own poster says the job is to move her writing from a graveyard to a library and those two objects share a silhouette.",
+    "The sky is her blog's own teal and the lit surfaces are her blog's own paper and gold, because this is a room in a house she already built, not a new brand.",
+    "Colour belongs to the three places she publishes and to nothing else, with one lamp colour reserved for 'found', because unifying her outlets is the request and a fourth meaning would blur it.",
+    "Her words are set in a book face on lit paper and everything the software says is set in a grotesque on the dark, because the reader must always be able to tell her sentence from the machine's.",
+    "Things arrive with a hop and a settle and are otherwise still, because the only event in this product is a buried piece coming back up."
+  ],
+  "anti_brief": [
+    "Gothic. She writes humour; the graveyard is a joke she made, so no blackletter, no fog, no skulls.",
+    "A dashboard of stat cards. The numbers that matter here are few and belong in a sentence.",
+    "A chat box. She did not ask to talk to her archive, she asked to be pointed back at it."
+  ],
+  "axes": {
+    "canvas": "tinted-mid-dark, saturated teal (her brand colour as a dusk sky); morning theme is a pale aqua sky",
+    "chroma_budget": "triad for the three outlets, one lamp accent, stone neutral",
+    "type_voice": "characterful variable grotesque for the interface, book serif for her prose",
+    "structure": "split desk over a ground strip; the stacks view is a year-by-year wall",
+    "density": "comfortable",
+    "edge": "mixed by meaning: full round top for a slab in the ground, 3px for a shelved book, 14px for paper sheets",
+    "depth": "ink outline and overlap, things stand on a ground line; no blur shadows",
+    "ornament": "the slabs themselves",
+    "motion": "physical, springs with visible overshoot",
+    "numerals": "lining tabular in counts and dates; ages written in words ('11 years ago')"
+  },
+  "themes": {
+    "dusk": {
+      "sky": "#06414D",
+      "ground": "#04303A",
+      "paper": "#F2EDE8",
+      "paper_shade": "#E3D9CC",
+      "ink": "#10262B",
+      "chalk": "#F2EDE8",
+      "chalk_dim": "#A9C2C3",
+      "line": "#0B1F23",
+      "stone": "#B9C4C0",
+      "stone_shade": "#8FA09C",
+      "lamp": "#E7B866",
+      "lamp_on_paper": "#8A5A12"
+    },
+    "morning": {
+      "sky": "#CDE7E3",
+      "ground": "#7FAE9B",
+      "paper": "#FBF8F3",
+      "paper_shade": "#EDE5DA",
+      "ink": "#10262B",
+      "chalk": "#10262B",
+      "chalk_dim": "#3F5A5E",
+      "line": "#10262B",
+      "stone": "#A3B0AD",
+      "stone_shade": "#7F908C",
+      "lamp": "#E0A53A",
+      "lamp_on_paper": "#7A4E0B"
+    }
+  },
+  "tokens": {
+    "outlet_moxie": "#17707C",
+    "outlet_westmount": "#B4492F",
+    "outlet_substack": "#6B3F78",
+    "accent_role": "lamp: the one colour that means 'this piece was found for the draft on the desk'",
+    "accent_hue_deg": 38,
+    "type_display": "Bricolage Grotesque",
+    "type_body": "Literata",
+    "type_mono": null,
+    "scale_ratio": 1.25,
+    "base_size_px": 17,
+    "space_unit_px": 4,
+    "radius_scale": [3, 14, 999],
+    "motion_duration_ms": [160, 520],
+    "motion_easing": "linear() spring with one overshoot"
+  },
+  "motion_brief": {
+    "explains": "where a suggestion came from: the slab in the strip that matches lifts out of the ground at the same moment its card lands beside the draft",
+    "signature": "a tombstone hops out of the ground, loses its round top and settles as a book",
+    "resting_state": "still"
+  },
+  "sources_of_values": "Teal, paper and gold are read from moxie-dude.com's own header CSS (#014855, #f2ede8, #c69a58) and adjusted for contrast. Plum is the title colour of the poster she made in May 2026.",
+  "notes": "Ledger: last three logged families were cinematic-atmospheric, dimensional-tactile and luminous-emissive, all banned here. toy-playful had never been used. Print-editorial (a library checkout card) was considered and dropped as the document attractor. Accent hue 38 is close to still-here's 41 but the canvas (saturated teal vs near-black green), family and structure all differ."
+}
