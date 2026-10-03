@@ -90,22 +90,34 @@ def ask(text, title, previous=None, problem=None):
                      {"role": "user", "content": f"That answer cannot be used: {problem} Choose a different "
                                                  "sentence from the piece, copied exactly, or answer null."}]
     body = json.dumps({"model": MODEL, "stream": False, "format": SCHEMA,
-                       "options": {"temperature": 0, "num_ctx": 4096}, "messages": messages}).encode()
+                       "options": {"temperature": 0, "num_ctx": 4096, "num_predict": 220},
+                       "messages": messages}).encode()
     req = urllib.request.Request("http://localhost:11434/api/chat", data=body,
                                  headers={"Content-Type": "application/json"})
-    for attempt in (1, 2):                      # a transport error gets one retry
+    for attempt in (1, 2, 3):                   # Ollama answers 500 now and then; it passes on a retry
         try:
             with urllib.request.urlopen(req, timeout=300) as r:
                 reply = json.loads(r.read())
-            return json.loads(reply["message"]["content"]).get("line")
-        except (urllib.error.URLError, json.JSONDecodeError):
-            if attempt == 2:
+            break
+        except urllib.error.URLError:
+            if attempt == 3:
                 raise
-            time.sleep(2)
+            time.sleep(5 * attempt)
+    try:
+        return json.loads(reply["message"]["content"]).get("line")
+    except json.JSONDecodeError:
+        # The model ran on past the length limit and the JSON never closed.
+        # That is an answer that cannot be used, not a failed call.
+        return CUT_OFF
+
+
+CUT_OFF = object()
 
 
 def judge(text, offered):
     """(line cut from her text or None, verdict, problem to show the model or None)"""
+    if offered is CUT_OFF:
+        return None, "reply cut off", "it ran on past the length limit and was cut off. One sentence only."
     if offered is None:
         return None, "model said none", None
     span, how = find_in(text, offered)
@@ -129,11 +141,13 @@ for n, (i, p) in enumerate(todo, 1):
         offered = ask(text_in, p["title"])
         line, verdict, problem = judge(text, offered)
         if problem:                             # retry fixes a wrong pick; it cannot invent a line that is not there
-            second = ask(text_in, p["title"], previous=offered, problem=problem)
+            shown = None if offered is CUT_OFF else offered
+            second = ask(text_in, p["title"], previous=shown or "", problem=problem)
             line2, verdict2, _ = judge(text, second)
-            rec["first_offer"], rec["first_verdict"] = offered, verdict
+            rec["first_offer"], rec["first_verdict"] = shown, verdict
             offered, line, verdict = second, line2, verdict2
-        rec["offered"], rec["line"], rec["verdict"] = offered, line, verdict
+        rec["offered"] = None if offered is CUT_OFF else offered
+        rec["line"], rec["verdict"] = line, verdict
     except Exception as e:           # a failed call is recorded as a failure, not as "no line"
         rec["verdict"] = f"error: {type(e).__name__}"
     done[p["id"]] = rec
@@ -145,7 +159,7 @@ for n, (i, p) in enumerate(todo, 1):
 OUT.write_text(json.dumps(list(done.values()), ensure_ascii=False, indent=1), encoding="utf-8")
 tally = {}
 for r in done.values():
-    key = r["verdict"] if r["verdict"] in ("exact", "typography", "not hers", "model said none") else \
+    key = r["verdict"] if r["verdict"] in ("exact", "typography", "not hers", "model said none", "reply cut off") else \
         ("error" if str(r["verdict"]).startswith("error") else "wrong length")
     tally[key] = tally.get(key, 0) + 1
 print(json.dumps({"model": MODEL, "pieces_answered": len(done), **tally}, indent=1))

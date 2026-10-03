@@ -82,9 +82,11 @@ These figures are computed from the exact vectors the page loads, not from a dif
 - **It works with the network off.** `scripts/check_site.mjs` switches the browser offline and
   asks again.
 - **It costs nothing to run.** She is not going to pay a subscription to search her own writing.
-- **I could measure the choice.** Three open embedding models ran against her links on my
-  laptop before I picked one. The largest was a second per passage in a browser; the smallest
-  was 78 ms and scored within one or two links of the others, so the smallest shipped.
+- **I could measure the choice.** all-MiniLM, nomic-embed-text and EmbeddingGemma ran against
+  her links through Ollama on my laptop before I picked one. On an early version of the test
+  they scored 7, 10 and 9 of 19, which is inside the noise. nomic-embed-text then took over a
+  second per passage on a CPU in the runtime the page uses; the smallest took 78 ms, so the
+  smallest shipped.
 
 ## What it cannot do
 

@@ -39,24 +39,32 @@ CLAIMS = [
     ("pieces, 'of 710' form", n(stats["pieces"]), r"\bof (?:your |her |the )?(7\d\d)\b(?! Moxie)"),
     ("never linked, all outlets", n(stats["pieces_never_linked_any_outlet"]), r"\b(\d{3}) of (?:your |her |the )?710\b"),
     ("Moxie-Dude posts", n(stats["moxie_posts"]), r"\b(\d{3}) (?:blog )?posts\b"),
-    ("Moxie-Dude never linked", n(stats["moxie_posts_never_linked"]), r"\b(\d{3}) of (?:them|the 650|650)\b"),
+    ("never linked, prose", n(stats["pieces_never_linked_any_outlet"]), r"links to (\d{3}) of them"),
+    ("Moxie-Dude never linked", n(stats["moxie_posts_never_linked"]), r"\b(\d{3}) of (?:the 650|650)\b"),
     ("Moxie-Dude words", n(stats["moxie_words"]), r"650 posts, ([\d,]+) words"),
-    ("Westmount pieces", n(stats["outlets"]["Westmount Magazine"]), r"Westmount Magazine \| (\d+) pieces|(?<!\d)(\d+) Westmount Magazine"),
-    ("Substack pieces", n(stats["outlets"]["Single Moms with Moxie (Substack)"]), r"\(Substack\) \| (\d+) pieces|(?<!\d)(\d+) Substack"),
-    ("total words", n(stats["words"]), r"Words in total \| ([\d,]*\d)"),
-    ("passages", n(stats["passages"]), r"cut into ([\d,]+) passages"),
-    ("backward links", n(stats["moxie_backward_links"]), r"back to an earlier one \| (\d+)"),
+    ("Westmount pieces", n(stats["outlets"]["Westmount Magazine"]),
+     r"Westmount Magazine \| (\d+) pieces|(?<!\d)(\d+) Westmount Magazine|(\d+) columns from Westmount"),
+    ("Substack pieces", n(stats["outlets"]["Single Moms with Moxie (Substack)"]),
+     r"\(Substack\) \| (\d+) pieces|(?<!\d)(\d+) Substack|(\d+) pieces from her Substack"),
+    ("total words", n(stats["words"]), r"Words in total \| ([\d,]*\d)|pieces and ([\d,]*\d) words"),
+    ("passages", n(stats["passages"]),
+     r"cut into ([\d,]+) passages|120 words\. ([\d,]+) of them|([\d,]+) vectors"),
+    ("backward links", n(stats["moxie_backward_links"]),
+     r"back to an earlier one \| (\d+)|back to an earlier post (\d+) times"),
     ("backward links, '150 of N' form", n(stats["moxie_backward_links"]), r"\b150 of (\d+)\b"),
-    ("within 30 days", n(stats["moxie_backward_within_30_days"]), r"\b(\d+) of 179\b"),
+    ("within 30 days", n(stats["moxie_backward_within_30_days"]), r"\b(\d+) of (?:179|those)\b"),
     ("within 30 days, table", n(stats["moxie_backward_within_30_days"]), r"previous 30 days \| (\d+)"),
-    ("over a year", n(stats["moxie_backward_over_1_year"]), r"more than a year \| (\d+)"),
-    ("long-range links", n(far["n"]), r"\bThe (\d+) that reach back more than 90 days"),
-    ("long-range n", n(far["n"]), r"(?:first|\(BM25\)|8-bit\)) \| \d+ of (\d+)"),
+    ("over a year", n(stats["moxie_backward_over_1_year"]),
+     r"more than a year \| (\d+)|more than a year (\d+) times"),
+    ("long-range links", n(far["n"]), r"\b[Tt]he (\d+) that reach back more than 90 days"),
+    ("long-range n", n(far["n"]), r"(?:first|\(BM25\)|8-bit\)|in the page) \| \d+ of (\d+)"),
     ("newest first", n(new["top5"]), r"Newest post first \| (\d+) of"),
     ("keyword search", n(kw["top5"]), r"Keyword search \(BM25\) \| (\d+) of"),
-    ("shipped model", n(far["top5"]), r"8-bit\) \| (\d+) of"),
-    ("fused, not shipped", n(fused["top5"]), r"keyword search \((\d+) of 19\)"),
+    ("shipped model", n(far["top5"]), r"(?:8-bit\)|model in the page) \| (\d+) of"),
+    ("fused, not shipped", n(fused["top5"]), r"(?:keyword search|fusing the two) \((\d+) of 19\)"),
+    ("requests to fetch her blog", n(-(-stats["moxie_posts"] // 100)), r"came down in (\w+) requests"),
 ]
+WORDS = {"seven": "7"}          # numbers the prose spells out
 REQUIRED_IN_README = {"pieces in the library", "never linked, all outlets", "Moxie-Dude posts", "backward links",
                       "within 30 days, table", "over a year", "newest first", "keyword search", "shipped model"}
 # Figures that were true of an earlier build and must not come back.
@@ -72,6 +80,7 @@ for doc in DOCS:
     for label, expected, pattern in CLAIMS:
         for m in re.finditer(pattern, text, flags=re.M):
             got = next(g for g in m.groups() if g is not None)
+            got = WORDS.get(got, got)
             if got != expected:
                 line = text.count("\n", 0, m.start()) + 1
                 problems.append(f"{doc}:{line}  {label}: says {got}, data says {expected}  ->  \"{m.group(0)}\"")
@@ -83,15 +92,31 @@ for doc in DOCS:
 for label in sorted(REQUIRED_IN_README - seen):
     problems.append(f"README.md  required claim not found: {label}")
 
-# The model comparison sentence in the README.
-readme = (ROOT / "README.md").read_text(encoding="utf-8")
-m = re.search(r"scored (\d+), (\d+) and (\d+) of 19", readme)
-if m and sorted(map(int, m.groups())) != ollama_top5:
-    problems.append(f"README.md  model comparison says {m.groups()}, data says {ollama_top5}")
-if meta:
-    m = re.search(r"smallest\s+was (\d+) ms", readme)
-    if m and int(m.group(1)) != round(meta["ms_per_passage_build"]):
-        problems.append(f"README.md  build speed says {m.group(1)} ms, data says {meta['ms_per_passage_build']}")
+# Claims that need more than one number, checked in every document.
+by_model = [round(ollama[(f"{m} (best passage)", "link text removed")]["recall@5"] *
+                  ollama[(f"{m} (best passage)", "link text removed")]["n"])
+            for m in ("all-minilm", "nomic-embed-text", "embeddinggemma")]
+browser_checks = len(re.findall(r"^\s*check\('(?!run completed)", (ROOT / "scripts/check_site.mjs").read_text(encoding="utf-8"), flags=re.M))
+index_file = ROOT / "data" / "index" / SHIPPED / "vectors.bin"
+for doc in DOCS:
+    if not (ROOT / doc).exists():
+        continue
+    text = (ROOT / doc).read_text(encoding="utf-8")
+    # Listed in the order all-MiniLM, nomic-embed-text, EmbeddingGemma.
+    for m in re.finditer(r"scored (\d+), (\d+) and (\d+) of 19", text):
+        if list(map(int, m.groups())) != by_model:
+            problems.append(f"{doc}  model comparison says {m.groups()}, data says {by_model} (MiniLM, nomic, EmbeddingGemma)")
+    if meta:
+        for m in re.finditer(r"smallest\s+(?:was|took) (\d+) ms", text):
+            if int(m.group(1)) != round(meta["ms_per_passage_build"]):
+                problems.append(f"{doc}  build speed says {m.group(1)} ms, data says {meta['ms_per_passage_build']}")
+    for m in re.finditer(r"(\d+) checks", text):
+        if int(m.group(1)) != browser_checks:
+            problems.append(f"{doc}  says {m.group(1)} browser checks, check_site.mjs has {browser_checks}")
+    if index_file.exists():
+        for m in re.finditer(r"number: ([\d.]+) MB", text):
+            if m.group(1) != f"{index_file.stat().st_size / 1e6:.2f}":
+                problems.append(f"{doc}  index size says {m.group(1)} MB, file is {index_file.stat().st_size / 1e6:.2f} MB")
 
 # What the page ships must be what was tested.
 site = ROOT / "site" / "data" / "library.json"
@@ -116,5 +141,5 @@ if problems:
     for p in problems:
         print("  " + p)
     sys.exit(1)
-print(f"claims hold: {len(CLAIMS)} patterns across {len([d for d in DOCS if (ROOT / d).exists()])} documents, "
-      f"{len(seen)} required claims present in the README")
+print(f"claims hold: {len(CLAIMS)} patterns checked across {len([d for d in DOCS if (ROOT / d).exists()])} documents, "
+      f"all {len(REQUIRED_IN_README)} required claims present in the README")

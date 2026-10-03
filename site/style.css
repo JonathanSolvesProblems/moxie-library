@@ -145,7 +145,13 @@ ul, ol { list-style: none; }
 .mast {
   display: flex; align-items: baseline; gap: calc(var(--u) * 5);
   padding: calc(var(--u) * 5) calc(var(--u) * 8) calc(var(--u) * 3);
+  min-height: var(--mast);
 }
+/* Masthead plus desk plus ground fill the window exactly, so the ground sits
+   at the bottom edge whether the desk is empty or full. */
+:root { --mast: 76px; }
+main { display: flex; flex-direction: column; min-height: calc(100vh - var(--mast)); }
+main > .desk { flex: 1 0 auto; }
 .wordmark {
   font-size: var(--t-mark); font-weight: 800; font-stretch: 78%;
   letter-spacing: -0.02em; line-height: 1;
