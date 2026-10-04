@@ -132,4 +132,10 @@ It matches subjects, not jokes, and it cannot tell whether a link would be welco
 
 **Best Use of Gemma.** Gemma 3 4B runs locally through Ollama and proposes one pull line per piece, and a word-for-word check decides which ones are kept. EmbeddingGemma was one of the three models I tested against her links. To be clear about the rest: the model that does the matching in the page is all-MiniLM-L6-v2, not Gemma.
 
+## Credits
+
+Every word quoted in the library was written by my mom, Mona Andrei. Read her where she published it: her blog [Moxie-Dude](https://www.moxie-dude.com), her Substack [Single Moms with Moxie](https://moxiemona.substack.com), and her column in [Westmount Magazine](https://www.westmountmag.ca).
+
+I wrote up the build in more detail on my own site: [My mom has published 710 pieces in 16 years. Nothing she wrote links to 526 of them.](https://jonathanandrei.com/blog/moxie-library-writers-archive-graded-by-her-own-links/)
+
 *The turquoise, the charcoal and the Raleway type are the ones on her blog. Her words are set in Literata. Both fonts are SIL Open Font License.*
