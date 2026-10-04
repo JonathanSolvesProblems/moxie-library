@@ -88,7 +88,7 @@ REQUIRED_IN_README = {"pieces in the library", "never linked, all outlets", "Mox
 # Figures that were true of an earlier build and must not come back.
 RETIRED = ["302,423", "0.286", "recall@5 0.", "110.7 MB"]
 
-DOCS = ["README.md", "PLAN.md"] + sorted(str(p.relative_to(ROOT)) for p in (ROOT / "post").glob("*.md"))
+DOCS = ["README.md", "PLAN.md", "broll/preview/captions.md"] + sorted(str(p.relative_to(ROOT)) for p in (ROOT / "post").glob("*.md"))
 problems, seen = [], set()
 for doc in DOCS:
     path = ROOT / doc
