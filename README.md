@@ -3,7 +3,9 @@
 Everything my mom has published, in one place, with a desk that points her back at what she
 already wrote.
 
-Live: **[moxie-library.vercel.app](https://moxie-library.vercel.app)**
+- Live: **[moxie-library.vercel.app](https://moxie-library.vercel.app)**
+- Demo video: [youtube.com/watch?v=VD4t_Ot2BOA](https://www.youtube.com/watch?v=VD4t_Ot2BOA)
+- Write-up: [jonathanandrei.com/blog/moxie-library-writers-archive-graded-by-her-own-links](https://jonathanandrei.com/blog/moxie-library-writers-archive-graded-by-her-own-links/)
 
 Built for the DEV Hacktoberfest Weekend Challenge: Build for a Friend, 2 to 4 October 2026.
 

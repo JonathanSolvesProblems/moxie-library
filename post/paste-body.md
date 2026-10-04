@@ -1,10 +1,3 @@
----
-title: My mom has published 710 pieces in 16 years. Nothing she wrote links to 526 of them.
-published: false
-tags: devchallenge, weekendchallenge, hf26challenge, opensource
-cover_image: https://moxie-library.vercel.app/press/cover.png
----
-
 *This is a submission for the [Hacktoberfest Weekend Challenge: Build for a Friend](https://dev.to/challenges/hacktoberfest-weekend-2026-10-01).*
 
 ## What I Built
