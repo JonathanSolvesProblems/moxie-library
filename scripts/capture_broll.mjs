@@ -57,6 +57,9 @@ const wheel = async (page, total, ms) => {
   for (let i = 0; i < steps; i++) { await page.mouse.wheel(0, total / steps); await page.waitForTimeout(16); }
 };
 
+let clipBegan = 0;
+const mark = (label) => console.log(`    ${label} at ${((Date.now() - clipBegan) / 1000).toFixed(1)}s`);
+
 async function clip(id, name, what, run) {
   if (only && !id.startsWith(only)) return;
   const dir = path.join(RAW, id);
@@ -77,6 +80,7 @@ async function clip(id, name, what, run) {
   await page.waitForTimeout(600);
   const start = (Date.now() - t0) / 1000;            // everything before this is loading
   const began = Date.now();
+  clipBegan = began;
   await run(page, context);
   await page.waitForTimeout(2200);                   // tail, so a clip is never shorter than its beat
   const seconds = (Date.now() - began) / 1000;
@@ -129,6 +133,32 @@ try {
       await page.waitForTimeout(800);
     });
 
+  await clip('00b', 'poster-words', 'The words from the poster she made, set over the real ground. The pointer crosses the tombstones and her own titles come up.', async (page) => {
+    await page.addStyleTag({ content: `
+      .desk, .colophon, .skip { display: none !important; }
+      .poster-words { flex: 1 0 auto; padding: 0 32px; display: flex; flex-direction: column; justify-content: center; }
+      .poster-words p { font: italic 500 2.6rem/1.2 var(--hers); white-space: pre-line; }
+      .poster-words span { font: 800 0.8rem/1 var(--says); text-transform: uppercase; letter-spacing: 0.09em; color: var(--chalk-dim); margin-top: 16px; }` });
+    await page.evaluate(() => {
+      const s = document.createElement('section');
+      s.className = 'poster-words';
+      const p = document.createElement('p');
+      p.textContent = '“Don’t treat your content like a graveyard.\nTreat it like a library.”';
+      const who = document.createElement('span');
+      who.textContent = 'Mona Andrei, on the poster she made in May 2026';
+      s.append(p, who);
+      document.querySelector('main').prepend(s);
+    });
+    await page.waitForTimeout(1200);
+    const tombs = page.locator('.plots .slab--tomb');
+    const total = await tombs.count();
+    for (const f of [0.03, 0.12, 0.22, 0.33, 0.45, 0.58, 0.7, 0.82, 0.93]) {
+      const box = await tombs.nth(Math.floor(total * f)).boundingBox();
+      await glide(page, box.x + box.width / 2, box.y + box.height / 2, 900);
+      await page.waitForTimeout(700);
+    }
+  });
+
   await clip('01', 'ground-glide', 'The whole library at rest. The pointer travels along sixteen years of slabs and titles come up, tombstones and books.', async (page) => {
     await page.waitForTimeout(1500);
     const strip = await page.locator('#plots').boundingBox();
@@ -158,36 +188,37 @@ try {
     await wheel(page, -1500, 3000);
   });
 
-  await clip('04', 'copy-link', 'One click copies a link to the first piece, and it is pasted into the draft: an old post back in circulation. Good closing shot.', async (page) => {
+  await clip('04', 'copy-link', 'Copy link is clicked and the link is pasted straight into the draft: an old post back in circulation. The closing shot.', async (page) => {
     await page.fill('#draft', KITCHEN);
     await found(page);
-    await page.waitForTimeout(1800);
+    await page.waitForTimeout(1500);
     // The button sits below the ground strip at this height, so scroll it up into view first.
     const below = (await page.locator('.find .btn--lamp').first().boundingBox()).y - 520;
-    await glide(page, 1400, 480, 600);
-    await wheel(page, below, 1300);
-    await page.waitForTimeout(500);
+    await glide(page, 1400, 480, 500);
+    await wheel(page, below, 1100);
+    await page.waitForTimeout(1500);
     const [x, y] = await centre(page, '.find .btn--lamp');
-    await glide(page, x, y, 1000);
-    await page.waitForTimeout(300);
+    mark('glide to the button starts');
+    await glide(page, x, y, 800);
     await page.mouse.click(x, y);
+    mark('copy clicked');
     const label = await page.waitForFunction(() => {
       const t = document.querySelector('.find .btn--lamp').textContent;
       return t !== 'Copy link' ? t : null;
     }, null, { timeout: 8000 }).then((h) => h.jsonValue());
     if (label !== 'Copied') throw new Error(`copy button says "${label}"`);
-    await page.waitForTimeout(1400);
-    await wheel(page, -below, 1100);
+    await page.waitForTimeout(500);
     // Paste the copied link into the draft, the way she would in her editor.
     const url = await page.locator('.find__title a').first().getAttribute('href');
     const [dx, dy] = await centre(page, '#draft');
-    await glide(page, dx, dy + 30, 900);
+    await glide(page, dx, dy + 30, 600);
     await page.click('#draft');
     await page.keyboard.press('Control+End');
     await page.keyboard.press('Enter');
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(150);
     await page.keyboard.insertText(url);
-    await page.waitForTimeout(3600);
+    mark('link pasted');
+    await page.waitForTimeout(7000);
   });
 
   await clip('05', 'nothing-close', 'A subject she has never written about. The page says so and shows nothing.', async (page) => {
@@ -215,11 +246,11 @@ try {
     await glide(page, x, y, 1400);
     await page.waitForTimeout(1200);
     await page.mouse.click(x, y);
+    mark('tombstone clicked');
     await page.waitForFunction(() => /^From /.test(document.getElementById('finds-title').textContent), null, { timeout: 30000 });
-    await page.waitForTimeout(3500);
-    await glide(page, 1400, 480, 900);
-    await wheel(page, 700, 3500);
-    await page.waitForTimeout(1500);
+    // Hold on her line so it is on screen while the narration reads it.
+    await glide(page, 1500, 300, 1200);
+    await page.waitForTimeout(12000);
   });
 
   await clip('08', 'title-search', 'Typing part of a title finds a piece from the keyboard and lights every slab that matches.', async (page) => {
