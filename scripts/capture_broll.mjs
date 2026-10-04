@@ -89,7 +89,46 @@ async function clip(id, name, what, run) {
   console.log(`${id}-${name}.mp4  ${Math.round(seconds)}s  ${(fs.statSync(out).size / 1e6).toFixed(1)} MB`);
 }
 
+// Her own public pages, recorded as a visitor sees them. Read-only: the script
+// loads a page and scrolls it, nothing more. Used with her permission.
+async function siteClip(id, name, what, url, run) {
+  if (only && !id.startsWith(only)) return;
+  const dir = path.join(RAW, id);
+  fs.rmSync(dir, { recursive: true, force: true });
+  const context = await browser.newContext({
+    viewport: { width: 1920, height: 1080 }, colorScheme: 'light',
+    recordVideo: { dir, size: { width: 1920, height: 1080 } },
+  });
+  await context.addInitScript(POINTER);
+  const page = await context.newPage();
+  const t0 = Date.now();
+  await page.goto(url, { waitUntil: 'load', timeout: 90000 });
+  // Her theme is built for a laptop-width column; zoom it so it fills a 1080p frame.
+  await page.addStyleTag({ content: 'html { zoom: 1.5; }' });
+  await page.mouse.move(1880, 620);            // parked in the margin, off her links
+  await page.waitForTimeout(2500);
+  const start = (Date.now() - t0) / 1000;
+  const began = Date.now();
+  await run(page);
+  await page.waitForTimeout(2200);
+  const seconds = (Date.now() - began) / 1000;
+  await context.close();
+  const webm = fs.readdirSync(dir).filter((f) => f.endsWith('.webm')).map((f) => path.join(dir, f))[0];
+  const out = path.join(OUT, `${id}-${name}.mp4`);
+  spawnSync('ffmpeg', ['-y', '-ss', start.toFixed(2), '-i', webm, '-c:v', 'libx264', '-crf', '18', '-preset', 'medium',
+    '-pix_fmt', 'yuv420p', '-r', '30', '-an', out], { stdio: 'ignore' });
+  shots.push({ file: `${id}-${name}.mp4`, seconds: Math.round(seconds), what });
+  console.log(`${id}-${name}.mp4  ${Math.round(seconds)}s  ${(fs.statSync(out).size / 1e6).toFixed(1)} MB`);
+}
+
 try {
+  await siteClip('00', 'her-blog-home', 'Her blog, moxie-dude.com, as a visitor sees it: the banner, then post after post scrolling by.',
+    'https://www.moxie-dude.com/', async (page) => {
+      await page.waitForTimeout(7500);          // hold on her banner for the opening line
+      await wheel(page, 3600, 11000);
+      await page.waitForTimeout(800);
+    });
+
   await clip('01', 'ground-glide', 'The whole library at rest. The pointer travels along sixteen years of slabs and titles come up, tombstones and books.', async (page) => {
     await page.waitForTimeout(1500);
     const strip = await page.locator('#plots').boundingBox();
@@ -119,15 +158,36 @@ try {
     await wheel(page, -1500, 3000);
   });
 
-  await clip('04', 'copy-link', 'One click copies a link to the first piece, ready to paste into WordPress or Substack.', async (page) => {
+  await clip('04', 'copy-link', 'One click copies a link to the first piece, and it is pasted into the draft: an old post back in circulation. Good closing shot.', async (page) => {
     await page.fill('#draft', KITCHEN);
     await found(page);
     await page.waitForTimeout(1800);
+    // The button sits below the ground strip at this height, so scroll it up into view first.
+    const below = (await page.locator('.find .btn--lamp').first().boundingBox()).y - 520;
+    await glide(page, 1400, 480, 600);
+    await wheel(page, below, 1300);
+    await page.waitForTimeout(500);
     const [x, y] = await centre(page, '.find .btn--lamp');
-    await glide(page, x, y, 1100);
-    await page.waitForTimeout(400);
+    await glide(page, x, y, 1000);
+    await page.waitForTimeout(300);
     await page.mouse.click(x, y);
-    await page.waitForTimeout(2600);
+    const label = await page.waitForFunction(() => {
+      const t = document.querySelector('.find .btn--lamp').textContent;
+      return t !== 'Copy link' ? t : null;
+    }, null, { timeout: 8000 }).then((h) => h.jsonValue());
+    if (label !== 'Copied') throw new Error(`copy button says "${label}"`);
+    await page.waitForTimeout(1400);
+    await wheel(page, -below, 1100);
+    // Paste the copied link into the draft, the way she would in her editor.
+    const url = await page.locator('.find__title a').first().getAttribute('href');
+    const [dx, dy] = await centre(page, '#draft');
+    await glide(page, dx, dy + 30, 900);
+    await page.click('#draft');
+    await page.keyboard.press('Control+End');
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(500);
+    await page.keyboard.insertText(url);
+    await page.waitForTimeout(3600);
   });
 
   await clip('05', 'nothing-close', 'A subject she has never written about. The page says so and shows nothing.', async (page) => {
@@ -191,6 +251,22 @@ try {
     await wheel(page, 1400, 3500);
     await page.waitForTimeout(6500);
   });
+
+  await siteClip('11', 'her-post-2014', 'The 2014 post the library finds in the demo, on her own blog: the real piece behind the first result.',
+    'https://www.moxie-dude.com/2014/03/26/when-a-picture-is-worth-1000-words-or-1000-reasons-why-i-should-never-try-to-cook-red-meat-ever-again/',
+    async (page) => {
+      await page.waitForTimeout(2200);
+      await wheel(page, 1700, 8000);
+      await page.waitForTimeout(800);
+    });
+
+  await siteClip('12', 'her-post-2011', 'The 2011 post "The story of my life" on her blog, the one whose line is "And then the kids woke up."',
+    'https://www.moxie-dude.com/2011/04/17/the-story-of-my-life/',
+    async (page) => {
+      await page.waitForTimeout(3000);
+      await wheel(page, 700, 5000);
+      await page.waitForTimeout(800);
+    });
 
   if (!only) {
     const lines = ['# B-roll shot list', '',
