@@ -1,0 +1,199 @@
+{
+ "summary": {
+  "floor": 0.457,
+  "near_negatives": 14,
+  "answered_nothing_close": 8,
+  "suggested_something": 6,
+  "median_best_closeness": 0.451,
+  "mixed_kitchen_matches_kept_of_5": [
+   5,
+   5,
+   5,
+   5,
+   4,
+   4,
+   5,
+   5,
+   5,
+   5,
+   4,
+   5,
+   5,
+   5
+  ],
+  "mixed_slots_taken_by_unrelated_paragraph": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0
+  ]
+ },
+ "nearRows": [
+  {
+   "topic": "drone",
+   "best": 0.449,
+   "above": 0,
+   "top": "Tim Hortons coffee and I are best friends. And it all started when the power went out."
+  },
+  {
+   "topic": "pickleball",
+   "best": 0.443,
+   "above": 0,
+   "top": "That strange place between boy and man"
+  },
+  {
+   "topic": "jury duty",
+   "best": 0.333,
+   "above": 0,
+   "top": "It’s wasp season here in Canada, y’all! And sometimes we think too much. I blame wasp season."
+  },
+  {
+   "topic": "ikea",
+   "best": 0.39,
+   "above": 0,
+   "top": "This is why I shouldn’t be allowed to shop alone. Ever."
+  },
+  {
+   "topic": "escape room",
+   "best": 0.528,
+   "above": 6,
+   "top": "Insights from the hood (Parenthood, that is) / 5"
+  },
+  {
+   "topic": "beekeeping",
+   "best": 0.505,
+   "above": 2,
+   "top": "A bee in his bonnet. Except that men shouldn’t even be wearing bonnets."
+  },
+  {
+   "topic": "braces",
+   "best": 0.392,
+   "above": 0,
+   "top": "10 things nobody tells you about adulting… Until it’s too late."
+  },
+  {
+   "topic": "power outage",
+   "best": 0.465,
+   "above": 2,
+   "top": "A little bit of teenage bliss this morning as hormones step aside"
+  },
+  {
+   "topic": "bowling",
+   "best": 0.443,
+   "above": 0,
+   "top": "Dear Steven Spielberg: I may or may not have missed your call. Sorry. I’ve been busy starring in my son’s homework."
+  },
+  {
+   "topic": "yard sale",
+   "best": 0.438,
+   "above": 0,
+   "top": "This is why I shouldn’t be allowed to shop alone. Ever."
+  },
+  {
+   "topic": "trampoline",
+   "best": 0.517,
+   "above": 15,
+   "top": "When reflections flash before you"
+  },
+  {
+   "topic": "bake sale",
+   "best": 0.511,
+   "above": 7,
+   "top": "To-Do List, Meet Reality"
+  },
+  {
+   "topic": "snowstorm",
+   "best": 0.473,
+   "above": 1,
+   "top": "Wordless Wednesday – The first snow fall"
+  },
+  {
+   "topic": "tax return",
+   "best": 0.451,
+   "above": 0,
+   "top": "5 Tips for Single Moms Facing a Financial Sh*tshow"
+  }
+ ],
+ "mixedRows": [
+  {
+   "topic": "drone",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "pickleball",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "jury duty",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "ikea",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "escape room",
+   "kept": 4,
+   "fromNew": 1
+  },
+  {
+   "topic": "beekeeping",
+   "kept": 4,
+   "fromNew": 1
+  },
+  {
+   "topic": "braces",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "power outage",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "bowling",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "yard sale",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "trampoline",
+   "kept": 4,
+   "fromNew": 1
+  },
+  {
+   "topic": "bake sale",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "snowstorm",
+   "kept": 5,
+   "fromNew": 0
+  },
+  {
+   "topic": "tax return",
+   "kept": 5,
+   "fromNew": 0
+  }
+ ]
+}
